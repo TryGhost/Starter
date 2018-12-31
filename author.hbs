@@ -1,0 +1,35 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#author}}
+{{!-- Everything inside the #author tags pulls data from the author --}}
+<header class="page-head">
+    <h1 class="page-head-title">{{name}}</h1>
+    {{#if bio}}<p class="page-head-description">{{bio}}</p>{{/if}}
+
+    <div class="author-meta">
+        <div class="author-links">
+            {{#if website}}
+            <a href="{{website}}" target="_blank" rel="noopener">Website</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if twitter}}
+            <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if facebook}}
+            <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a> <span class="divider">/</span>
+            {{/if}}
+            <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener">RSS</a>
+        </div>
+    </div>
+</header>
+{{/author}}
+
+<div class="post-feed">
+{{#foreach posts}}
+
+    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+    {{> "post-card"}}
+
+{{/foreach}}
+</div>
+

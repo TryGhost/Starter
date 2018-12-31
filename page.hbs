@@ -1,0 +1,26 @@
+{{!< default}}
+
+{{#post}}
+<article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+
+    <div class="post-content-body">
+        {{content}}
+    </div>
+
+</article>
+{{/post}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script>
+// Layout Script for Ghost Gallery Cards
+var images = document.querySelectorAll('.kg-gallery-image img');
+images.forEach(function (image) {
+    var container = image.closest('.kg-gallery-image');
+    var width = image.attributes.width.value;
+    var height = image.attributes.height.value;
+    var ratio = width / height;
+    container.style.flex = ratio + ' 1 0%';
+})
+</script>
+{{/contentFor}}

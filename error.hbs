@@ -1,0 +1,27 @@
+{{!< default}}
+
+<header class="page-head error-head">
+    <h1 class="page-head-title">{{code}}</h1>
+    <p class="page-head-description">{{message}}</p>
+    <a class="error-link" href="{{@blog.url}}">Go to the front page →</a>
+</header>
+
+{{#if errorDetails}}
+<div class="post-content-body">
+    <section class="error-stack">
+        <h3>Theme errors</h3>
+        <ul class="error-stack-list">
+            {{#each errorDetails}}
+            <li>
+                <em class="error-stack-function">{{{rule}}}</em>
+
+                {{#each failures}}
+                <p><span class="error-stack-file">Ref: {{ref}}</span></p>
+                <p><span class="error-stack-file">Message: {{message}}</span></p>
+                {{/each}}
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</div>
+{{/if}}

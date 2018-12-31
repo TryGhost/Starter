@@ -1,0 +1,11 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<article class="post-card {{post_class}} {{#if feature_image}}with-image" style="background-image: url({{img_url feature_image size="l"}}){{else}}no-image{{/if}}">
+    <a class="post-card-link" href="{{url}}">
+        <div class="post-card-content">
+            <h2 class="post-card-title">{{title}}</h2>
+        </div>
+    </a>
+</article>

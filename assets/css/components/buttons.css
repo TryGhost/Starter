@@ -1,0 +1,110 @@
+/* Buttons
+/* ---------------------------------------------------------- */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    display: inline-block;
+    height: var(--height);
+    padding: 0 2rem;
+    border: 0;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-family: var(--font-sans-serif);
+    font-size: 1.4rem;
+    font-weight: var(--font-normal);
+    line-height: var(--height);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    appearance: none;
+    transition: 0.4s ease;
+}
+
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit,
+.button.fit {
+    width: 100%;
+}
+
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+button.small,
+.button.small {
+    height: calc(var(--height) * 0.9);
+    line-height: calc(var(--height) * 0.9);
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+input[type="submit"].large,
+input[type="reset"].large,
+input[type="button"].large,
+button.large,
+.button.large {
+    height: calc(var(--height) * 1.14);
+    line-height: calc(var(--height) * 1.14);
+    padding: 0 3rem;
+    font-size: 1.6rem;
+}
+
+
+input[type="submit"].disabled,
+input[type="submit"]:disabled,
+input[type="reset"].disabled,
+input[type="reset"]:disabled,
+input[type="button"].disabled,
+input[type="button"]:disabled,
+button.disabled,
+button:disabled,
+.button.disabled,
+.button:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    color: var(--color-primary) !important;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+    text-decoration: none;
+    color: color(var(--color-primary) l(-15%)) !important;
+    box-shadow: inset 0 0 0 2px color(var(--color-primary) l(-10%));
+    transition: 0.2s ease;
+}
+
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary {
+    color: #fff !important;
+    background-color: var(--color-primary);
+    box-shadow: none;
+}
+
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover {
+        background-color: color(var(--color-primary) l(-10%));
+    }
