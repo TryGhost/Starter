@@ -14,7 +14,10 @@
     "scripts": {
         "dev": "gulp",
         "zip": "gulp zip",
-        "test": "gscan ."
+        "test": "gscan .",
+        "pretest": "gulp build",
+        "preship": "yarn test",
+        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
         "name": "Ghost Foundation",
@@ -40,21 +43,20 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "6.3.6",
-        "cssnano": "3.7.1",
+        "autoprefixer": "9.4.10",
+        "cssnano": "4.1.10",
         "gscan": "^2.0.0",
-        "gulp": "3.9.1",
-        "gulp-livereload": "3.8.1",
-        "gulp-postcss": "6.1.1",
-        "gulp-sourcemaps": "1.6.0",
-        "gulp-util": "3.0.7",
-        "gulp-watch": "4.3.8",
-        "gulp-zip": "4.0.0",
-        "postcss-color-function": "2.0.1",
-        "postcss-custom-properties": "5.0.1",
-        "postcss-easy-import": "1.0.1",
-        "gulp-filter": "5.1.0",
-        "gulp-uglify": "3.0.1"
+        "gulp": "4.0.0",
+        "gulp-livereload": "4.0.1",
+        "gulp-postcss": "8.0.0",
+        "gulp-sourcemaps": "2.6.5",
+        "gulp-uglify": "3.0.2",
+        "gulp-util": "3.0.8",
+        "gulp-watch": "5.0.1",
+        "gulp-zip": "4.2.0",
+        "postcss-color-function": "4.0.1",
+        "postcss-custom-properties": "8.0.9",
+        "postcss-easy-import": "3.0.0"
     },
     "config": {
         "posts_per_page": 15,
