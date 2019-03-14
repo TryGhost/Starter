@@ -13,7 +13,7 @@ fieldset {
 
 label {
     color: var(--color-primary);
-    play: block;
+    display: block;
     font-size: 0.9em;
     font-weight: var(--font-bold);
     margin: 0 0 (var(--margin) * 0.5) 0;
@@ -74,13 +74,12 @@ select option {
 }
 
 select:focus::-ms-value {
-        background-color: transparent;
-    }
+    background-color: transparent;
+}
 
 select::-ms-expand {
     display: none;
 }
-
 
 input[type="text"],
 input[type="password"],
@@ -114,7 +113,7 @@ input[type="radio"] + label {
     cursor: pointer;
     font-size: 1em;
     font-weight: var(--font-normal);
-    padding-left: calc(var(--height) * 0.6) + 0.75em;
+    padding-left: calc((var(--height) * 0.6) + 0.75em);
     padding-right: 2rem;
     position: relative;
     user-select: none;
