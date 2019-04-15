@@ -1,4 +1,4 @@
-const { series, watch, src, dest } = require('gulp');
+const {series, watch, src, dest, parallel} = require('gulp');
 const pump = require('pump');
 
 // gulp plugins and utils
@@ -29,28 +29,35 @@ const handleError = (done) => {
     };
 };
 
+function hbs(done) {
+    pump([
+        src(['*.hbs', 'partials/**/*.hbs', '!node_modules/**/*.hbs']),
+        livereload()
+    ], handleError(done));
+}
+
 function css(done) {
     var processors = [
         easyimport,
-        customProperties({ preserve: false }),
+        customProperties({preserve: false}),
         colorFunction(),
-        autoprefixer({ browsers: ['last 2 versions'] }),
+        autoprefixer({browsers: ['last 2 versions']}),
         cssnano()
     ];
 
     pump([
-        src('assets/css/*.css', { sourcemaps: true }),
+        src('assets/css/*.css', {sourcemaps: true}),
         postcss(processors),
-        dest('assets/built/', { sourcemaps: '.' }),
+        dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
 }
 
 function js(done) {
     pump([
-        src('assets/js/*.js', { sourcemaps: true }),
+        src('assets/js/*.js', {sourcemaps: true}),
         uglify(),
-        dest('assets/built/', { sourcemaps: '.' }),
+        dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
 }
@@ -71,7 +78,9 @@ function zipper(done) {
     ], handleError(done));
 }
 
-const watcher = () => watch('assets/css/**', css);
+const cssWatcher = () => watch('assets/css/**', css);
+const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs', '!node_modules/**/*.hbs'], hbs);
+const watcher = parallel(cssWatcher, hbsWatcher);
 const build = series(css, js);
 const dev = series(build, serve, watcher);
 
