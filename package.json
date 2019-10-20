@@ -1,8 +1,8 @@
 {
-    "name": "starter",
-    "description": "A starter theme for Ghost.",
+    "name": "ghost-starter-theme",
+    "description": "A custom theme for ghost",
     "demo": "https://starter.ghost.io",
-    "version": "3.0.0",
+    "version": "1.0.0",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
