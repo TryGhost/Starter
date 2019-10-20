@@ -22,20 +22,18 @@
     </div>
 
     {{!-- Email subscribe form at the bottom of the page --}}
-    {{#if @labs.subscribers}}
-    <section class="subscribe-form">
-        <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
-        <p>Get the latest posts delivered right to your inbox</p>
-        {{subscribe_form placeholder="youremail@example.com"}}
-    </section>
+    {{#if @labs.members}}
+        {{> subscribe-form}}
     {{/if}}
 
     <footer class="post-content-footer">
 
-        {{!-- There are two options for how we display the byline/author-info.
-        If the post has more than one author, we load a specific template
-        from includes/byline-multiple.hbs, otherwise, we just use the
-        default byline. --}}
+        <div class="post-authors">
+            Written by
+            {{#foreach authors}}
+                <a href="{{url}}">{{name}}</a>
+            {{/foreach}}
+        </div>
 
     </footer>
 
