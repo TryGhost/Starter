@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
+
 <head>
 
     {{!-- Document Settings --}}
@@ -18,71 +19,74 @@
     {{ghost_head}}
 
 </head>
+
 <body class="{{body_class}}">
 
-<div class="site-wrapper">
+    <div class="site-wrapper">
 
-    <header class="site-head">
-        <div class="site-head-container">
-            <nav id="swup" class="site-head-left">
-                {{navigation}}
-            </nav>
-            <div class="site-head-center">
-                {{#if @site.logo}}
-                <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                {{else}}
-                <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
-                {{/if}}
-            </div>
-            <div class="site-head-right">
-                <div class="social-links">
-                    {{#if @site.facebook}}
-                    <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
+        <header class="site-head">
+            <div class="site-head-container inner">
+                <nav class="site-head-left">
+                    {{navigation}}
+                </nav>
+                <div class="site-head-center">
+                    {{#if @site.logo}}
+                    <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                    {{else}}
+                    <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
                     {{/if}}
-                    {{#if @site.twitter}}
-                    <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-                    {{/if}}
-                    <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                </div>
+                <div class="site-head-right">
+                    <div class="social-links">
+                        {{#if @site.facebook}}
+                        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
+                        {{/if}}
+                        {{#if @site.twitter}}
+                        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
+                        {{/if}}
+                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main id="site-main" class="site-main">
+        <main class="site-main">
+            <div class="site-main-container inner">
 
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        {{{body}}}
+                {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+                {{{body}}}
 
-    </main>
+            </div>
+        </main>
 
-    {{!-- The footer at the very bottom of the screen --}}
-    <footer class="site-foot">
-        &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-    </footer>
+        {{!-- The footer at the very bottom of the screen --}}
+        <footer class="site-foot">
+            <div class="site-foot-container inner">
+                &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+            </div>
+        </footer>
 
-</div>
+    </div>
 
-<script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous">
-</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
 
-{{#if pagination.pages}}
-<script>
-    // maxPages is a global variable that is needed to determine
-    // if we need to load more pages for the infinitescroll, or if
-    // we reached the last page already.
-    var maxPages = parseInt('{{pagination.pages}}');
-</script>
-<script src="{{asset "built/infinitescroll.js"}}"></script>
-{{/if}}
+    {{#if pagination.pages}}
+    <script>
+        // maxPages is a global variable that is needed to determine
+        // if we need to load more pages for the infinitescroll, or if
+        // we reached the last page already.
+        var maxPages = parseInt('{{pagination.pages}}');
+    </script>
+    <script src="{{asset "built/infinitescroll.js"}}"></script>
+    {{/if}}
 
-{{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
-{{{block "scripts"}}}
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
 
-{{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
-{{ghost_foot}}
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
 
 </body>
+
 </html>

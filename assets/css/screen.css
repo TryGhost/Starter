@@ -21,4 +21,67 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* Main - Theme styles
 /* ---------------------------------------------------------- */
 
-/* Your styles here */
+
+/* Your styles here! Edit below */
+
+
+/* Global */
+.inner {
+    width: 100%;
+    max-width: 1030px;
+    margin: 0 auto;
+}
+
+/* Header */
+.site-head {
+    padding: 20px 4vw;
+    color: #fff;
+    background: var(--color-base);
+}
+
+.site-head a {
+    color: #fff;
+}
+
+.site-head-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-head-left .nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-head-left .nav li {
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.site-head-logo img {
+    height: 30px;
+    width: auto;
+}
+
+/* Main */
+.site-main {
+    margin: 5vw 4vw;
+}
+
+/* Footer */
+.site-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 4vw;
+    color: #fff;
+    background: var(--color-base);
+}
+
+.site-foot a {
+    color: #fff;
+}
