@@ -8,12 +8,16 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
+
+/* Base */
 @import "vars.css";
 @import "components/global.css";
-@import "components/ghost.css";
-@import "components/lists.css";
-@import "components/grid.css";
-@import "components/tables.css";
+
+/* Ghost components */
+@import "components/content.css";
+@import "components/members.css";
+
+/* Global components */
 @import "components/forms.css";
 @import "components/buttons.css";
 
