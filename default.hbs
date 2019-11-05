@@ -1,92 +1,77 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
-
 <head>
-
-    {{!-- Document Settings --}}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    {{!-- Base Meta --}}
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
-    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
-
+    {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
 </head>
-
 <body class="{{body_class}}">
+<div class="site-wrapper">
 
-    <div class="site-wrapper">
-
-        <header class="site-head">
-            <div class="site-head-container inner">
-                <nav class="site-head-left">
-                    {{navigation}}
-                </nav>
-                <div class="site-head-center">
-                    {{#if @site.logo}}
-                    <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                    <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
+    <header class="site-head">
+        <div class="site-head-container inner">
+            <nav class="site-head-left">
+                {{navigation}}
+            </nav>
+            <div class="site-head-center">
+                {{#if @site.logo}}
+                <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                {{else}}
+                <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
+                {{/if}}
+            </div>
+            <div class="site-head-right">
+                <div class="social-links">
+                    {{#if @site.facebook}}
+                    <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
                     {{/if}}
-                </div>
-                <div class="site-head-right">
-                    <div class="social-links">
-                        {{#if @site.facebook}}
-                        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
-                        {{/if}}
-                        {{#if @site.twitter}}
-                        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-                        {{/if}}
-                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
-                    </div>
+                    {{#if @site.twitter}}
+                    <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
+                    {{/if}}
+                    <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <main class="site-main">
-            <div class="site-main-container inner">
+    <main class="site-main">
+        <div class="site-main-container inner">
 
-                {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-                {{{body}}}
+            {{{body}}}
+            {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
 
-            </div>
-        </main>
+        </div>
+    </main>
 
-        {{!-- The footer at the very bottom of the screen --}}
-        <footer class="site-foot">
-            <div class="site-foot-container inner">
-                &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-            </div>
-        </footer>
+    <footer class="site-foot">
+        <div class="site-foot-container inner">
+            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+        </div>
+    </footer>
 
-    </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
-    </script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-    {{#if pagination.pages}}
-    <script>
-        // maxPages is a global variable that is needed to determine
-        // if we need to load more pages for the infinitescroll, or if
-        // we reached the last page already.
-        var maxPages = parseInt('{{pagination.pages}}');
-    </script>
-    <script src="{{asset "built/infinitescroll.js"}}"></script>
-    {{/if}}
+<script>
+    var maxPages = parseInt('{{pagination.pages}}');
+</script>
+<script src="{{asset "built/infinitescroll.js"}}"></script>
 
-    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
-    {{{block "scripts"}}}
 
-    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
-    {{ghost_foot}}
+{{{block "scripts"}}}
+{{!-- The #block helper will pull in data from the #contentFor other template files --}}
+
+{{ghost_foot}}
+{{!-- Outputs important scripts - should always be included before closing body tag --}}
 
 </body>
-
 </html>
