@@ -85,3 +85,9 @@ production stylesheet in assets/built/screen.css using: gulp dev
 .site-foot a {
     color: #fff;
 }
+
+
+/* Natural flow and rhythm in articles by default */
+.post-body > * + * {
+  margin-top: 1em;
+}
