@@ -25,30 +25,30 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* ---------------------------------------------------------- */
 
 /* Global */
-.inner {
+.gh-container {
     width: 100%;
     max-width: 1030px;
     margin: 0 auto;
 }
 
 /* Header */
-.site-head {
+.gh-head {
     padding: 20px 4vw;
     color: #fff;
     background: var(--color-base);
 }
 
-.site-head a {
+.gh-head a {
     color: #fff;
 }
 
-.site-head-container {
+.gh-head-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.site-head-left .nav {
+.gh-head-left .nav {
     display: flex;
     align-items: center;
     list-style: none;
@@ -56,23 +56,18 @@ production stylesheet in assets/built/screen.css using: gulp dev
     padding: 0;
 }
 
-.site-head-left .nav li {
+.gh-head-left .nav li {
     margin: 0 10px 0 0;
     padding: 0;
 }
 
-.site-head-logo img {
+.gh-head-logo img {
     height: 30px;
     width: auto;
 }
 
-/* Main */
-.site-main {
-    margin: 5vw 4vw;
-}
-
 /* Footer */
-.site-foot {
+.gh-foot {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,12 +76,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
     background: var(--color-base);
 }
 
-.site-foot a {
+.gh-foot a {
     color: #fff;
-}
-
-
-/* Natural flow and rhythm in articles by default */
-.post-body > * + * {
-  margin-top: 1em;
 }

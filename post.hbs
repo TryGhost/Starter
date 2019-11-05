@@ -1,23 +1,23 @@
 {{!< default}}
 
 {{#post}}
-<article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+<article class="gh-post {{post_class}}">
 
-    <header class="post-content-header">
-        <h1 class="post-content-title">{{title}}</h1>
+    <header class="gh-post-header">
+        <h1 class="gh-post-title">{{title}}</h1>
     </header>
 
     {{#if custom_excerpt}}
-        <p class="post-content-excerpt">{{custom_excerpt}}</p>
+        <p class="gh-post-excerpt">{{custom_excerpt}}</p>
     {{/if}}
 
     {{#if feature_image}}
-    <div class="post-content-image">
+    <div class="gh-post-image">
         <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
     </div>
     {{/if}}
 
-    <div class="post-content-body">
+    <div class="gh-post-body">
         {{content}}
     </div>
 
@@ -26,9 +26,9 @@
         {{> subscribe-form}}
     {{/if}}
 
-    <footer class="post-content-footer">
+    <footer class="gh-post-footer">
 
-        <div class="post-authors">
+        <div class="gh-post-authors">
             Written by
             {{#foreach authors}}
                 <a href="{{url}}">{{name}}</a>
@@ -38,7 +38,7 @@
     </footer>
 
     {{!--
-    <section class="post-content-comments">
+    <section class="gh-post-comments">
         If you want to embed comments, this is a good place to do it!
     </section>
     --}}
@@ -46,10 +46,9 @@
 </article>
 {{/post}}
 
-{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{!-- The #contentFor helper here will send everything in it to the matching #block helper in default.hbs --}}
 {{#contentFor "scripts"}}
 <script>
-// Layout Script for Ghost Gallery Cards
 var images = document.querySelectorAll('.kg-gallery-image img');
 images.forEach(function (image) {
     var container = image.closest('.kg-gallery-image');
