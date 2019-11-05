@@ -1,11 +1,10 @@
 {{!--
-This error template is used for all 404 errors, which might occur on your site.
-It's a good idea to keep this template as minimal as possible in terms of both file size and complexity.
---}}
 
+A 404 error template, served whenever someone tries to access a page which does not exist.
+
+--}}
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,7 +13,6 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 </head>
-
 <body class="error-template">
     <div class="site-wrapper">
 
@@ -32,7 +30,6 @@ It's a good idea to keep this template as minimal as possible in terms of both f
 
         <main id="site-main" class="site-main outer">
             <div class="inner">
-
                 <section class="error-message">
                     <h1 class="error-code">{{statusCode}}</h1>
                     <p class="error-description">{{message}}</p>
@@ -43,5 +40,4 @@ It's a good idea to keep this template as minimal as possible in terms of both f
 
     </div>
 </body>
-
 </html>

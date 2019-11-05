@@ -1,12 +1,11 @@
 {{!--
-This error template is used for all 400/500 errors, except 404, which might occur on your site.
-It's a good idea to keep this template as minimal as possible in terms of both file size and complexity.
-You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in this file.
---}}
 
+This error template is used for all server errors except 404, which has a custom template.
+It's a good idea to keep this template as minimal as possible in terms of both file size and complexity.
+
+--}}
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,7 +14,6 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 </head>
-
 <body class="error-template">
     <div class="site-wrapper">
 
@@ -60,7 +58,7 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
 
             </div>
         </main>
+
     </div>
 </body>
-
 </html>
