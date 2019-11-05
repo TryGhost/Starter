@@ -5,7 +5,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 */
 
-
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 
@@ -22,12 +21,8 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "components/buttons.css";
 
 
-/* Main - Theme styles
+/* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
-
-
-/* Your styles here! Edit below */
-
 
 /* Global */
 .inner {
