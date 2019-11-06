@@ -3,25 +3,25 @@
 {{#post}}
 <article class="gh-post {{post_class}}">
 
-    <header class="gh-post-header">
+    <header class="gh-post-header gh-canvas">
         <h1 class="gh-post-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="gh-post-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+        <div class="gh-post-image">
+            <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
+        </div>
+        {{/if}}
     </header>
 
-    {{#if custom_excerpt}}
-        <p class="gh-post-excerpt">{{custom_excerpt}}</p>
-    {{/if}}
-
-    {{#if feature_image}}
-    <div class="gh-post-image">
-        <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
-    </div>
-    {{/if}}
-
-    <div class="gh-post-body">
+    <div class="gh-content-body gh-canvas">
         {{content}}
     </div>
 
-    <footer class="gh-post-footer">
+    <footer class="gh-post-footer gh-canvas">
 
         <div class="gh-post-authors">
             Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}

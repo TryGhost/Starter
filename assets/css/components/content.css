@@ -1,16 +1,15 @@
 
 /* Content grid
 /* ---------------------------------------------------------- */
-.gh-content {
+.gh-canvas {
     display: grid;
-    grid-row-gap: 1.5em;
     grid-template-columns:
     [full-start]
       minmax(calc(calc(100% - 720px) / 2), 1fr)
         [wide-start]
             1fr
                 [main-start]
-                      repeat(10, [col-start] 1fr)
+                    repeat(10, [col-start] 1fr)
                 [main-end]
             1fr
         [wide-end]
@@ -20,7 +19,7 @@
 }
 
 @media (max-width: 600px) {
-    .gh-content {
+    .gh-canvas {
         grid-template-columns:
             [full-start]
               minmax(calc(calc(100% - 720px) / 2), 1fr)
@@ -33,7 +32,7 @@
     }
 }
 
-.gh-content > * {
+.gh-canvas > * {
     grid-column: main-start / main-end;
 }
 
@@ -102,21 +101,28 @@ tfoot {
 /* Cards
 /* ---------------------------------------------------------- */
 
-.kg-card {
-    margin: 7vw 0;
+.gh-content-body > * + * {
+    margin-top: 1.5em;
+}
+.gh-content-body > h1 + *,
+.gh-content-body > h2 + *,
+.gh-content-body > h3 + *,
+.gh-content-body > h4 + *,
+.gh-content-body > h5 + *,
+.gh-content-body > h6 + * {
+    margin-top: 0;
 }
 
-/* Do we need this anymore?
-.kg-embed-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+:not(.kg-card):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + .kg-card {
+    margin-top: 7vw;
 }
-*/
+
+.kg-card + :not(.kg-card):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-top: 7vw;
+}
 
 .kg-card figcaption {
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0;
     font-size: 1.3rem;
     line-height: 1.4em;
     font-weight: 600;
@@ -125,11 +131,19 @@ tfoot {
     opacity: 0.4;
 }
 
-.gh-content > pre {
+.gh-canvas > pre {
     overflow: scroll;
     border-radius: 5px;
     box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
     padding: 16px 20px;
+}
+
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 /* Card captions
