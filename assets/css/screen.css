@@ -211,8 +211,9 @@ body:not(.gh-head-open) .burger:hover .burger-inner::after {
         display: inline-block;
     }
     .gh-head {
-        height: max-content;
+        height: 86px;
         transition: all 0.4s ease-out;
+        overflow: hidden;
     }
     .gh-head .gh-container {
         height: 100%;
@@ -221,12 +222,14 @@ body:not(.gh-head-open) .burger:hover .burger-inner::after {
     }
     .gh-head-actions,
     .gh-head-menu {
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease-in;
+        position: relative;
+        z-index: -1;
+        height: auto;
+        transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     }
     .gh-head-brand {
+        position: relative;
+        z-index: 10;
         grid-column-start: auto;
         max-width: none;
         display: flex;
@@ -235,16 +238,11 @@ body:not(.gh-head-open) .burger:hover .burger-inner::after {
         user-select: none;
     }
     .gh-head-open {
-        background: rgba(255,255,255,1);
+        background: rgba(0,0,0,1);
         transition: background 0.5s ease-out;
         transition-delay: 0.25;
         overflow: hidden;
         height: 100vh;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
     }
 
     .gh-head-open .gh-head {
@@ -255,12 +253,12 @@ body:not(.gh-head-open) .burger:hover .burger-inner::after {
 
     .gh-head-open .gh-head-actions,
     .gh-head-open .gh-head-menu {
-        position: relative;
-        visibility: visible;
-        opacity: 1;
+        z-index: 9999;
+        height: auto;
+        transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     }
 
-    .gh-head-menu {
+    .gh-head-open .gh-head-menu {
         align-self: center;
         display: flex;
         flex-direction: column;
@@ -285,9 +283,6 @@ body:not(.gh-head-open) .burger:hover .burger-inner::after {
         margin: 0 10px;
     }
 }
-
-
-
 
 
 
