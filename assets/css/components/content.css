@@ -48,14 +48,14 @@
 /* Tables
 /* ---------------------------------------------------------- */
 
-table {
+.gh-content table {
     border-collapse: separate;
     margin: 0 0 var(--margin) 0;
     width: 100%;
     font-size: 0.8em;
 }
 
-th {
+.gh-content th {
     color: var(--color-base);
     font-size: 0.9em;
     font-weight: var(--font-bold);
@@ -63,53 +63,112 @@ th {
     text-align: left;
 }
 
-td {
+.gh-content td {
     padding: 0.4em 0.7em;
     border-left-width: 0;
     border-top-width: 0;
 }
 
-td:first-child {
+.gh-content td:first-child {
     border-left-width: 1px;
 }
 
-tbody tr {
+.gh-content tbody tr {
     border: solid 1px var(--color-border);
     border-left: 0;
     border-right: 0;
 }
 
-tbody tr:first-child td {
+.gh-content tbody tr:first-child td {
     border-top-width: 1px;
 }
 
-tbody tr:nth-child(2n + 1) {
+.gh-content tbody tr:nth-child(2n + 1) {
     background-color: var(--color-bg);
 }
 
-tbody td {
+.gh-content tbody td {
     border: solid 1px var(--color-border);
     border-left-width: 0;
     border-top-width: 0;
 }
 
-tfoot {
+.gh-content tfoot {
     border-width: 0;
+}
+
+/* Standard content
+/* ---------------------------------------------------------- */
+
+.gh-content h1 {
+    margin: 0.5em 0 0.4em;
+}
+
+.gh-content p + h1 {
+    margin-top: 0.8em;
+}
+
+.gh-content h2 {
+    margin: 0.5em 0 0.3em;
+}
+
+.gh-content p + h2 {
+    margin-top: 0.8em;
+}
+
+.gh-content h3 {
+    margin: 0.5em 0 0.2em;
+}
+
+@media (max-width: 800px) {
+    .gh-content h3 {
+        margin-bottom: 0.3em;
+    }
+}
+
+.gh-content h2 + h3 {
+    margin-top: 0.7em;
+}
+
+.gh-content h4 {
+    margin: 0.5em 0 0.2em;
+}
+
+.gh-content h2 + h4 {
+    margin-top: 0.7em;
+}
+
+.gh-content h3 + h4 {
+    margin-top: 0;
+}
+
+@media (max-width: 800px) {
+    .gh-content h4 {
+        margin-bottom: 0.3em;
+    }
+}
+
+.gh-content h6 {
+    margin: 0.5em 0 0.2em 0;
+}
+
+.gh-content table {
+    margin: 0.5em 0 2.5em;
 }
 
 
 /* Cards
 /* ---------------------------------------------------------- */
 
-.gh-content-body > * + * {
-    margin-top: 1.5em;
+.gh-content > * + * {
+    margin-top: 1.5rem;
 }
-.gh-content-body > h1 + *,
-.gh-content-body > h2 + *,
-.gh-content-body > h3 + *,
-.gh-content-body > h4 + *,
-.gh-content-body > h5 + *,
-.gh-content-body > h6 + * {
+.gh-content > h1 + *,
+.gh-content > h2 + *,
+.gh-content > h3 + *,
+.gh-content > h4 + *,
+.gh-content > h5 + *,
+.gh-content > h6 + * {
     margin-top: 0;
 }
 
