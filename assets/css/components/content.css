@@ -97,65 +97,71 @@
     border-width: 0;
 }
 
+/* Post header
+/* ---------------------------------------------------------- */
+
+.gh-post-header {
+    grid-row-gap: 2rem;
+}
+
+.gh-post-title,
+.gh-post-image {
+    grid-row: 1 / 2;
+    align-self: end;
+}
+
+.gh-post-excerpt {
+    grid-row: 2 / 3;
+}
+
+.gh-post-image {
+    grid-column: full-start / full-end;
+}
+
 /* Standard content
 /* ---------------------------------------------------------- */
 
-.gh-content h1 {
-    margin: 0.5em 0 0.4em;
+.gh-content h1,
+.gh-content h2,
+.gh-content h3,
+.gh-content h4,
+.gh-content h5,
+.gh-content h6,
+.gh-content table,
+.gh-content blockquote {
+    margin: 0.6em 0 0.3em;
 }
 
-.gh-content p + h1 {
-    margin-top: 0.8em;
-}
-
-.gh-content h2 {
-    margin: 0.5em 0 0.3em;
-}
-
-.gh-content p + h2 {
-    margin-top: 0.8em;
-}
-
-.gh-content h3 {
-    margin: 0.5em 0 0.2em;
-}
-
-@media (max-width: 800px) {
-    .gh-content h3 {
-        margin-bottom: 0.3em;
-    }
-}
-
-.gh-content h2 + h3 {
-    margin-top: 0.7em;
-}
-
-.gh-content h4 {
-    margin: 0.5em 0 0.2em;
-}
-
-.gh-content h2 + h4 {
-    margin-top: 0.7em;
-}
-
-.gh-content h3 + h4 {
+.gh-content > [id] + [id] {
     margin-top: 0;
 }
 
-@media (max-width: 800px) {
-    .gh-content h4 {
-        margin-bottom: 0.3em;
-    }
+.gh-content h1 + .kg-card,
+.gh-content h2 + .kg-card,
+.gh-content h3 + .kg-card,
+.gh-content h4 + .kg-card,
+.gh-content h5 + .kg-card,
+.gh-content h6 + .kg-card,
+.gh-content table + .kg-card,
+.gh-content blockquote + .kg-card {
+    margin-top: 1.5em;
 }
 
-.gh-content h6 {
-    margin: 0.5em 0 0.2em 0;
+.gh-content h5 {
+    display: block;
+    margin: 1.5em 0;
+    text-align: center;
 }
 
-.gh-content table {
-    margin: 0.5em 0 2.5em;
+.gh-content hr {
+    margin: 2em 0;
 }
 
+.gh-content ul,
+.gh-content ol,
+.gh-content dl {
+    padding-left: 1.9em;
+}
 
 /* Cards
 /* ---------------------------------------------------------- */

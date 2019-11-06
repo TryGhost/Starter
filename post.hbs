@@ -4,16 +4,16 @@
 <article class="gh-post {{post_class}}">
 
     <header class="gh-post-header gh-canvas">
+        {{#if feature_image}}
+            <div class="gh-post-image">
+                <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
+            </div>
+        {{/if}}
+
         <h1 class="gh-post-title">{{title}}</h1>
 
         {{#if custom_excerpt}}
             <p class="gh-post-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-
-        {{#if feature_image}}
-        <div class="gh-post-image">
-            <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
-        </div>
         {{/if}}
     </header>
 
