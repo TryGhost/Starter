@@ -1,4 +1,51 @@
 
+/* Content grid
+/* ---------------------------------------------------------- */
+.gh-content {
+    display: grid;
+    grid-row-gap: 1.5em;
+    grid-template-columns:
+    [full-start]
+      minmax(calc(calc(100% - 720px) / 2), 1fr)
+        [wide-start]
+            1fr
+                [main-start]
+                      repeat(10, [col-start] 1fr)
+                [main-end]
+            1fr
+        [wide-end]
+      minmax(calc(calc(100% - 720px) / 2), 1fr)
+    [full-end]
+    ;
+}
+
+@media (max-width: 600px) {
+    .gh-content {
+        grid-template-columns:
+            [full-start]
+              minmax(calc(calc(100% - 720px) / 2), 1fr)
+                [wide-start main-start]
+                    repeat(10, [col-start] 1fr)
+                [main-end wide-end]
+              minmax(calc(calc(100% - 720px) / 2), 1fr)
+            [full-end]
+        ;
+    }
+}
+
+.gh-content > * {
+    grid-column: main-start / main-end;
+}
+
+.kg-width-wide {
+    grid-column: wide-start / wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start / full-end;
+}
+
+
 /* Tables
 /* ---------------------------------------------------------- */
 
@@ -59,16 +106,14 @@ tfoot {
     margin: 7vw 0;
 }
 
+/* Do we need this anymore?
 .kg-embed-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-
-.kg-image {
-    max-width: 100%;
-}
+*/
 
 .kg-card figcaption {
     padding: 1.5rem;
@@ -80,58 +125,34 @@ tfoot {
     opacity: 0.4;
 }
 
+.gh-content > pre {
+    overflow: scroll;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    padding: 16px 20px;
+}
 
-/* Wide cards
+/* Card captions
 /* ---------------------------------------------------------- */
-
-.kg-width-wide {
-    position: relative;
-    width: 75vw;
-    min-width: 100%;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    transform: translateX(calc(50vw - 50%));
+.kg-width-full.kg-card-hascaption {
+    display: grid;
+    grid-template-columns: inherit;
 }
 
-.kg-width-full {
-    position: relative;
-    width: 94vw;
-    min-width: 100%;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    transform: translateX(calc(50vw - 50%));
+.kg-width-wide.kg-card-hascaption img {
+    grid-column: wide-start / wide-end;
+}
+.kg-width-full.kg-card-hascaption img {
+    grid-column: full-start / full-end;
 }
 
-.kg-width-full figcaption {
-    padding-left: 0;
-    padding-right: 0;
-    text-align: left;
-}
-
-@media (max-width: 800px) {
-    .kg-width-full {
-        width: 100vw;
-    }
-    .kg-width-full figcaption {
-        padding-left: 6vw;
-    }
+.kg-width-full.kg-card-hascaption figcaption {
+    grid-column: main-start / main-end;
 }
 
 
 /* Galleries
 /* ---------------------------------------------------------- */
-
-.kg-gallery-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 75vw;
-    min-width: 100%;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    transform: translateX(calc(50vw - 50%));
-}
-
 .kg-gallery-row {
     display: flex;
     flex-direction: row;
@@ -153,31 +174,9 @@ tfoot {
     margin: 0 0 0 0.75em;
 }
 
-.kg-gallery-card + .kg-image-card.kg-width-wide,
-.kg-gallery-card + .kg-gallery-card,
-.kg-image-card.kg-width-wide + .kg-gallery-card,
-.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
-    margin-top: calc( -7vw + 0.75em );
-}
-
-/* Code Cards
-/* ---------------------------------------------------------- */
-
-.kg-code-card {
-    width: 100%;
-}
-
-.kg-code-card pre {
-    margin: 0;
-}
-
 
 /* Bookmark Cards
 /* ---------------------------------------------------------- */
-
-.kg-bookmark-card {
-    width: 100%;
-}
 
 .kg-bookmark-container {
     display: flex;
@@ -205,7 +204,7 @@ tfoot {
 }
 
 .kg-bookmark-title {
-    color: #131313;
+    color: inherit;
     font-size: 1.6rem;
     line-height: 1.5em;
     font-weight: 600;
@@ -220,7 +219,6 @@ tfoot {
     font-weight: 400;
     max-height: 44px;
     overflow-y: hidden;
-
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
@@ -239,7 +237,6 @@ tfoot {
     width: 100%;
     height: 100%;
     border-radius: 0 3px 3px 0;
-
     object-fit: cover;
 }
 
