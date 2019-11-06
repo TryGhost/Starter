@@ -21,32 +21,24 @@
         {{content}}
     </div>
 
-    {{!-- Email subscribe form at the bottom of the page --}}
-    {{#if @labs.members}}
-        {{> subscribe-form}}
-    {{/if}}
-
     <footer class="gh-post-footer">
 
         <div class="gh-post-authors">
-            Written by
-            {{#foreach authors}}
-                <a href="{{url}}">{{name}}</a>
-            {{/foreach}}
+            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
         </div>
 
-    </footer>
+        {{!--
+        <section class="gh-post-comments">
+            If you want to embed comments, this is a good place to do it!
+        </section>
+        --}}
 
-    {{!--
-    <section class="gh-post-comments">
-        If you want to embed comments, this is a good place to do it!
-    </section>
-    --}}
+    </footer>
 
 </article>
 {{/post}}
 
-{{!-- The #contentFor helper here will send everything in it to the matching #block helper in default.hbs --}}
+
 {{#contentFor "scripts"}}
 <script>
 var images = document.querySelectorAll('.kg-gallery-image img');
@@ -59,3 +51,5 @@ images.forEach(function (image) {
 })
 </script>
 {{/contentFor}}
+
+{{!-- The #contentFor helper sends everything in it to the matching #block helper in default.hbs --}}
