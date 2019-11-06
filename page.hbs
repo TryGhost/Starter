@@ -3,6 +3,18 @@
 {{#post}}
 <article class="gh-page {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
+    <header class="gh-header gh-canvas">
+        {{#if feature_image}}
+            <img class="gh-image" src="{{feature_image}}" alt="{{title}}" />
+        {{/if}}
+
+        <h1 class="gh-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="gh-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+    </header>
+
     <div class="gh-content gh-canvas">
         {{content}}
     </div>

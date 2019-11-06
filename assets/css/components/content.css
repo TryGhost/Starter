@@ -1,4 +1,10 @@
 
+/* Main
+/* ---------------------------------------------------------- */
+.gh-main {
+    margin: 2rem 0;
+}
+
 /* Content grid
 /* ---------------------------------------------------------- */
 .gh-canvas {
@@ -100,22 +106,30 @@
 /* Post header
 /* ---------------------------------------------------------- */
 
-.gh-post-header {
+.gh-header {
     grid-row-gap: 2rem;
 }
 
-.gh-post-title,
-.gh-post-image {
+.gh-title,
+.gh-image {
     grid-row: 1 / 2;
     align-self: end;
 }
 
-.gh-post-excerpt {
+.gh-excerpt {
     grid-row: 2 / 3;
 }
 
-.gh-post-image {
+.gh-image {
     grid-column: full-start / full-end;
+}
+
+.gh-title {
+    margin-top: 2rem;
+}
+
+.gh-post-footer {
+    margin: 2rem 0;
 }
 
 /* Standard content
