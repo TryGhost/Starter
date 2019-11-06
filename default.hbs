@@ -17,9 +17,7 @@
 
 <header class="gh-head">
     <nav class="gh-container">
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
+
         <div class="gh-head-brand">
             <a class="gh-head-logo" href="{{@site.url}}">
                 {{#if @site.logo}}
@@ -28,6 +26,9 @@
                     {{@site.title}}
                 {{/if}}
             </a>
+        </div>
+        <div class="gh-head-menu">
+            {{navigation}}
         </div>
         <div class="gh-head-actions">
             <div class="gh-head-actions-list">
