@@ -5,75 +5,90 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 */
 
-
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
+
+/* Base */
 @import "vars.css";
 @import "components/global.css";
-@import "components/ghost.css";
-@import "components/lists.css";
-@import "components/grid.css";
-@import "components/tables.css";
+
+/* Ghost components */
+@import "components/content.css";
+@import "components/members.css";
+
+/* Global components */
 @import "components/forms.css";
 @import "components/buttons.css";
 
 
-/* Main - Theme styles
+/* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
-
-/* Your styles here! Edit below */
-
-
 /* Global */
-.inner {
+.gh-container {
     width: 100%;
-    max-width: 1030px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 /* Header */
-.site-head {
+.gh-head {
     padding: 20px 4vw;
     color: #fff;
     background: var(--color-base);
 }
 
-.site-head a {
+.gh-head a {
     color: #fff;
+    line-height: 1.2em;
+    text-decoration: none;
 }
 
-.site-head-container {
+.gh-head .gh-container {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.gh-head-menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.site-head-left .nav {
+.gh-head-menu .nav {
     display: flex;
     align-items: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.site-head-left .nav li {
+.gh-head-menu .nav li {
     margin: 0 10px 0 0;
     padding: 0;
 }
 
-.site-head-logo img {
-    height: 30px;
-    width: auto;
+.gh-head-brand {
+    max-width: 200px;
+    text-align: center;
+    word-break: break-all;
 }
 
-/* Main */
-.site-main {
-    margin: 5vw 4vw;
+.gh-head-logo {
+    display: block;
+}
+
+.gh-head-logo img {
+    max-height: 40px;
+}
+
+.gh-head-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
 }
 
 /* Footer */
-.site-foot {
+.gh-foot {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,12 +97,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
     background: var(--color-base);
 }
 
-.site-foot a {
+.gh-foot a {
     color: #fff;
-}
-
-
-/* Natural flow and rhythm in articles by default */
-.post-body > * + * {
-  margin-top: 1em;
 }
