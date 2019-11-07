@@ -31,6 +31,10 @@ production stylesheet in assets/built/screen.css using: gulp dev
     margin: 0 auto;
 }
 
+.gh-main {
+    padding: 0 4vw;
+}
+
 /* Header */
 .gh-head {
     padding: 20px 4vw;
@@ -124,13 +128,13 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Menu
 /* ---------------------------------------------------------- */
 
-.burger {
+.gh-burger {
     position: relative;
     display: none;
     cursor: pointer;
 }
 
-.burger-box {
+.gh-burger-box {
     position: relative;
     display: flex;
     align-items: center;
@@ -139,12 +143,12 @@ production stylesheet in assets/built/screen.css using: gulp dev
     height: 33px;
 }
 
-.burger-inner {
+.gh-burger-inner {
     width: 100%;
     height: 100%;
 }
 
-.burger-box::before {
+.gh-burger-box::before {
     position: absolute;
     display: block;
     top: 0;
@@ -159,8 +163,8 @@ production stylesheet in assets/built/screen.css using: gulp dev
     will-change: transform, width;
 }
 
-.burger-inner::before,
-.burger-inner::after {
+.gh-burger-inner::before,
+.gh-burger-inner::after {
     position: absolute;
     display: block;
     top: 0;
@@ -175,57 +179,48 @@ production stylesheet in assets/built/screen.css using: gulp dev
     will-change: transform, width;
 }
 
-.burger-inner::before {
+.gh-burger-inner::before {
     transform: translatey(-6px);
 }
-.burger-inner::after {
+.gh-burger-inner::after {
     transform: translatey(6px);
 }
 
-body:not(.gh-head-open) .burger:hover .burger-inner::before {
+body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::before {
     transform: translatey(-8px);
 }
-body:not(.gh-head-open) .burger:hover .burger-inner::after {
+body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     transform: translatey(8px);
 }
 
-.gh-head-open .burger-box::before {
+.gh-head-open .gh-burger-box::before {
     width: 0;
     transform: translatex(19px);
     transition: transform 200ms cubic-bezier(.2,.7,.3,1), width 200ms cubic-bezier(.2,.7,.3,1);
 }
 
-.gh-head-open .burger-inner::before {
+.gh-head-open .gh-burger-inner::before {
     width: 26px;
     transform: translatex(6px) rotate(135deg);
 }
 
-.gh-head-open .burger-inner::after {
+.gh-head-open .gh-burger-inner::after {
     width: 26px;
     transform: translatex(6px) rotate(-135deg);
 }
 
 
 @media (max-width: 900px) {
-    .burger {
+    .gh-burger {
         display: inline-block;
     }
     .gh-head {
-        height: 86px;
         transition: all 0.4s ease-out;
         overflow: hidden;
     }
     .gh-head .gh-container {
         height: 100%;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-    }
-    .gh-head-actions,
-    .gh-head-menu {
-        position: relative;
-        z-index: -1;
-        height: auto;
-        transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     }
     .gh-head-brand {
         position: relative;
@@ -237,43 +232,28 @@ body:not(.gh-head-open) .burger:hover .burger-inner::after {
         justify-content: space-between;
         user-select: none;
     }
-    .gh-head-open {
-        background: rgba(0,0,0,1);
-        transition: background 0.5s ease-out;
-        transition-delay: 0.25;
-        overflow: hidden;
-        height: 100vh;
-    }
-
-    .gh-head-open .gh-head {
-        height: 100vh;
-        overflow-y: scroll;
-        transition: height 0.2s ease-in;
-    }
-
-    .gh-head-open .gh-head-actions,
-    .gh-head-open .gh-head-menu {
-        z-index: 9999;
-        height: auto;
-        transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    }
-
-    .gh-head-open .gh-head-menu {
+    .gh-head-menu {
         align-self: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
         margin: 0 0 10vh;
+        font-weight: 300;
         font-size: 3.6rem;
-        line-height: 1.5em;
+        line-height: 1.1em;
     }
-
+     .gh-head-menu .nav li {
+        margin: 5px 0;
+    }
+    .gh-head-menu .nav a {
+        padding: 8px 0;
+    }
     .gh-head-menu .nav {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .gh-head-actions {
         padding: 20px 0;
         justify-content: center;
@@ -282,8 +262,37 @@ body:not(.gh-head-open) .burger:hover .burger-inner::after {
     .gh-head-actions a {
         margin: 0 10px;
     }
+    /* Hide collapsed content */
+    .gh-head-actions,
+    .gh-head-menu {
+        display: none;
+    }
+    /* Open the menu */
+    .gh-head-open {
+        overflow: hidden;
+        height: 100vh;
+    }
+    .gh-head-open .gh-head {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow-y: scroll;
+    }
+    .gh-head-open .gh-head .gh-container {
+        grid-template-rows: auto 1fr auto;
+    }
+    .gh-head-open .gh-head-actions,
+    .gh-head-open .gh-head-menu {
+        display: flex;
+    }
 }
-
+@media (max-width: 600px) {
+    .gh-head-menu {
+        font-size: 6vmin;
+    }
+}
 
 
 /* Footer
