@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
 <head>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
@@ -8,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
     <title>{{meta_title}}</title>
+
     {{ghost_head}}
     {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
 
@@ -15,7 +17,7 @@
 <body class="{{body_class}}">
 <div class="gh-viewport">
 
-<header class="gh-head">
+<header id="gh-head" class="gh-head">
     <nav class="gh-container">
 
         <div class="gh-head-brand">
@@ -38,12 +40,12 @@
         <div class="gh-head-actions">
             <div class="gh-head-actions-list">
                 {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
+                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                 {{/if}}
                 {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
+                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                 {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
             </div>
         </div>
     </nav>

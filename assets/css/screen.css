@@ -25,6 +25,11 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
+html,
+.gh-viewport {
+    background: #fff;
+}
+
 /* Global */
 .gh-container {
     width: 100%;
@@ -34,6 +39,27 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 .gh-main {
     padding: 0 4vw;
+}
+
+
+.gh-head-actions a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.gh-head-actions a svg {
+    height: 1.8rem;
+    fill: currentcolor;
+}
+
+.gh-head-actions a:first-child svg {
+    margin-left: 20px;
+}
+
+.gh-head-actions a:last-child svg {
+    height: 2rem;
 }
 
 
