@@ -102,6 +102,15 @@ mark {
     background-color: #fdffb6;
 }
 
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
+
 a:not([class]) {
     color: color(var(--color-primary) l(-5%));
     text-decoration-skip-ink: auto;
