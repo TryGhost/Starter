@@ -193,6 +193,12 @@
 /* Cards
 /* ---------------------------------------------------------- */
 
+.kg-gallery-container,
+.kg-bookmark-card,
+.kg-bookmark-publisher {
+    position: relative;
+}
+
 .gh-content > * + * {
     margin-top: 1.5rem;
 }
