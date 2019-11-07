@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns:
     [full-start]
-      minmax(calc(calc(100% - 720px) / 2), 1fr)
+      minmax(calc(calc(100% - 1000px) / 2), 1fr)
         [wide-start]
             1fr
                 [main-start]
@@ -19,7 +19,7 @@
                 [main-end]
             1fr
         [wide-end]
-      minmax(calc(calc(100% - 720px) / 2), 1fr)
+      minmax(calc(calc(100% - 1000px) / 2), 1fr)
     [full-end]
     ;
 }
