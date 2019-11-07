@@ -97,6 +97,7 @@
 
 .gh-header {
     grid-row-gap: 2rem;
+    margin-bottom: 1.5em;
 }
 
 .gh-title,
@@ -107,7 +108,6 @@
 
 .gh-excerpt {
     grid-row: 2 / 3;
-    margin-bottom: 1.5em;
 }
 
 .gh-image {
