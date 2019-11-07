@@ -60,7 +60,7 @@ img {
 input,
 button,
 select,
-textarea, {
+textarea {
     font: inherit;
 }
 
@@ -78,7 +78,6 @@ hr {
 blockquote {
     margin: 1.5em 0;
     padding: 0 1.6em 0 1.6em;
-    border-left: var(--color-bg) 0.5em solid;
 }
 
 blockquote p {
