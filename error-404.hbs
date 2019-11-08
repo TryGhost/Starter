@@ -1,43 +1,13 @@
-{{!--
+{{!< default}}
 
-A 404 error template, served whenever someone tries to access a page which does not exist.
+<section class="gh-page gh-error">
+    <div class="gh-container">
 
---}}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{meta_title}}</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
-</head>
-<body class="error-template">
-    <div class="site-wrapper">
-
-        <header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-image{{/if}}">
-            <div class="inner">
-                <nav class="site-nav-center">
-                    {{#if @site.logo}}
-                        <a class="site-nav-logo" href="{{@site.url}}"><img src="{{img_url @site.logo size="xs"}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                        <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
-                    {{/if}}
-                </nav>
-            </div>
-        </header>
-
-        <main id="site-main" class="site-main outer">
-            <div class="inner">
-                <section class="error-message">
-                    <h1 class="error-code">{{statusCode}}</h1>
-                    <p class="error-description">{{message}}</p>
-                    <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
-                </section>
-            </div>
-        </main>
+        <section class="gh-error-content">
+            <h1 class="gh-error-code">{{statusCode}}</h1>
+            <p class="gh-error-description">{{message}}</p>
+            <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
+        </section>
 
     </div>
-</body>
-</html>
+</section>

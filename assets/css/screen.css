@@ -27,19 +27,29 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 html,
 .gh-viewport {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background: #fff;
 }
 
+.gh-main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Global */
+
+.gh-page {
+    padding: 0 4vw;
+}
+
 .gh-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
-
-/* .gh-main {
-    padding: 0 4vw;
-} */
 
 
 .gh-head-actions a {
@@ -60,6 +70,39 @@ html,
 
 .gh-head-actions a:last-child svg {
     height: 2rem;
+}
+
+/* Errors
+/* ---------------------------------------------------------- */
+
+.gh-error {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2vmin;
+}
+
+.gh-error-content {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.gh-error-code {
+    margin: 0;
+    font-size: 14vmin;
+}
+
+.gh-error-description {
+    font-size: 4vmin;
+    font-weight: 300;
+    opacity: 0.6;
+}
+
+.gh-error-link {
+    display: block;
+    margin-top: 4vmin;
+    font-size: 1.6rem;
 }
 
 
