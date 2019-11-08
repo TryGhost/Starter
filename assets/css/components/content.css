@@ -355,3 +355,13 @@
     content: "•";
     margin: 0 .5em;
 }
+
+/* Spotify Cards
+/* ---------------------------------------------------------- */
+
+.kg-card iframe[src*="spotify.com"] {
+    width: 100%;
+    height: 25vw;
+    min-height: 200px;
+    max-height: 400px;
+}
