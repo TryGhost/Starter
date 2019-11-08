@@ -112,6 +112,7 @@
 
 .gh-image {
     grid-column: full-start / full-end;
+    width: 100%;
 }
 
 .gh-title {
