@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns:
     [full-start]
-      minmax(calc(calc(100% - 1000px) / 2), 1fr)
+      minmax(calc(calc(100% - 880px) / 2), 1fr)
         [wide-start]
             1fr
                 [main-start]
@@ -19,7 +19,7 @@
                 [main-end]
             1fr
         [wide-end]
-      minmax(calc(calc(100% - 1000px) / 2), 1fr)
+      minmax(calc(calc(100% - 880px) / 2), 1fr)
     [full-end]
     ;
 }
@@ -42,7 +42,8 @@
     grid-column: main-start / main-end;
 }
 
-.kg-width-wide {
+.kg-width-wide,
+.gh-canvas > h5 {
     grid-column: wide-start / wide-end;
 }
 
@@ -130,37 +131,33 @@
 /* Standard content
 /* ---------------------------------------------------------- */
 
-.gh-content h1,
-.gh-content h2,
-.gh-content h3,
-.gh-content h4,
-.gh-content h5,
-.gh-content h6,
+.gh-content [id],
 .gh-content table,
 .gh-content blockquote {
     margin: 0.6em 0 0.3em;
 }
 
-.gh-content > [id] + [id] {
+.gh-content > [id] + [id]:not(h5) {
     margin-top: 0;
 }
 
-.gh-content h1 + .kg-card,
-.gh-content h2 + .kg-card,
-.gh-content h3 + .kg-card,
-.gh-content h4 + .kg-card,
-.gh-content h5 + .kg-card,
-.gh-content h6 + .kg-card,
+.gh-content > .kg-card + [id]:not(h5) {
+    margin-top: 2.3em;
+}
+
+.gh-content [id] + .kg-card,
 .gh-content table + .kg-card,
 .gh-content blockquote + .kg-card,
 .gh-content blockquote {
     margin-top: 1.5em;
 }
 
-.gh-content h5 {
+.gh-content h5[id] {
     display: block;
-    margin: 1.5em 0;
+    margin: 2em 0 1.5em;
     text-align: center;
+    line-height: 1.35em;
+    font-weight: 300;
 }
 
 .gh-content hr {
@@ -203,21 +200,16 @@
 .gh-content > * + * {
     margin-top: 1.5rem;
 }
-.gh-content > h1 + *,
-.gh-content > h2 + *,
-.gh-content > h3 + *,
-.gh-content > h4 + *,
-.gh-content > h5 + *,
-.gh-content > h6 + * {
+.gh-content > [id] + * {
     margin-top: 0;
 }
 
-:not(.kg-card):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + .kg-card,
+:not(.kg-card):not([id]) + .kg-card,
 .gh-post-footer {
     margin-top: 7vw;
 }
 
-.kg-card + :not(.kg-card):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+.kg-card + :not(.kg-card):not([id]) {
     margin-top: 7vw;
 }
 
