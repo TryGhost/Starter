@@ -10,17 +10,17 @@
 .gh-canvas {
     display: grid;
     grid-template-columns:
-    [full-start]
-      minmax(calc(calc(100% - 880px) / 2), 1fr)
-        [wide-start]
-            1fr
-                [main-start]
-                    repeat(10, [col-start] 1fr)
-                [main-end]
-            1fr
-        [wide-end]
-      minmax(calc(calc(100% - 880px) / 2), 1fr)
-    [full-end]
+        [full-start]
+          minmax(calc(calc(100% - 970px) / 2), 1fr)
+            [wide-start]
+                1fr
+                    [main-start]
+                        repeat(10, [col-start] 1fr)
+                    [main-end]
+                1fr
+            [wide-end]
+          minmax(calc(calc(100% - 970px) / 2), 1fr)
+        [full-end]
     ;
 }
 
@@ -252,7 +252,7 @@
     grid-column: wide-start / wide-end;
 }
 .kg-width-full.kg-card-hascaption img {
-    grid-column: full-start / full-end;
+    grid-column: 1 / -1;
 }
 
 .kg-width-full.kg-card-hascaption figcaption {
