@@ -1,5 +1,8 @@
 {
   "extends": [
-    "config:base"
-  ]
+    "@tryghost:theme"
+  ],
+  "node": {
+    "supportPolicy": ["lts_latest"]
+  }
 }
