@@ -113,7 +113,7 @@
 .gh-content blockquote::before {
     content: "";
     position: absolute;
-    left: -1.1em;
+    left: -1.5em;
     top: 0;
     bottom: 0;
     width: 0.3rem;
@@ -127,6 +127,10 @@
     .gh-canvas dl,
     .gh-canvas p {
         font-size: 1.8rem;
+    }
+
+    .gh-content blockquote::before {
+        left: -4vw;
     }
 }
 
@@ -168,6 +172,7 @@
     font-weight: 400 !important;
     font-size: 0.9em;
     line-height: 1em;
+    color: #dc0050;
     background: #f0f6f9;
     border-radius: 0.25em;
 }
