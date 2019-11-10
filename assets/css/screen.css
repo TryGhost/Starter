@@ -72,6 +72,22 @@ html,
     height: 2rem;
 }
 
+/* Post header
+/* ---------------------------------------------------------- */
+
+.gh-excerpt {
+    grid-row: 2 / 3;
+}
+
+.gh-image {
+    grid-column: full-start / full-end;
+    width: 100%;
+}
+
+.gh-post-footer {
+    margin: 2rem 0;
+}
+
 /* Errors
 /* ---------------------------------------------------------- */
 

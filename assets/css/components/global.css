@@ -37,6 +37,7 @@ ol,
 li,
 dl,
 dd,
+hr,
 pre,
 table,
 video,
@@ -44,6 +45,7 @@ figure,
 figcaption,
 blockquote {
     margin: 0;
+    padding: 0;
 }
 
 ul[class],
@@ -68,29 +70,10 @@ hr {
     position: relative;
     display: block;
     width: 100%;
-    margin: 2.5em 0 3.5em;
-    padding: 0;
     height: 1px;
     border: 0;
-    border-top: 1px solid color(var(--color-border) l(+10%));
-}
-
-blockquote {
-    margin: 1.5em 0;
-    padding: 0 1.6em 0 1.6em;
-}
-
-blockquote p {
-    margin: 0.8em 0;
-    font-size: 1.2em;
-    font-weight: 300;
-}
-
-blockquote small {
-    display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;
-    font-size: 0.9em;
-    opacity: 0.8;
+    border-top: 1px solid currentcolor;
+    opacity: 0.2;
 }
 
 ::selection {
@@ -102,13 +85,22 @@ mark {
     background-color: #fdffb6;
 }
 
-sup, sub {
-  vertical-align: baseline;
-  position: relative;
-  top: -0.4em;
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
 }
 sub {
-  top: 0.4em;
+    bottom: -0.25em;
 }
 
 a:not([class]) {
@@ -138,7 +130,6 @@ h6 {
 }
 
 h1 {
-    margin: 0 0 0.5em 0;
     font-size: 5.7rem;
     font-weight: 800;
 }
@@ -149,7 +140,6 @@ h1 {
 }
 
 h2 {
-    margin: 0 0 0.5em 0;
     font-size: 4rem;
 }
 @media (max-width: 500px) {
@@ -159,7 +149,6 @@ h2 {
 }
 
 h3 {
-    margin: 0 0 1em 0;
     font-size: 3.2rem;
 }
 @media (max-width: 500px) {
@@ -169,17 +158,14 @@ h3 {
 }
 
 h4 {
-    margin: 0 0 1em 0;
     font-size: 2.6rem;
 }
 
 h5 {
-    margin: 0 0 1em 0;
     font-size: 2.4rem;
 }
 
 h6 {
-    margin: 0 0 1em 0;
     font-size: 2.2rem;
 }
 
