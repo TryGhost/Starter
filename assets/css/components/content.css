@@ -6,42 +6,50 @@
     display: grid;
     grid-template-columns:
         [full-start]
-          minmax(calc(calc(100% - 1040px) / 2), 1fr)
+          minmax(calc(calc(100% - 1200px) / 2), 1fr)
             [wide-start]
-                2fr
+                auto
                     [main-start]
-                        repeat(10, [col-start] 1fr)
+                        720px
                     [main-end]
-                2fr
+                auto
             [wide-end]
-          minmax(calc(calc(100% - 1040px) / 2), 1fr)
+          minmax(calc(calc(100% - 1200px) / 2), 1fr)
         [full-end]
     ;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1296px) {
     .gh-canvas {
         grid-template-columns:
             [full-start]
-              minmax(calc(calc(100% - 700px) / 2), 1fr)
-                [wide-start main-start]
-                    repeat(10, [col-start] 1fr)
-                [main-end wide-end]
-              minmax(calc(calc(100% - 700px) / 2), 1fr)
+            4vw
+                [wide-start]
+                    auto
+                        [main-start]
+                            720px
+                        [main-end]
+                    auto
+                [wide-end]
+            4vw
             [full-end]
         ;
     }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 778px) {
     .gh-canvas {
         grid-template-columns:
             [full-start]
-              4vw
-                [wide-start main-start]
-                    repeat(10, [col-start] 1fr)
-                [main-end wide-end]
-              4vw
+            4vw
+                [wide-start]
+                    auto
+                        [main-start]
+                            auto
+                        [main-end]
+                    auto
+                [wide-end]
+            4vw
             [full-end]
         ;
     }
@@ -178,11 +186,15 @@
 
 .kg-card figcaption {
     padding: 1.5rem 1.5rem 0;
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+    font-weight: 600;
     font-size: 1.3rem;
     line-height: 1.4em;
-    font-weight: 600;
-    text-align: center;
-    opacity: 0.4;
+}
+
+.kg-card figcaption strong {
+    color: rgba(0,0,0,0.8);
 }
 
 .gh-canvas :not(pre) code {
