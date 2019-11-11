@@ -139,7 +139,7 @@
     background: var(--color-primary);
 }
 
-@media (max-width: 740px) {
+@media (max-width: 650px) {
     .gh-canvas blockquote,
     .gh-canvas ol,
     .gh-canvas ul,
