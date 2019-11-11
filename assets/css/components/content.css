@@ -64,7 +64,18 @@
 /* ---------------------------------------------------------- */
 
 .gh-content > * + * {
-    margin-top: 3vw;
+    margin-top: 4vw;
+}
+
+@media (min-width: 600px) {
+    .gh-content > * + * {
+        margin-top: 3vw;
+    }
+}
+@media (min-width: 1100px) {
+    .gh-content > * + * {
+        margin-top: 4.2rem;
+    }
 }
 
 .gh-content > [id] + * {
@@ -146,6 +157,15 @@
     margin-top: 6vw;
 }
 
+@media (min-width: 600px) {
+    :not(.kg-card):not([id]) + .kg-card {
+        margin-top: 6vw;
+    }
+
+    .kg-card + :not(.kg-card):not([id]) {
+        margin-top: 6vw;
+    }
+}
 @media (min-width: 1100px) {
     :not(.kg-card):not([id]) + .kg-card {
         margin-top: 6rem;

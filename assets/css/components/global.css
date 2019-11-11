@@ -130,8 +130,8 @@ h6 {
 }
 
 h1 {
-    font-size: 5.7rem;
-    font-weight: 800;
+    font-size: 4.6rem;
+    letter-spacing: -0.5px;
 }
 @media (max-width: 500px) {
     h1 {
@@ -140,7 +140,7 @@ h1 {
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3.4rem;
 }
 @media (max-width: 500px) {
     h2 {
