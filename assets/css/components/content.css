@@ -287,11 +287,15 @@
 /* Bookmark Cards
 /* ---------------------------------------------------------- */
 
+.kg-bookmark-card {
+    width: 100%;
+    position: relative;
+}
+
 .kg-bookmark-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-    min-height: 148px;
     color: currentColor;
     background: rgba(255,255,255,0.6);
     font-family: inherit;
@@ -316,8 +320,12 @@
     font-weight: 600;
 }
 
-.kg-bookmark-metadata {
+.kg-bookmark-metadata,
+.kg-bookmark-description {
     margin-top: .5em;
+}
+
+.kg-bookmark-metadata {
     align-items: center;
     white-space: nowrap;
     overflow: hidden;
@@ -325,8 +333,10 @@
 }
 
 .kg-bookmark-description {
-    -webkit-line-clamp: 2;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .kg-bookmark-icon {
@@ -351,7 +361,7 @@
     object-fit: cover;
 }
 
-.kg-bookmark-author::after {
+.kg-bookmark-publisher::before {
     content: "•";
     margin: 0 .5em;
 }
