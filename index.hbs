@@ -1,22 +1,15 @@
 {{!< default}}
 
-<div class="gh-container">
+<div class="gh-page">
+    <div class="gh-container">
 
-    {{#is "home"}}
-        {{#if @site.description}}
-        <header class="page-head">
-            <h2 class="page-head-title">{{@site.description}}</h2>
-        </header>
-        {{/if}}
-    {{/is}}
+        <div class="post-feed">
+        {{#foreach posts}}
 
-    <div class="post-feed">
-    {{#foreach posts}}
+            {{> "post-card"}} {{!-- partials/post-card.hbs --}}
 
-        {{> "post-card"}}
-        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+        {{/foreach}}
+        </div>
 
-    {{/foreach}}
     </div>
-
 </div>
