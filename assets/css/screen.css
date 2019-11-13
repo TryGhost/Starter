@@ -51,7 +51,6 @@ html,
     margin: 0 auto;
 }
 
-
 .gh-head-actions a {
     display: inline-flex;
     align-items: center;
@@ -72,8 +71,36 @@ html,
     height: 2rem;
 }
 
-/* Post header
+/* Index
 /* ---------------------------------------------------------- */
+
+.post-card {
+    margin: 0 0 4vw;
+}
+
+.post-card-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-card-image {
+    margin-left: 4vw;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Post
+/* ---------------------------------------------------------- */
+
+.gh-header {
+    padding: 0 0 4vw 0;
+}
+
+.gh-title {
+    margin-top: 4vw;
+}
 
 .gh-image {
     grid-column: full-start / full-end;
