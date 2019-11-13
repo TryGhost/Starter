@@ -346,6 +346,12 @@
     object-fit: cover;
 }
 
+.kg-bookmark-author {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .kg-bookmark-publisher::before {
     content: "•";
     margin: 0 .5em;
