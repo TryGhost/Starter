@@ -95,7 +95,7 @@ html,
     margin: 0 0 1rem;
     font-size: 1.3rem;
     text-transform: uppercase;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .post-card-content {
@@ -114,7 +114,7 @@ html,
     padding: 1px 0;
     font-weight: 500;
     box-shadow: 0 -1px 0 0 inset currentColor;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 
