@@ -4,10 +4,6 @@ Re-usable card for linking to posts
 
 <article class="post-card {{post_class}} {{#if feature_image}}with-image{{else}}no-image{{/if}}">
     <a class="post-card-link" href="{{url}}">
-        <div class="post-card-content">
-            <h2 class="post-card-title">{{title}}</h2>
-            <p>{{excerpt}}</p>
-        </div>
         {{#if feature_image}}
             <img class="post-card-image"
                 srcset="{{img_url feature_image size="s"}} 300w,
@@ -19,5 +15,11 @@ Re-usable card for linking to posts
                 alt="{{title}}"
             />
         {{/if}}
+        <div class="post-card-content">
+            <span class="post-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+            <h2 class="post-card-title">{{title}}</h2>
+            <p>{{excerpt}}</p>
+            <strong>Read more</strong>
+        </div>
     </a>
 </article>

@@ -75,19 +75,46 @@ html,
 /* ---------------------------------------------------------- */
 
 .post-card {
-    margin: 0 0 4vw;
+    margin: 0 auto 6vw;
 }
 
 .post-card-link {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .post-card-image {
-    margin-left: 4vw;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    max-height: 700px;
     object-fit: cover;
+    margin-bottom: 2vw;
+}
+
+.post-card-meta {
+    display: block;
+    margin: 0 0 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.post-card-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.post-card-content p {
+    margin: 1rem 0;
+    padding: 0 4vw;
+}
+
+.post-card-content > strong {
+    display: inline-block;
+    padding: 1px 0;
+    font-weight: 500;
+    box-shadow: 0 -1px 0 0 inset currentColor;
+    opacity: 0.6;
 }
 
 
