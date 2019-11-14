@@ -4,14 +4,15 @@
 <article class="{{post_class}}">
 
     <header class="gh-header gh-canvas">
-        {{#if feature_image}}
-            <img class="gh-image" src="{{feature_image}}" alt="{{title}}" />
-        {{/if}}
-
+        <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
         <h1 class="gh-title">{{title}}</h1>
 
         {{#if custom_excerpt}}
-            <p class="gh-excerpt">{{custom_excerpt}}</p>
+        <p class="gh-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <img class="gh-feature-image" src="{{feature_image}}" alt="{{title}}" />
         {{/if}}
     </header>
 

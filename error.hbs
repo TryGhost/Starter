@@ -1,64 +1,34 @@
-{{!--
 
-This error template is used for all server errors except 404, which has a custom template.
-It's a good idea to keep this template as minimal as possible in terms of both file size and complexity.
+{{!< default}}
 
---}}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{meta_title}}</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
-</head>
-<body class="error-template">
-    <div class="site-wrapper">
+<section class="gh-page gh-error">
+    <div class="gh-container">
 
-        <header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-image{{/if}}">
-            <div class="inner">
-                <nav class="site-nav-center">
-                    {{#if @site.logo}}
-                    <a class="site-nav-logo" href="{{@site.url}}"><img src="{{img_url @site.logo size="xs"}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                    <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
-                    {{/if}}
-                </nav>
-            </div>
-        </header>
+        <section class="gh-error-content">
 
-        <main id="site-main" class="site-main outer">
-            <div class="inner">
+            <h1 class="gh-error-code">{{statusCode}}</h1>
+            <p class="gh-error-description">{{message}}</p>
+            <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
 
-                <section class="error-message">
-                    <h1 class="error-code">{{statusCode}}</h1>
-                    <p class="error-description">{{message}}</p>
-                    <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
-                </section>
+            {{#if errorDetails}}
+            <section class="gh-error-stack">
+                <h4>Theme errors:</h4>
+                <ul class="gh-error-stack-list">
+                    {{#foreach errorDetails}}
+                    <li>
+                        <h5 class="gh-error-stack-function">{{{rule}}}</h5>
 
-                {{#if errorDetails}}
-                <section class="error-stack">
-                    <h3>Theme errors</h3>
-                    <ul class="error-stack-list">
-                        {{#foreach errorDetails}}
-                        <li>
-                            <em class="error-stack-function">{{{rule}}}</em>
-
-                            {{#foreach failures}}
-                            <p><span class="error-stack-file">Ref: {{ref}}</span></p>
-                            <p><span class="error-stack-file">Message: {{message}}</span></p>
-                            {{/foreach}}
-                        </li>
+                        {{#foreach failures}}
+                        <span class="gh-error-stack-file"><strong>Ref:</strong> {{ref}}</span><br>
+                        <span class="gh-error-stack-file"><strong>Message:</strong> {{message}}</span>
                         {{/foreach}}
-                    </ul>
-                </section>
-                {{/if}}
+                    </li>
+                    {{/foreach}}
+                </ul>
+            </section>
+            {{/if}}
 
-            </div>
-        </main>
+        </section>
 
     </div>
-</body>
-</html>
+</section>

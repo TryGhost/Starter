@@ -74,42 +74,44 @@ html,
 /* Index
 /* ---------------------------------------------------------- */
 
-.post-card {
+.gh-postcard {
     margin: 0 auto 6vw;
 }
 
-.post-card-link {
+.gh-postcard-link {
     display: flex;
     flex-direction: column;
 }
 
-.post-card-image {
+.gh-postcard-image {
     width: 100%;
     max-height: 700px;
     object-fit: cover;
     margin-bottom: 2vw;
 }
 
-.post-card-meta {
+.gh-postcard-meta {
     display: block;
     margin: 0 0 1rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    line-height: 1.2em;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     opacity: 0.8;
 }
 
-.post-card-content {
+.gh-postcard-content {
     max-width: 720px;
     margin: 0 auto;
     text-align: center;
 }
 
-.post-card-content p {
-    margin: 1rem 0;
+.gh-postcard-content p {
+    margin: 1.2rem 0;
     padding: 0 4vw;
 }
 
-.post-card-content > strong {
+.gh-postcard-content > strong {
     display: inline-block;
     padding: 1px 0;
     font-weight: 500;
@@ -122,16 +124,24 @@ html,
 /* ---------------------------------------------------------- */
 
 .gh-header {
+    margin: 4vw 0 0;
     padding: 0 0 4vw 0;
+    text-align: center;
 }
 
-.gh-title {
-    margin-top: 4vw;
+.gh-post-meta {
+    display: block;
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
 }
 
-.gh-image {
-    grid-column: full-start / full-end;
+.gh-feature-image {
+    grid-column: wide-start / wide-end;
     width: 100%;
+    margin: 4vw 0 0;
 }
 
 .gh-post-footer {
@@ -160,7 +170,11 @@ html,
 }
 
 .gh-error-description {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
     font-size: 4vmin;
+    line-height: 1.2em;
     font-weight: 300;
     opacity: 0.6;
 }
@@ -169,6 +183,30 @@ html,
     display: block;
     margin-top: 4vmin;
     font-size: 1.6rem;
+}
+
+.gh-error-stack {
+    max-width: 600px;
+    margin: 0 auto 0;
+    padding: 4vw 0;
+    text-align: left;
+}
+
+.gh-error-stack-list {
+    margin: 2vw 0 0;
+    font-size: 1.4rem;
+}
+
+.gh-error-stack-list > li {
+    padding: 2rem 0;
+    margin: 0;
+    border-top: rgba(0,0,0,0.1) 1px solid;
+}
+
+.gh-error-stack-function {
+    margin: 0 0 0.5em;
+    font-size: 1.8rem;
+    color: red;
 }
 
 
