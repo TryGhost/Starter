@@ -60,7 +60,12 @@
 
 <footer class="gh-foot">
     <div class="gh-container">
-        &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+        <div class="gh-foot-menu">
+            {{navigation}}
+        </div>
+        <div class="gh-foot-meta">
+            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+        </div>
     </div>
 </footer>
 
@@ -98,7 +103,6 @@ images.forEach(function (image) {
     container.style.flex = ratio + ' 1 0%';
 });
 $(document).ready(function () {
-    // FitVids - start
     var $postContent = $(".gh-content");
     $postContent.fitVids();
 });
