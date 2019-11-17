@@ -11,18 +11,16 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Base */
 @import "vars.css";
 @import "components/global.css";
-
-/* Ghost components */
-@import "components/header.css";
-@import "components/content.css";
-@import "components/readmore.css";
-@import "components/members.css";
-@import "components/errors.css";
-@import "components/footer.css";
-
-/* Global components */
 @import "components/forms.css";
 @import "components/buttons.css";
+
+/* Ghost components */
+@import "ghost/header.css";
+@import "ghost/content.css";
+@import "ghost/readmore.css";
+@import "ghost/members.css";
+@import "ghost/errors.css";
+@import "ghost/footer.css";
 
 
 /* Main - Your styles here! Edit below
@@ -41,8 +39,6 @@ html,
     display: flex;
     flex-direction: column;
 }
-
-/* Global */
 
 .gh-page {
     padding: 0 4vw;

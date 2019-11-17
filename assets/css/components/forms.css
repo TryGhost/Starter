@@ -2,7 +2,7 @@
 /* ---------------------------------------------------------- */
 
 form {
-    margin: 0 0 var(--margin) 0;
+    margin: 0;
 }
 
 fieldset {
@@ -12,21 +12,13 @@ fieldset {
 }
 
 label {
-    color: var(--color-primary);
     display: block;
     font-size: 0.9em;
-    font-weight: var(--font-bold);
-    margin: 0 0 (var(--margin) * 0.5) 0;
+    font-weight: 700;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="search"],
-input[type="url"],
-select,
-textarea {
+.gh-input,
+.gh-textarea {
     background: var(--color-bg);
     border-radius: var(--radius);
     border: none;
@@ -39,65 +31,41 @@ textarea {
     width: 100%;
 }
 
-input[type="text"]:invalid,
-input[type="password"]:invalid,
-input[type="email"]:invalid,
-input[type="tel"]:invalid,
-input[type="search"]:invalid,
-input[type="url"]:invalid,
-select:invalid,
-textarea:invalid {
-    box-shadow: none;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="search"]:focus,
-input[type="url"]:focus,
-select:focus,
-textarea:focus {
+.gh-input:focus {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 1px var(--color-primary);
 }
 
-select {
+.gh-select {
     height: var(--height);
     padding-right: var(--height);
     text-overflow: ellipsis;
 }
 
-select option {
+.gh-select option {
     color: var(--color-primary);
     background: var(--color-bg);
 }
 
-select:focus::-ms-value {
+.gh-select:focus::-ms-value {
     background-color: transparent;
 }
 
-select::-ms-expand {
+.gh-select::-ms-expand {
     display: none;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="search"],
-input[type="url"],
-select {
+.gh-input,
+.gh-select {
     height: var(--height);
 }
 
-textarea {
+.gh-textarea {
     padding: 0.3em 0.6em;
     resize: vertical;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+.gh-check {
     display: block;
     margin-right: -2em;
     opacity: 0;
@@ -105,8 +73,8 @@ input[type="radio"] {
     z-index: -1;
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+.gh-check + label,
+.gh-check + label {
     display: flex;
     align-items: center;
     color: var(--color-base);
@@ -119,8 +87,8 @@ input[type="radio"] + label {
     user-select: none;
 }
 
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
+.gh-check + label:before,
+.gh-check + label:before {
     background: var(--color-bg);
     border-radius: var(--radius);
     border: solid 1px var(--color-border);
@@ -133,25 +101,25 @@ input[type="radio"] + label:before {
     margin-right: 1rem;
 }
 
-input[type="checkbox"]:checked + label:before,
-input[type="radio"]:checked + label:before {
+.gh-check:checked + label:before,
+.gh-check:checked + label:before {
     background: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--color-bg);
     content: '✓';
 }
 
-input[type="checkbox"]:focus + label:before,
-input[type="radio"]:focus + label:before {
+.gh-check:focus + label:before,
+.gh-check:focus + label:before {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 1px var(--color-primary);
 }
 
 
-input[type="checkbox"] + label:before {
+.gh-check + label:before {
     border-radius: var(--radius);
 }
 
-input[type="radio"] + label:before {
+.gh-check + label:before {
     border-radius: 100%;
 }
