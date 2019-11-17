@@ -2,10 +2,10 @@
 Re-usable card for linking to posts
 --}}
 
-<article class="gh-postcard {{post_class}} {{#if feature_image}}with-image{{else}}no-image{{/if}}">
-    <a class="gh-postcard-link" href="{{url}}">
+<article class="gh-card {{post_class}} {{#if feature_image}}with-image{{else}}no-image{{/if}}">
+    <a class="gh-card-link" href="{{url}}">
         {{#if feature_image}}
-            <img class="gh-postcard-image"
+            <img class="gh-card-image"
                 srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 600w,
                         {{img_url feature_image size="l"}} 1000w,
@@ -15,9 +15,9 @@ Re-usable card for linking to posts
                 alt="{{title}}"
             />
         {{/if}}
-        <div class="gh-postcard-content">
-            <span class="gh-postcard-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-            <h2 class="gh-postcard-title">{{title}}</h2>
+        <div class="gh-card-content">
+            <span class="gh-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+            <h2 class="gh-card-title">{{title}}</h2>
             <p>{{excerpt}}</p>
             <strong>Read more</strong>
         </div>

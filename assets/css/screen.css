@@ -15,7 +15,10 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Ghost components */
 @import "components/header.css";
 @import "components/content.css";
+@import "components/readmore.css";
 @import "components/members.css";
+@import "components/errors.css";
+@import "components/footer.css";
 
 /* Global components */
 @import "components/forms.css";
@@ -82,23 +85,23 @@ html,
 /* Index
 /* ---------------------------------------------------------- */
 
-.gh-postcard:not(:first-child) {
+.gh-card:not(:first-child) {
     margin: 8vmin auto 0;
 }
 
-.gh-postcard-link {
+.gh-card-link {
     display: flex;
     flex-direction: column;
 }
 
-.gh-postcard-image {
+.gh-card-image {
     width: 100%;
     max-height: 700px;
     object-fit: cover;
     margin-bottom: 4vmin;
 }
 
-.gh-postcard-meta {
+.gh-card-meta {
     display: block;
     margin: 0 0 1rem;
     font-size: 1.4rem;
@@ -108,18 +111,18 @@ html,
     opacity: 0.8;
 }
 
-.gh-postcard-content {
+.gh-card-content {
     max-width: 720px;
     margin: 0 auto;
     text-align: center;
 }
 
-.gh-postcard-content p {
+.gh-card-content p {
     margin: 1.2rem 0;
     padding: 0 4vw;
 }
 
-.gh-postcard-content > strong {
+.gh-card-content > strong {
     display: inline-block;
     padding: 1px 0;
     font-weight: 500;
@@ -153,177 +156,4 @@ html,
 
 .gh-post-footer {
     margin: 2rem 0;
-}
-
-
-/* Read More
-/* ---------------------------------------------------------- */
-
-.gh-readmore {
-    padding: 8vmin 4vw;
-    font-size: 2.6rem;
-}
-
-.gh-readmore .gh-container {
-    display: grid;
-    grid-gap: 8vmin;
-    grid-template-columns: 1fr 1fr;
-}
-
-.gh-readmore-prev {
-    justify-content: flex-end;
-    text-align: right;
-}
-
-.gh-readmore a {
-    display: flex;
-    color: currentColor;
-    text-decoration: none;
-}
-
-.gh-readmore h4 {
-    width: 100%;
-    font-size: inherit;
-}
-
-.gh-readmore svg {
-    display: inline-block;
-    vertical-align: middle;
-    height: 1em;
-    margin: 0.15em 0 0;
-}
-
-.gh-readmore svg + h4,
-.gh-readmore h4 + svg {
-    margin-left: 2vmin;
-}
-
-@media (max-width: 700px) {
-    .gh-readmore {
-        font-size: 1.6rem;
-    }
-    .gh-readmore svg {
-        margin: 0.1em 0 0;
-    }
-}
-
-
-/* Errors
-/* ---------------------------------------------------------- */
-
-.gh-error {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 2vmin;
-}
-
-.gh-error-content {
-    flex: 1 0 auto;
-    text-align: center;
-}
-
-.gh-error-code {
-    margin: 0;
-    font-size: 14vmin;
-}
-
-.gh-error-description {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    font-size: 4vmin;
-    line-height: 1.2em;
-    font-weight: 300;
-    opacity: 0.6;
-}
-
-.gh-error-link {
-    display: block;
-    margin-top: 4vmin;
-    font-size: 1.6rem;
-}
-
-.gh-error-stack {
-    max-width: 600px;
-    margin: 0 auto 0;
-    padding: 8vmin 0;
-    text-align: left;
-}
-
-.gh-error-stack-list {
-    margin: 4vmin 0 0;
-    font-size: 1.4rem;
-}
-
-.gh-error-stack-list > li {
-    padding: 2rem 0;
-    margin: 0;
-    border-top: rgba(0,0,0,0.1) 1px solid;
-}
-
-.gh-error-stack-function {
-    margin: 0 0 0.5em;
-    font-size: 1.8rem;
-    color: red;
-}
-
-
-/* Footer
-/* ---------------------------------------------------------- */
-
-.gh-foot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8vmin 4vw;
-}
-
-.gh-foot .gh-container {
-    width: auto;
-}
-
-.gh-foot a {
-    color: inherit;
-}
-
-.gh-foot-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gh-foot-menu .nav {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    font-size: 1.8rem;
-}
-
-.gh-foot-menu .nav li {
-    margin: 0 1.5vmin;
-    padding: 0;
-}
-
-.gh-foot-menu .nav a {
-    display: inline-block;
-    padding: 3px 0;
-    text-decoration: none;
-    box-shadow: 0 -1px 0 0 currentcolor inset;
-}
-
-.gh-foot-meta {
-    margin: 2rem 0;
-    font-size: 1.5rem;
-    text-align: center;
-    opacity: 0.5;
-}
-
-@media (max-width: 700px) {
-    .gh-foot-menu .nav {
-        font-size: 1.6rem;
-    }
 }
