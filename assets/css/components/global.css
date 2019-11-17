@@ -39,6 +39,7 @@ dl,
 dd,
 hr,
 pre,
+form,
 table,
 video,
 figure,
@@ -64,6 +65,18 @@ button,
 select,
 textarea {
     font: inherit;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 700;
 }
 
 hr {

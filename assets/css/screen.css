@@ -8,7 +8,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 
-/* Base */
+/* Base components */
 @import "vars.css";
 @import "components/global.css";
 @import "components/forms.css";
