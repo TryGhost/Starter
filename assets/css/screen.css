@@ -45,6 +45,14 @@ html,
     padding: 0 4vw;
 }
 
+.gh-article {
+    padding: 8vmin 0;
+}
+
+.gh-postfeed {
+    padding: 8vmin 0;
+}
+
 .gh-container {
     width: 100%;
     max-width: 1200px;
@@ -74,8 +82,8 @@ html,
 /* Index
 /* ---------------------------------------------------------- */
 
-.gh-postcard {
-    margin: 0 auto 6vw;
+.gh-postcard:not(:first-child) {
+    margin: 8vmin auto 0;
 }
 
 .gh-postcard-link {
@@ -87,7 +95,7 @@ html,
     width: 100%;
     max-height: 700px;
     object-fit: cover;
-    margin-bottom: 2vw;
+    margin-bottom: 4vmin;
 }
 
 .gh-postcard-meta {
@@ -124,8 +132,7 @@ html,
 /* ---------------------------------------------------------- */
 
 .gh-header {
-    margin: 4vw 0 0;
-    padding: 0 0 4vw 0;
+    padding: 0 0 8vmin 0;
     text-align: center;
 }
 
@@ -141,7 +148,7 @@ html,
 .gh-feature-image {
     grid-column: wide-start / wide-end;
     width: 100%;
-    margin: 4vw 0 0;
+    margin: 8vmin 0 0;
 }
 
 .gh-post-footer {
@@ -153,13 +160,13 @@ html,
 /* ---------------------------------------------------------- */
 
 .gh-readmore {
-    padding: 4vw;
+    padding: 8vmin 4vw;
     font-size: 2.6rem;
 }
 
 .gh-readmore .gh-container {
     display: grid;
-    grid-gap: 4vw;
+    grid-gap: 8vmin;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -241,12 +248,12 @@ html,
 .gh-error-stack {
     max-width: 600px;
     margin: 0 auto 0;
-    padding: 4vw 0;
+    padding: 8vmin 0;
     text-align: left;
 }
 
 .gh-error-stack-list {
-    margin: 2vw 0 0;
+    margin: 4vmin 0 0;
     font-size: 1.4rem;
 }
 
@@ -270,7 +277,7 @@ html,
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4vw;
+    padding: 8vmin 4vw;
 }
 
 .gh-foot .gh-container {
@@ -297,7 +304,7 @@ html,
 }
 
 .gh-foot-menu .nav li {
-    margin: 0 0.75vw;
+    margin: 0 1.5vmin;
     padding: 0;
 }
 
@@ -318,9 +325,5 @@ html,
 @media (max-width: 700px) {
     .gh-foot-menu .nav {
         font-size: 1.6rem;
-    }
-    .gh-foot-menu .nav li {
-        margin: 0 1rem;
-        padding: 0;
     }
 }
