@@ -208,6 +208,28 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     padding: 0;
 }
 
+/* Center Stacked */
+.gh-head-stacked .gh-container {
+    grid-template-columns: 1fr;
+    grid-gap: 2vmin;
+}
+.gh-head-stacked .gh-head-brand {
+     grid-column-start: 1;
+     width: 100%;
+     max-width: none;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+}
+.gh-head-stacked .gh-head-menu,
+.gh-head-stacked .gh-head-actions,
+.gh-head-stacked .gh-head-actions-list {
+    justify-content: center;
+}
+.gh-head-stacked .gh-head-actions a:first-child svg {
+    margin-left: 0;
+}
+
 
 /* Mobile Menu
 /* ---------------------------------------------------------- */
@@ -234,6 +256,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         align-items: center;
         justify-content: space-between;
         user-select: none;
+    }
+    #gh-head .gh-head-logo {
+        font-size: 2.2rem;
+    }
+    #gh-head .gh-head-logo img {
+        max-height: 40px;
     }
     #gh-head .gh-head-menu {
         align-self: center;
