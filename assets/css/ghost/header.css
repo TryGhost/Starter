@@ -186,8 +186,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 
-
-
 /* Layout Variants
 /* ---------------------------------------------------------- */
 
@@ -209,8 +207,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin: 0 0 0 1.5vw;
     padding: 0;
 }
-
-
 
 
 /* Mobile Menu
@@ -296,6 +292,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         display: flex;
     }
 }
+
 @media (max-width: 600px) {
     #gh-head .gh-head-menu {
         font-size: 6vmin;

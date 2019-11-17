@@ -144,6 +144,10 @@ html,
     opacity: 0.8;
 }
 
+.gh-excerpt {
+    margin: 1rem 0 0 0;
+}
+
 .gh-feature-image {
     grid-column: wide-start / wide-end;
     width: 100%;
