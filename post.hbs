@@ -39,16 +39,14 @@
 
 <aside class="gh-readmore">
     <div class="gh-container">
-        {{#next_post}}
-            <div class="gh-readmore-next">
-                <a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>
-            </div>
-        {{/next_post}}
-        {{#prev_post}}
-            <div class="gh-readmore-prev">
-                <a href="{{url}}"><h4>{{title}}</h4> {{> "icons/arrow-right"}}</a>
-            </div>
-        {{/prev_post}}
+        <div class="gh-readmore-next">
+            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
+        </div>
+        <div class="gh-readmore-prev">
+            {{#prev_post}}<a href="{{url}}">
+                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
+            </a>{{/prev_post}}
+        </div>
     </div>
 </aside>
 
