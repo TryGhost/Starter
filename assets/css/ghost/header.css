@@ -243,7 +243,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         transition: all 0.4s ease-out;
         overflow: hidden;
     }
-    #gh-head .gh-container {
+    #gh-head .gh-head-inner {
         height: 100%;
         grid-template-columns: 1fr;
     }
@@ -312,7 +312,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         z-index: 900;
         overflow-y: scroll;
     }
-    .gh-head-open #gh-head .gh-container {
+    .gh-head-open #gh-head .gh-head-inner {
         grid-template-rows: auto 1fr auto;
     }
     .gh-head-open #gh-head .gh-head-actions,
