@@ -94,7 +94,7 @@
     align-items: center;
 }
 
-.gh-head-actions-list a {
+.gh-head-actions-list a:not([class]) {
     display: inline-block;
     margin: 0 0 0 1.5vw;
     padding: 5px 0;

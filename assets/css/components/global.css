@@ -116,6 +116,10 @@ sub {
     bottom: -0.25em;
 }
 
+li:not([class]) + li:not([class]) {
+    margin-top: 1em;
+}
+
 a:not([class]) {
     color: color(var(--color-primary) l(-5%));
     text-decoration-skip-ink: auto;
