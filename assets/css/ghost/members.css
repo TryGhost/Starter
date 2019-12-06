@@ -1,10 +1,63 @@
+/* Members Auth Template
+/* ---------------------------------------------------------- */
+
+.gh-auth-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 10vmin;
+    text-align: center;
+}
+
+.gh-auth-title {
+    margin: 0 0 0.1em;
+    font-size: 4.2rem;
+}
+
+.gh-auth-form p {
+    margin: 0 0 20px 0;
+    font-size: 1.7rem;
+    color: rgba(0,0,0,0.6)
+}
+
+.gh-auth-form p small {
+    display: inline-block;
+    margin: 15px 0 0 0;
+    font-size: 1.4rem;
+}
+
+.gh-auth-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.gh-auth-box .gh-button {
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    .gh-auth-box {
+        flex-direction: column;
+    }
+    .gh-auth-box .gh-button {
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+}
+
 /* Members Forms
 /* ---------------------------------------------------------- */
 
-form[data-members-form] .button-loader,
+form[data-members-form] .gh-button-loader,
 form[data-members-form] .message-success,
 form[data-members-form] .message-error {
     display: none;
+}
+
+.gh-button-content {
+    min-width: 100px;
 }
 
 .message-success svg,
@@ -19,17 +72,17 @@ form[data-members-form] .message-error {
     fill: #fff;
 }
 .message-error svg {
-    fill: var(--color-primary);
+    fill: red;
 }
 
 form[data-members-form].success .message-success,
 form[data-members-form].error .message-error {
     position: fixed;
     top: 20px;
-    left: 6vw;
-    right: 6vw;
+    left: 4vw;
+    right: 4vw;
     z-index: 9999;
-    max-width: calc(1400px - 12vw);
+    max-width: calc(1400px - 8vw);
     margin: 0 auto;
     padding: 10px 0;
     color: #fff;
@@ -44,33 +97,35 @@ form[data-members-form].success .message-success {
     background: var(--color-success);
 }
 form[data-members-form].error .message-error {
-    color: var(--color-primary);
+    color: red;
     background: #fff;
-    box-shadow: var(--color-primary) 0 0 0 1px;
+    box-shadow: red 0 0 0 1px;
 }
 
-form[data-members-form] .button {
+form[data-members-form] .gh-button {
     position: relative;
+    min-width: 120px;
 }
 
 /*-- Loading --*/
 
 /* Hide button text */
-form[data-members-form].loading .button-content {
+form[data-members-form].loading .gh-button-content {
     visibility: hidden;
 }
 
 /* Show loading spinner */
-form[data-members-form].loading .button-loader {
+form[data-members-form].loading .gh-button-loader {
     display: inline-block;
     position: absolute;
     left: 50%;
-    margin-left: -19px;
-    transform: scale(0.7);
+    bottom: -30%;
+    margin: 0 0 0 -19px;
+    transform: scale(0.6);
 }
 
-.button-loader svg path,
-.button-loader svg rect{
+.gh-button-loader svg path,
+.gh-button-loader svg rect{
   fill: #fff;
 }
 
