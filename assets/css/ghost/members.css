@@ -14,7 +14,7 @@
 }
 
 .gh-auth-form p {
-    margin: 0 0 20px 0;
+    margin: 10px 0 4vmin 0;
     font-size: 1.7rem;
     color: rgba(0,0,0,0.6)
 }
@@ -40,6 +40,7 @@
 @media (max-width: 600px) {
     .gh-auth-box {
         flex-direction: column;
+        max-width: 400px;
     }
     .gh-auth-box .gh-button {
         width: 100%;
