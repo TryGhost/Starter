@@ -6,7 +6,7 @@
     font-size: 2.6rem;
 }
 
-.gh-readmore .gh-container {
+.gh-readmore-inner {
     display: grid;
     grid-gap: 8vmin;
     grid-template-columns: 1fr 1fr;
