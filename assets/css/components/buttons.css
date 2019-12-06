@@ -3,6 +3,7 @@
 
 .gh-button {
     display: inline-block;
+    min-width: 75px;
     height: var(--height);
     padding: 0 2rem;
     border: 0;
