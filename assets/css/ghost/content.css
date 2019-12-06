@@ -84,13 +84,13 @@
     margin-top: 1.5rem;
 }
 
-.gh-content [id] {
+.gh-content [id]:not(:first-child) {
     margin: 1.5em 0 0;
 }
 
 .gh-content [id] + .kg-card,
 .gh-content blockquote + .kg-card {
-    margin-top: 1.5rem;
+    margin-top: 6vmin;
 }
 
 .gh-canvas blockquote,
