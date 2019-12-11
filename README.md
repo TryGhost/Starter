@@ -2,8 +2,6 @@
 
 A starter framework for Ghost themes! Fork this repository and start your development here with all the main things you need to develop a custom Ghost theme.
 
-![pico](https://user-images.githubusercontent.com/120485/70646878-67b93400-1c7a-11ea-9722-64bb7ecf2d22.png)
-
 &nbsp;
 
 # First time using a Ghost theme?
