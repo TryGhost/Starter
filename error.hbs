@@ -8,19 +8,19 @@
 
             <h1 class="gh-error-code">{{statusCode}}</h1>
             <p class="gh-error-description">{{message}}</p>
-            <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
+            <p class="gh-error-link"><a href="{{@site.url}}">{{t "Go to the front page"}} →</a></p>
 
             {{#if errorDetails}}
             <section class="gh-error-stack">
-                <h4>Theme errors:</h4>
+                <h4>{{t "Theme errors"}}:</h4>
                 <ul class="gh-error-stack-list">
                     {{#foreach errorDetails}}
                     <li>
                         <h5 class="gh-error-stack-function">{{{rule}}}</h5>
 
                         {{#foreach failures}}
-                        <span class="gh-error-stack-file"><strong>Ref:</strong> {{ref}}</span><br>
-                        <span class="gh-error-stack-file"><strong>Message:</strong> {{message}}</span>
+                        <span class="gh-error-stack-file"><strong>{{t "Ref"}}:</strong> {{ref}}</span><br>
+                        <span class="gh-error-stack-file"><strong>{{t "Message"}}:</strong> {{message}}</span>
                         {{/foreach}}
                     </li>
                     {{/foreach}}

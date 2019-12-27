@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
-    <title>{{meta_title}}</title>
+    <title>{{meta_title page=(t "Page %")}}</title>
 
     {{ghost_head}}
     {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
@@ -64,7 +64,7 @@
             {{navigation}}
         </div>
         <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+            {{t "Published with"}} <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
     </div>
 </footer>
