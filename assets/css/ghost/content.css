@@ -93,20 +93,20 @@
     margin-top: 6vmin;
 }
 
-.gh-canvas blockquote,
-.gh-canvas ol,
-.gh-canvas ul,
-.gh-canvas dl,
-.gh-canvas p {
+.gh-canvas > blockquote,
+.gh-canvas > ol,
+.gh-canvas > ul,
+.gh-canvas > dl,
+.gh-canvas > p {
     font-family: var(--font-serif);
     font-weight: 400;
     font-size: 2rem;
     line-height: 1.6em;
 }
 
-.gh-content ul,
-.gh-content ol,
-.gh-content dl {
+.gh-content > ul,
+.gh-content > ol,
+.gh-content > dl {
     padding-left: 1.9em;
 }
 
