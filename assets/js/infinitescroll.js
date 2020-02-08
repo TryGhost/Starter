@@ -5,7 +5,7 @@ $(function ($) {
     var currentPage = 1;
     var pathname = window.location.pathname;
     var $document = $(document);
-    var $result = $('.post-feed');
+    var $result = $('.gh-postfeed');
     var buffer = 300;
 
     var ticking = false;
