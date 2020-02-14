@@ -32,10 +32,10 @@
 }
 
 .gh-button.gh-button-large {
-    height: calc(var(--height) * 1.14);
-    line-height: calc(var(--height) * 1.14);
-    padding: 0 3rem;
-    font-size: 1.6rem;
+    height: calc(var(--height) * 1.2);
+    line-height: calc(var(--height) * 1.2);
+    padding: 0 2.5rem;
+    font-size: 1.7rem;
 }
 
 .gh-button.gh-button-disabled,
