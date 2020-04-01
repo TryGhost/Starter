@@ -48,7 +48,7 @@
         "cssnano": "4.1.10",
         "gscan": "3.4.0",
         "gulp": "4.0.2",
-        "gulp-livereload": "4.0.1",
+        "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
         "gulp-sourcemaps": "2.6.5",
         "gulp-uglify": "3.0.2",
