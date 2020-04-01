@@ -2208,10 +2208,10 @@ gulp-watch@5.0.1:
     vinyl "^2.1.0"
     vinyl-file "^2.0.0"
 
-gulp-zip@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-zip/-/gulp-zip-5.0.0.tgz#ba1af3247e7acc4dc01a72a77c568654cfb1dd1f"
-  integrity sha512-oR3t8kn+ccHkSyRcBV5kBLPXrhqTh5d6wBAR7r7wqjNQNBhYvOwPedCwlAaGcNl1qSeXNDn6qOk1Qyxvx9Wrow==
+gulp-zip@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-zip/-/gulp-zip-5.0.1.tgz#0dba5094901b0d91bcc8b53b3f6ff797c0f2002d"
+  integrity sha512-M/IWLh9RvOpuofDZkgDirtiyz9J3yIqnDOJ3muzk2D/XnZ1ruqPlPLRIpXnl/aZU+xXwKPdOIxjRzkUcVEQyZQ==
   dependencies:
     get-stream "^5.1.0"
     plugin-error "^1.0.1"
