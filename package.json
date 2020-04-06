@@ -46,7 +46,7 @@
     "devDependencies": {
         "autoprefixer": "9.7.5",
         "cssnano": "4.1.10",
-        "gscan": "3.4.0",
+        "gscan": "3.4.1",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
