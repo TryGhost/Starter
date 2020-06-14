@@ -118,7 +118,7 @@ sub {
 }
 
 ul:not([class]) li + li {
-    margin-top: 1em;
+    margin-top: 0.6em;
 }
 
 a:not([class]) {
