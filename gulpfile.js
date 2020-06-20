@@ -12,7 +12,6 @@ var beeper = require('beeper');
 var autoprefixer = require('autoprefixer');
 var colorFunction = require('postcss-color-function');
 var cssnano = require('cssnano');
-var customProperties = require('postcss-custom-properties');
 var easyimport = require('postcss-easy-import');
 
 function serve(done) {
@@ -39,7 +38,6 @@ function hbs(done) {
 function css(done) {
     var processors = [
         easyimport,
-        customProperties({preserve: false}),
         colorFunction(),
         autoprefixer(),
         cssnano()
