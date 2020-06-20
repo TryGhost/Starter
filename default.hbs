@@ -4,14 +4,13 @@
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
     <title>{{meta_title}}</title>
 
     {{ghost_head}}
-    {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
+    {{!-- Outputs important meta data and settings, should always be in <head> --}}
 
 </head>
 <body class="{{body_class}}">
@@ -73,7 +72,7 @@
 
 {{!-- <foot> --}}
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
 
 {{#if pagination.pages}}
 <script>

@@ -21,6 +21,8 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/members.css";
 @import "ghost/errors.css";
 @import "ghost/footer.css";
+@import "ghost/badge.css";
+
 
 
 /* Main - Your styles here! Edit below

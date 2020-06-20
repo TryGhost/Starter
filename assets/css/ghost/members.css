@@ -73,7 +73,7 @@ form[data-members-form] .message-error {
     fill: #fff;
 }
 .message-error svg {
-    fill: red;
+    fill: var(--color-error);
 }
 
 form[data-members-form].success .message-success,
@@ -98,9 +98,9 @@ form[data-members-form].success .message-success {
     background: var(--color-success);
 }
 form[data-members-form].error .message-error {
-    color: red;
+    color: var(--color-error);
     background: #fff;
-    box-shadow: red 0 0 0 1px;
+    box-shadow: var(--color-error) 0 0 0 1px;
 }
 
 form[data-members-form] .gh-button {

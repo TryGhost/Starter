@@ -25,6 +25,7 @@ One neat trick is that you can also create custom one-off templates just by addi
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
 - `author-ali.hbs` - Custom template for `/author/ali/` archive
 
+&nbsp;
 
 # Development
 
@@ -46,12 +47,15 @@ The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which
 yarn zip
 ```
 
+&nbsp;
+
 # PostCSS Features Used
 
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 - Variables - Simple pure CSS variables
 - [Color Function](https://github.com/postcss/postcss-color-function)
 
+&nbsp;
 
 # Copyright & License
 

@@ -56,7 +56,7 @@
             <h1 class="gh-auth-title">Signup to {{@site.title}}</h1>
             <p>{{@site.description}}</p>
             <div class="gh-auth-box">
-                <input class="gh-input" data-members-email type="email" placeholder="Type your email..." required="true" autocomplete="false" />
+                <input aria-label="Email Address" class="gh-input" data-members-email type="email" placeholder="youremail@example.com" required="true" autocomplete="false" autofocus />
                 <button class="gh-button gh-button-primary" type="submit">
                     <span class="gh-button-content">Continue</span>
                     <span class="gh-button-loader">{{> "icons/loader"}}</span>
@@ -71,5 +71,3 @@
 
     </div>
 </div>
-
-<style>.pico-cta{display:none;}</style>
