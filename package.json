@@ -44,7 +44,7 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "9.8.0",
+        "autoprefixer": "9.8.3",
         "cssnano": "4.1.10",
         "gscan": "3.5.4",
         "gulp": "4.0.2",
