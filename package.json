@@ -56,7 +56,6 @@
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.0.1",
         "postcss-color-mod-function": "3.0.3",
-        "postcss-custom-properties": "9.1.1",
         "postcss-easy-import": "3.0.0"
     },
     "browserslist": [
