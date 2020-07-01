@@ -80,12 +80,12 @@
     margin-top: 4vmin;
 }
 
-.gh-content > [id] + * {
-    margin-top: 1.5rem;
-}
-
 .gh-content [id]:not(:first-child) {
     margin: 1.5em 0 0;
+}
+
+.gh-content > [id] + * {
+    margin-top: 1.5rem;
 }
 
 .gh-content [id] + .kg-card,
@@ -151,11 +151,11 @@
 /* Cards
 /* ---------------------------------------------------------- */
 
-:not(.kg-card):not([id]) + .kg-card {
+.gh-content :not(.kg-card):not([id]) + .kg-card {
     margin-top: 6vmin;
 }
 
-.kg-card + :not(.kg-card):not([id]) {
+.gh-content .kg-card + :not(.kg-card) {
     margin-top: 6vmin;
 }
 
