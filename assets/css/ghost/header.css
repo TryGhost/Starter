@@ -2,7 +2,7 @@
 /* ---------------------------------------------------------- */
 
 .gh-head {
-    padding: 3vw 4vw;
+    padding: 3vmin 4vmin;
     font-size: 1.6rem;
     line-height: 1.3em;
     background: inherit;
@@ -62,7 +62,7 @@
 }
 
 .gh-head-menu .nav li {
-    margin: 0 1.5vw 0 0;
+    margin: 0 1.5vmin 0 0;
     padding: 0;
 }
 
@@ -96,7 +96,7 @@
 
 .gh-head-actions-list a:not([class]) {
     display: inline-block;
-    margin: 0 0 0 1.5vw;
+    margin: 0 0 0 1.5vmin;
     padding: 5px 0;
 }
 
@@ -204,7 +204,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin-left: 40px;
 }
 .gh-head-brandnav .gh-head-menu .nav li {
-    margin: 0 0 0 1.5vw;
+    margin: 0 0 0 1.5vmin;
     padding: 0;
 }
 

@@ -80,10 +80,10 @@ form[data-members-form].success .message-success,
 form[data-members-form].error .message-error {
     position: fixed;
     top: 20px;
-    left: 4vw;
-    right: 4vw;
+    left: 4vmin;
+    right: 4vmin;
     z-index: 9999;
-    max-width: calc(1400px - 8vw);
+    max-width: calc(1400px - 8vmin);
     margin: 0 auto;
     padding: 10px 0;
     color: #fff;

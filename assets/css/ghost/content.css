@@ -24,7 +24,7 @@
     .gh-canvas {
         grid-template-columns:
             [full-start]
-            4vw
+            4vmin
                 [wide-start]
                     auto
                         [main-start]
@@ -32,7 +32,7 @@
                         [main-end]
                     auto
                 [wide-end]
-            4vw
+            4vmin
             [full-end]
         ;
     }
@@ -42,7 +42,7 @@
     .gh-canvas {
         grid-template-columns:
             [full-start]
-            4vw
+            4vmin
                 [wide-start]
                     0
                         [main-start]
@@ -50,7 +50,7 @@
                         [main-end]
                     0
                 [wide-end]
-            4vw
+            4vmin
             [full-end]
         ;
     }
@@ -143,7 +143,7 @@
     }
 
     .gh-content blockquote::before {
-        left: -4vw;
+        left: -4vmin;
     }
 }
 
