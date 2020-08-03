@@ -7,7 +7,7 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.4.0
         with:
