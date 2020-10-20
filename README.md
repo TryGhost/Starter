@@ -36,7 +36,7 @@ Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need 
 yarn
 
 # Run build & watch for changes
-$ yarn dev
+yarn dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
