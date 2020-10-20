@@ -7,53 +7,17 @@
     display: grid;
     grid-template-columns:
         [full-start]
-          minmax(calc(calc(100% - 1200px) / 2), 1fr)
+        minmax(4vw, auto)
             [wide-start]
-                auto
-                    [main-start]
-                        720px
-                    [main-end]
-                auto
+            minmax(auto, 240px)
+                [main-start]
+                    min(720px, calc(100% - 8vw))
+                [main-end]
+            minmax(auto, 240px)
             [wide-end]
-          minmax(calc(calc(100% - 1200px) / 2), 1fr)
+        minmax(4vw, auto)
         [full-end]
     ;
-}
-
-@media (max-width: 1296px) {
-    .gh-canvas {
-        grid-template-columns:
-            [full-start]
-            4vmin
-                [wide-start]
-                    auto
-                        [main-start]
-                            720px
-                        [main-end]
-                    auto
-                [wide-end]
-            4vmin
-            [full-end]
-        ;
-    }
-}
-
-@media (max-width: 778px) {
-    .gh-canvas {
-        grid-template-columns:
-            [full-start]
-            4vmin
-                [wide-start]
-                    0
-                        [main-start]
-                            auto
-                        [main-end]
-                    0
-                [wide-end]
-            4vmin
-            [full-end]
-        ;
-    }
 }
 
 .gh-canvas > * {
