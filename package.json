@@ -1,7 +1,7 @@
 {
-    "name": "ghost-starter-theme",
+    "name": "scjt-basic",
     "description": "A custom theme for ghost",
-    "demo": "https://starter.ghost.io",
+    "demo": "https://scjt.blog",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=4.0.0",
@@ -21,9 +21,9 @@
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Sean Thompson",
+        "email": "dev@scjt.blog",
+        "url": "https://scjt.blog"
     },
     "gpm": {
         "type": "theme",
@@ -39,14 +39,14 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/iSCJT/scjt-basic.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
+    "bugs": "https://github.com/iSCJT/scjt-basic/issues",
+    "contributors": "https://github.com/iSCJT/scjt-basic/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "9.8.3",
         "cssnano": "4.1.10",
-        "gscan": "3.5.4",
+        "gscan": "4.0.1",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
