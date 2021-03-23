@@ -50,7 +50,7 @@
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.0",
-        "gulp-sourcemaps": "2.6.5",
+        "gulp-sourcemaps": "3.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
