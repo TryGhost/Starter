@@ -122,7 +122,7 @@ ul:not([class]) li + li {
 }
 
 a:not([class]) {
-    color: color-mod(var(--color-primary) l(-5%));
+    color: var(--color-primary);
     text-decoration-skip-ink: auto;
 }
 
