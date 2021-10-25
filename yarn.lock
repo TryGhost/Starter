@@ -118,10 +118,10 @@
   dependencies:
     "@elastic/elasticsearch" "^7.10.0"
 
-"@tryghost/pretty-cli@1.2.21":
-  version "1.2.21"
-  resolved "https://registry.yarnpkg.com/@tryghost/pretty-cli/-/pretty-cli-1.2.21.tgz#abd9c01e80325a624b68d2605ad3c4e73993ea82"
-  integrity sha512-hmFqacvmAtCWxMz5vUTw0tSGDs89+0tRIeVSdL4WjFsZnc8WoDgj0wUi3YLxp0VI4uaVyhCAZxOOBlYwqNdcQg==
+"@tryghost/pretty-cli@1.2.22":
+  version "1.2.22"
+  resolved "https://registry.yarnpkg.com/@tryghost/pretty-cli/-/pretty-cli-1.2.22.tgz#dfc3356c842569003f5e0cd6114b3811c2a4911b"
+  integrity sha512-y5k/bT3zhuYGDbPUNcgAPt9OSk4rZjtEjIjrqbo1nES14kp66uq+aLldqPyMAR/1a17AFnwMEiEZwkRL3KSAhQ==
   dependencies:
     chalk "^4.1.0"
     sywac "^1.3.0"
@@ -134,10 +134,10 @@
     caller "^1.0.1"
     find-root "^1.1.0"
 
-"@tryghost/zip@1.1.17":
-  version "1.1.17"
-  resolved "https://registry.yarnpkg.com/@tryghost/zip/-/zip-1.1.17.tgz#8665655fbbde0f421180d012ca7769bd133a7482"
-  integrity sha512-ZyjJsQaVSBUqsJ3iBU9hV6G1P7kTSfi83u+g26ZcSjfx4y3FvpYiDbCc2WTKj5xDS0p3NbQ7ZVOi6E73oXVlDg==
+"@tryghost/zip@1.1.18":
+  version "1.1.18"
+  resolved "https://registry.yarnpkg.com/@tryghost/zip/-/zip-1.1.18.tgz#1afcf07d1c5404ab38bc42ef9b400eafc4052edc"
+  integrity sha512-NyVBOnB4PWqx29/8ZO94Sbgy21izJVnBPwH5PgoVG4B16IRXJ1Fa13WrUeUZuGXBqqiH5D5KorZhlYkfmsvHuw==
   dependencies:
     archiver "^4.0.2"
     bluebird "^3.7.2"
@@ -2112,14 +2112,14 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
-gscan@4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.9.0.tgz#1e9c7aeb1cced58c5e9006b0a969908bd6395f78"
-  integrity sha512-4aaQ5rd3vqlqzhCSpf1EtuMqD7CA31LBjKWLqMeOzZJF4hr9Ngxayxix5tZeVT4gn2gQqPMyXhFxARc/0g1FgA==
+gscan@4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.9.1.tgz#e9b4f1dd5f332cda469014f8afaa6c21ac73ae20"
+  integrity sha512-hujCwP3xR/ebe5DLidUJZCWP8vxqttAwoy7oYL6u6XjBuuByeqzjNfo+rmNi9/L4Y0ldyKEQXC4hLW+eXydHag==
   dependencies:
     "@sentry/node" "6.13.3"
-    "@tryghost/pretty-cli" "1.2.21"
-    "@tryghost/zip" "1.1.17"
+    "@tryghost/pretty-cli" "1.2.22"
+    "@tryghost/zip" "1.1.18"
     bluebird "3.7.2"
     chalk "4.1.2"
     common-tags "1.8.0"
