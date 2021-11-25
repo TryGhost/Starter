@@ -47,7 +47,7 @@
         "autoprefixer": "10.4.0",
         "beeper": "2.1.0",
         "cssnano": "5.0.11",
-        "gscan": "4.13.0",
+        "gscan": "4.13.2",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.1",
