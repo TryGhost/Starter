@@ -143,10 +143,10 @@
     lodash "^4.17.21"
     uuid "^8.3.2"
 
-"@tryghost/logging@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@tryghost/logging/-/logging-1.0.1.tgz#26f8dc45f70550efed583244ee79ff7721e4dc58"
-  integrity sha512-e01V4kYlsqKuJsSw3VPWSrGBF2PaZ4NMXhh9jokVksB9EXOgX1DUElHM0nu1vKcewYvQJnMxkPoOSi3SvxeA7w==
+"@tryghost/logging@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tryghost/logging/-/logging-1.0.2.tgz#8a8828ee5a22abfeb7a7aca67900b3cd129b37d8"
+  integrity sha512-D/KFMb40dA/1dExe2nbw7m1SFY5B8ghJHPYfLYXAK+Qi4GGO0c9D+3zbWcPoyCfveNW+7Uwgexwg+nAWMH+vmg==
   dependencies:
     "@tryghost/bunyan-rotating-filestream" "^0.0.7"
     "@tryghost/elasticsearch" "^1.0.0"
@@ -2184,16 +2184,16 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
-gscan@4.13.2:
-  version "4.13.2"
-  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.13.2.tgz#120a8d88a8100f25795cdf179c0c5dcb5793836e"
-  integrity sha512-RyR16GSLfFCiDsdQoLv75PqDmFeSuB91EsFZ/F+qmE/LWGKoyYLi5tJtZPGSixcyjV9/+DchgjUVnVy47UgTnw==
+gscan@4.13.3:
+  version "4.13.3"
+  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.13.3.tgz#01da40ed46ecb907922090a274c069a732535815"
+  integrity sha512-4PkBu5hgH9TlxKxSucFAXzKpmLcB6hkVf4jmIWmMnRQJJGMvENRWQU1NloqItIT+jQWu/pRO/GRvW+LpJqOPmQ==
   dependencies:
     "@sentry/node" "6.15.0"
     "@tryghost/config" "0.2.1"
     "@tryghost/debug" "0.1.9"
     "@tryghost/ignition-errors" "0.1.8"
-    "@tryghost/logging" "1.0.1"
+    "@tryghost/logging" "1.0.2"
     "@tryghost/pretty-cli" "1.2.22"
     "@tryghost/server" "0.1.0"
     "@tryghost/zip" "1.1.18"
