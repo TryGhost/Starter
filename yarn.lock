@@ -143,7 +143,7 @@
     lodash "^4.17.21"
     uuid "^8.3.2"
 
-"@tryghost/logging@2.0.0":
+"@tryghost/logging@2.0.0", "@tryghost/logging@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@tryghost/logging/-/logging-2.0.0.tgz#587c579d703ef15fe468b8bb8efdd9cdfefb90ef"
   integrity sha512-eWKtiHWDtVVf+xn+ecKb8mUepFDK1RXOhl1tFMF1b7eFASn5WIDLFSMH9Xl9gyCi6dnsXp5fAm2G3baZ77bPZg==
@@ -158,24 +158,6 @@
     gelf-stream "^1.1.1"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.21"
-
-"@tryghost/logging@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@tryghost/logging/-/logging-1.0.0.tgz#c68b06929a3ad84a903fc4f368c2000026ae4f68"
-  integrity sha512-0xoVtyf2FMo+ZzQjjVsKjav9d81iNG6zHpHOtHQBu4SDtEbBUPJ3T6xe3+kz3JRM/xZS3jzUZT71Pps1RM3UVg==
-  dependencies:
-    "@tryghost/bunyan-rotating-filestream" "^0.0.7"
-    "@tryghost/elasticsearch" "^1.0.0"
-    "@tryghost/pretty-stream" "^0.1.2"
-    "@tryghost/root-utils" "^0.3.7"
-    bunyan "^1.8.15"
-    bunyan-loggly "^1.4.2"
-    fs-extra "^10.0.0"
-    gelf-stream "^1.1.1"
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.21"
-    moment "^2.29.1"
-    prettyjson "^1.2.1"
 
 "@tryghost/pretty-cli@1.2.22":
   version "1.2.22"
@@ -202,13 +184,13 @@
     caller "^1.0.1"
     find-root "^1.1.0"
 
-"@tryghost/server@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@tryghost/server/-/server-0.1.0.tgz#2d0065b2dd784b6280ee5e01e0b0c7a1e1d99e1c"
-  integrity sha512-xHtJdRe+w4w8Or5udVTfyKOqhEurLgzUpwb8uxTpBnGWjCRFjtzIRAropqJwuxWiK6Ymsnqc19tkcXNsuTed/A==
+"@tryghost/server@0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@tryghost/server/-/server-0.1.3.tgz#78b7fdbf8b9221ea3e0d33c70685253630eb03dc"
+  integrity sha512-6sj4cNcWQZLnINl7bRmhzJUVSD67pBqesp6xRSLghglHWRFeQawyj6RrEymjMJw510swe+llpbIltY6ppxjA5Q==
   dependencies:
     "@tryghost/debug" "^0.1.9"
-    "@tryghost/logging" "^1.0.0"
+    "@tryghost/logging" "^2.0.0"
 
 "@tryghost/zip@1.1.18":
   version "1.1.18"
@@ -2178,10 +2160,10 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
-gscan@4.20.1:
-  version "4.20.1"
-  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.20.1.tgz#c532c5d34fe4f67555e809eb14f8a38a5f046617"
-  integrity sha512-cdG3o5K7Mbxc6mgaBMwFP3RK5s7Q6So7BznuJc0UIU+7G6mVg3xH12M6bNXIq2wOjP8NaAu8Moh/lVYdorHZ4w==
+gscan@4.20.2:
+  version "4.20.2"
+  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.20.2.tgz#2d281e2c198b6bb14089d14ebd8b27d9c202ad87"
+  integrity sha512-14VjJYMJ5UlcQYQ3VPhOfjUgakTQV6+Uj67+GXOMjLvOnyAM2g/o/dOiyeuEnXepbxDwDGLTQ1pPS4TL1VBA9w==
   dependencies:
     "@sentry/node" "6.16.1"
     "@tryghost/config" "0.2.1"
@@ -2189,7 +2171,7 @@ gscan@4.20.1:
     "@tryghost/ignition-errors" "0.1.8"
     "@tryghost/logging" "2.0.0"
     "@tryghost/pretty-cli" "1.2.22"
-    "@tryghost/server" "0.1.0"
+    "@tryghost/server" "0.1.3"
     "@tryghost/zip" "1.1.18"
     bluebird "3.7.2"
     chalk "4.1.2"
