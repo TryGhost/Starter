@@ -63,6 +63,7 @@
         "defaults"
     ],
     "config": {
+        "card_assets": true,
         "posts_per_page": 15,
         "image_sizes": {
             "xxs": {
