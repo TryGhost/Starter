@@ -15,7 +15,7 @@ jobs:
       - run: yarn test:ci
       - run: yarn ship
       - name: Deploy Ghost Theme
-        uses: TryGhost/action-deploy-theme@v1.6.0
+        uses: TryGhost/action-deploy-theme@v1.6.1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
