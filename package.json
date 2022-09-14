@@ -43,7 +43,7 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "10.4.10",
+        "autoprefixer": "10.4.11",
         "beeper": "2.1.0",
         "cssnano": "5.1.13",
         "gscan": "4.34.0",
