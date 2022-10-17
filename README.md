@@ -47,6 +47,16 @@ The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which
 yarn zip
 ```
 
+## One time setup for local theme development
+Run this inside container after start the first time only
+Symlink theme folder to the ghost instance.
+**Then restart the container** and open ghost at `localhost:2368/ghost`
+
+```
+ln -s /app /var/lib/ghost/content/themes
+```
+After that change ghost default theme to app-starter (using ghost admin)
+
 &nbsp;
 
 # PostCSS Features Used
