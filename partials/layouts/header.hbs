@@ -1,0 +1,53 @@
+<header id="gh-head" class="gh-head">
+    <nav class="gh-head-inner gh-container lb-header">
+        <div class="logo">
+            <a href="{{@site.url}}{{url}}">
+                <img src={{@site.logo}} alt="{{@site.title}}" />
+            </a>
+        </div>
+        
+        <div class="menus">
+            <ul>
+                <li><a>{{t "Services"}}</a></li>
+                <li><a>{{t "Case Studies"}}</a></li>
+                <li><a href="/about">{{t "About Us"}}</a></li>
+                <li><a>{{t "Blog"}}</a></li>
+                <li><a>{{t "News"}}</a></li>
+            </ul>
+        </div>
+        
+        <div class="button-group">
+            <button class="lb-btn">{{t "Contact Us"}}</button>
+            <select id="language-change">
+                <option value="en">en</option>
+                <option value="ja">ja</option>
+            </select>
+        </div>
+    </nav>
+</header>
+
+<script type="text/javascript">
+    const currentLang = document.documentElement.lang;
+    const select = $('#language-change');
+    select.val(currentLang);
+    select.change(function() {
+        const lang = $(this).find('option:selected').val();
+        let urlArr = window.location.href.split('/');
+        const current = urlArr[3];
+        const options = Array.from(document.getElementById("language-change").options).map(e => e.value);
+        if(lang === 'en' && options.includes(current)){
+            urlArr = urlArr.filter((_, index) => index !== 3);
+        }
+        else if(lang !== 'en' && options.includes(current)){
+            urlArr[3] = lang;
+        }
+        else if(lang !== 'en' && !options.includes(current)){
+            urlArr.splice(3, 0, lang);
+        }
+        const urlStr = urlArr.join('/');
+        window.location.href = urlStr;
+    })
+</script>
+
+
+

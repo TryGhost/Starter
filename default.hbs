@@ -1,115 +1,88 @@
-<!DOCTYPE html>
-<html lang="{{@site.locale}}">
-<head>
+<html lang="{{{block 'lang'}}}">
+    <head>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{asset 'built/screen.css'}}"
+        />
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        ></script>
+        <script
+            src="https://twitter.github.io/typeahead.js/js/handlebars.js"
+        ></script>
 
-    <title>{{meta_title}}</title>
+        <title>{{meta_title}}</title>
 
-    {{ghost_head}}
-    {{!-- Outputs important meta data and settings, should always be in <head> --}}
+        {{ghost_head}}
+        {{! Outputs important meta data and settings, should always be in <head> }}
 
-</head>
-<body class="{{body_class}}">
-<div class="gh-viewport">
+    </head>
+    <body class="{{body_class}}">
+        <div class="gh-viewport">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
+            <main class="gh-main">
 
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
+                {{{body}}}
+                {{! All content gets inserted here, index.hbs, post.hbs, etc }}
+
+            </main>
+
+            <footer class="gh-foot">
+                <div class="gh-container">
+                    <div class="gh-foot-menu">
+                        {{navigation}}
+                    </div>
+                    <div class="gh-foot-meta">
+                        Published with
+                        <a
+                            href="https://ghost.org"
+                            target="_blank"
+                            rel="noopener"
+                        >Ghost</a>
+                    </div>
                 </div>
-            </a>
+            </footer>
+
         </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            </div>
-        </div>
-    </nav>
-</header>
 
-<main class="gh-main">
+        {{! <foot> }}
 
-    {{{body}}}
-    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+        <script src="{{asset 'built/jquery-3.4.1.min.js'}}"></script>
 
-</main>
+        {{#if pagination.pages}}
+            <script>
+                var maxPages = parseInt('{{pagination.pages}}');
+            </script>
+            <script src="{{asset 'built/infinitescroll.js'}}"></script>
+        {{/if}}
 
-<footer class="gh-foot">
-    <div class="gh-container">
-        <div class="gh-foot-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-        </div>
-    </div>
-</footer>
+        <script>
+            $(document).ready(function () { // Mobile Menu Trigger
+            $('.gh-burger').click(function () {
+            $('body').toggleClass('gh-head-open'); }); });
+        </script>
 
-</div>
+        {{#is "post, page"}}
+            <script src="{{asset 'built/jquery.fitvids.js'}}"></script>
+            <script>
+                var images = document.querySelectorAll('.kg-gallery-image img');
+                images.forEach(function (image) { var container =
+                image.closest('.kg-gallery-image'); var width =
+                image.attributes.width.value; var height =
+                image.attributes.height.value; var ratio = width / height;
+                container.style.flex = ratio + ' 1 0%'; });
+                $(document).ready(function () { var $postContent =
+                $(".gh-content"); $postContent.fitVids(); });
+            </script>
+        {{/is}}
 
-{{!-- <foot> --}}
+        {{ghost_foot}}
+        {{! Outputs important scripts - should always be included before closing body tag }}
 
-<script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
-
-{{#if pagination.pages}}
-<script>
-    var maxPages = parseInt('{{pagination.pages}}');
-</script>
-<script src="{{asset "built/infinitescroll.js"}}"></script>
-{{/if}}
-
-<script>
-$(document).ready(function () {
-    // Mobile Menu Trigger
-    $('.gh-burger').click(function () {
-        $('body').toggleClass('gh-head-open');
-    });
-});
-</script>
-
-{{#is "post, page"}}
-<script src="{{asset "built/jquery.fitvids.js"}}"></script>
-<script>
-var images = document.querySelectorAll('.kg-gallery-image img');
-images.forEach(function (image) {
-    var container = image.closest('.kg-gallery-image');
-    var width = image.attributes.width.value;
-    var height = image.attributes.height.value;
-    var ratio = width / height;
-    container.style.flex = ratio + ' 1 0%';
-});
-$(document).ready(function () {
-    var $postContent = $(".gh-content");
-    $postContent.fitVids();
-});
-</script>
-{{/is}}
-
-{{ghost_foot}}
-{{!-- Outputs important scripts - should always be included before closing body tag --}}
-
-</body>
+    </body>
 </html>

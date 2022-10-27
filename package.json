@@ -11,6 +11,7 @@
         "desktop": "assets/screenshot-desktop.jpg"
     },
     "scripts": {
+        "build:lang": "rm ./locales/zz.json && node ./locales/index.js",
         "dev": "gulp",
         "zip": "gulp zip",
         "test": "gscan .",

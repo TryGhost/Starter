@@ -1,25 +1,6 @@
 /* Buttons
 /* ---------------------------------------------------------- */
 
-.gh-button {
-    display: inline-block;
-    min-width: 75px;
-    height: var(--height);
-    padding: 0 2rem;
-    border: 0;
-    border-radius: var(--radius);
-    cursor: pointer;
-    font-family: var(--font-sans-serif);
-    font-size: 1.4rem;
-    font-weight: var(--font-normal);
-    line-height: var(--height);
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    appearance: none;
-    transition: 0.4s ease;
-}
-
 .gh-button.gh-button-fit {
     width: 100%;
 }
@@ -65,4 +46,23 @@
 
 .gh-button.gh-button-primary:hover {
     background-color: var(--color-primary);
+}
+
+.lb-btn {
+    display: inline-block;
+    padding: 10px 35px;
+    border: 0;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-family: var(--font-sans-serif);
+    font-weight: var(--font-normal);
+    line-height: var(--height);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    appearance: none;
+    transition: 0.4s ease;
+    outline: none;
+    color: var(--color-white);
+    background-color: var(--btn-primary);
 }

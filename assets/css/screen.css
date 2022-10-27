@@ -22,8 +22,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
-
-
+@import "ghost/home.css";
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
@@ -80,6 +79,10 @@ html,
     height: 2rem;
 }
 
+body{
+    color: var(--text-primary);
+}
+
 /* Index
 /* ---------------------------------------------------------- */
 
@@ -129,7 +132,6 @@ html,
     opacity: 0.5;
 }
 
-
 /* Page
 /* ---------------------------------------------------------- */
 
@@ -157,7 +159,6 @@ html,
         font-size: 1.6rem;
     }
 }
-
 
 /* Post
 /* ---------------------------------------------------------- */
@@ -189,7 +190,6 @@ html,
 .gh-post-footer {
     margin: 2rem 0;
 }
-
 
 /* Author Archive
 /* ---------------------------------------------------------- */
@@ -227,7 +227,7 @@ html,
     margin: 0 1.25vmin 0 0;
     height: 1em;
     width: 1px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     transform: rotate(20deg);
 }
 

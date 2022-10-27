@@ -1,0 +1,9 @@
+routes:
+    /: home-en
+    /ja/: home-ja
+
+collections:
+
+taxonomies:
+    tag: /{slug}/
+    author: /author/{slug}/

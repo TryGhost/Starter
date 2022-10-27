@@ -1,0 +1,42 @@
+/* Main banner */
+.main-banner {
+    position: relative;
+}
+.main-banner .frame-group {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame-content {
+    text-align: center;
+    color: var(--color-white);
+}
+.frame-content button {
+    background-color: var(--color-white);
+    color: black;
+    font-weight: var(--font-bold);
+}
+.frame-content p {
+    margin: 1rem 0;
+}
+
+/*Description*/
+.lb-home-description-section{
+    width: 60%;
+    margin: 150px auto;
+}
+.lb-home-description{
+    margin-top: 50px;
+}
+.lb-home-description-section h3 {
+    font-size: 39px;
+}
+.lb-home-description {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 5%;
+}

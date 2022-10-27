@@ -2,6 +2,12 @@
 
 {{#post}}
 
+{{#has tag="#en"}}
+    {{#contentFor "lang"}}en{{/contentFor}}
+{{else}}
+    {{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
+{{/has}}
+
 <article class="gh-article {{post_class}}">
 
     <header class="gh-header gh-canvas">
