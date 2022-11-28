@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v3
-      - uses: Borales/actions-yarn@v3
+      - uses: Borales/actions-yarn@v4
         with:
           cmd: install
       - run: yarn install
