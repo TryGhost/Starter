@@ -163,6 +163,13 @@ figcaption strong {
     width: 100%;
 }
 
+/* Default to 16 / 9 aspect ratio for YouTube & Vimeo embeds  */
+.kg-embed-card > :where(iframe[src*="youtube.com"],iframe[src*="vimeo.com"]) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
 .kg-image-card img {
     margin: auto;
 }

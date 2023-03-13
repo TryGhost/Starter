@@ -89,6 +89,7 @@
 
 .gh-head-actions-list {
     display: inline-flex;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;

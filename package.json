@@ -1,23 +1,22 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A custom theme for ghost",
+    "name": "starter",
+    "description": "A starter theme for Ghost theme development",
     "demo": "https://starter.ghost.io",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "engines": {
-        "ghost": ">=4.0.0"
+        "ghost": ">=5.0.0"
     },
     "license": "MIT",
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg"
     },
     "scripts": {
-        "dev": "gulp",
-        "zip": "gulp zip",
+        "dev": "rollup -c --environment BUILD:development -w",
+        "build": "rollup -c --environment BUILD:production",
+        "zip": "bestzip theme.zip assets/* partials/* *.hbs package.json",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
-        "pretest": "gulp build",
-        "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
+        "pretest": "gulp build"
     },
     "author": {
         "name": "Ghost Foundation",
@@ -43,21 +42,20 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "10.4.14",
-        "beeper": "2.1.0",
-        "cssnano": "5.1.15",
-        "gscan": "4.36.1",
-        "gulp": "4.0.2",
-        "gulp-livereload": "4.0.2",
-        "gulp-postcss": "9.0.1",
-        "gulp-sourcemaps": "3.0.0",
-        "gulp-uglify": "3.0.2",
-        "gulp-util": "3.0.8",
-        "gulp-watch": "5.0.1",
-        "gulp-zip": "5.1.0",
-        "postcss": "8.4.21",
-        "postcss-color-mod-function": "3.0.3",
-        "postcss-easy-import": "4.0.0"
+        "@babel/core": "^7.21.0",
+        "@babel/preset-env": "^7.20.2",
+        "@rollup/plugin-babel": "^6.0.3",
+        "@rollup/plugin-commonjs": "^24.0.1",
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "@rollup/plugin-terser": "^0.4.0",
+        "bestzip": "^2.2.1",
+        "cssnano": "^5.1.15",
+        "gscan": "^4.36.1",
+        "postcss-import": "^15.1.0",
+        "postcss-preset-env": "^8.0.1",
+        "rollup": "^3.18.0",
+        "rollup-plugin-livereload": "^2.0.5",
+        "rollup-plugin-postcss": "^4.0.2"
     },
     "browserslist": [
         "defaults"
@@ -85,5 +83,6 @@
                 "width": 2000
             }
         }
-    }
+    },
+    "type": "module"
 }

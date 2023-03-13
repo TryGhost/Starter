@@ -22,6 +22,8 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
+@import "ghost/pagination.css";
+@import "ghost/comments.css";
 
 
 
@@ -51,7 +53,14 @@ html,
 }
 
 .gh-postfeed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 4.8vmin 4vmin;
     padding: 8vmin 0;
+}
+
+.gh-postfeed > *:first-child {
+    grid-column: 1 / -1;
 }
 
 .gh-container {
@@ -60,7 +69,7 @@ html,
     margin: 0 auto;
 }
 
-.gh-head-actions a {
+.gh-head-actions a:not(.gh-button) {
     display: inline-flex;
     align-items: center;
     margin: 0;
@@ -83,9 +92,9 @@ html,
 /* Index
 /* ---------------------------------------------------------- */
 
-.gh-card:not(:first-child) {
+/* .gh-card:not(:first-child) {
     margin: 8vmin auto 0;
-}
+} */
 
 .gh-card-link {
     display: flex;
