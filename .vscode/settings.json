@@ -1,8 +1,8 @@
 {
     "search.exclude": {
         "**/node_modules": true,
-        "assets/*.js": true,
-        "assets/*.css": true,
-        "assets/*.map": true,
+        "assets/built/*.js": true,
+        "assets/built/*.css": true,
+        "assets/built/*.map": true,
     }
 }

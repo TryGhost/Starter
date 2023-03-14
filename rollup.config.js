@@ -24,9 +24,9 @@ import livereload from 'rollup-plugin-livereload';
 
 // Rollup configuration
 export default defineConfig({
-    input: 'src/js/index.js',
+    input: 'assets/js/index.js',
     output: {
-        dir: "assets",
+        dir: "assets/built",
         sourcemap: true,
         format: process.env.BUILD === "production" ? 'iife' : 'esm',
          plugins: [process.env.BUILD === "production" && terser()]
@@ -47,7 +47,7 @@ export default defineConfig({
         process.env.BUILD !== "production" && livereload({
             watch: resolve('.'),
             extraExts: ['hbs'],
-            exclusions: [resolve('src'), resolve('node_modules')]
+            exclusions: [resolve('node_modules')]
         }),
     ]
 })

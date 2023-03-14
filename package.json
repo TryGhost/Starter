@@ -13,7 +13,7 @@
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
         "build": "rollup -c --environment BUILD:production",
-        "zip": "bestzip theme.zip assets/* partials/* *.hbs package.json",
+        "zip": "npm run build && bestzip theme.zip assets/* partials/* members/* *.hbs package.json",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build"
@@ -84,5 +84,8 @@
             }
         }
     },
-    "type": "module"
+    "type": "module",
+    "dependencies": {
+        "tocbot": "^4.20.1"
+    }
 }

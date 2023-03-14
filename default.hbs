@@ -4,13 +4,8 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset "index.css"}}" />
-    {{#if pagination.pages}}
-        <script>
-            const maxPages = parseInt('{{pagination.pages}}');
-        </script>
-    {{/if}}
-    <script src="{{asset "index.js"}}" defer></script>
+    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+    <script src="{{asset "built/index.js"}}" defer></script>
 
     <title>{{meta_title}}</title>
 
