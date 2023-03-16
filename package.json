@@ -1,5 +1,5 @@
 {
-    "name": "starter",
+    "name": "ghost-starter-theme",
     "description": "A starter theme for Ghost theme development",
     "demo": "https://starter.ghost.io",
     "version": "2.0.0",
@@ -15,8 +15,7 @@
         "build": "rollup -c --environment BUILD:production",
         "zip": "npm run build && bestzip theme.zip assets/* partials/* members/* *.hbs package.json",
         "test": "gscan .",
-        "test:ci": "gscan --fatal --verbose .",
-        "pretest": "gulp build"
+        "pretest": "npm run build"
     },
     "author": {
         "name": "Ghost Foundation",
