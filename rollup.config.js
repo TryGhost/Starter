@@ -28,8 +28,8 @@ export default defineConfig({
     output: {
         dir: "assets/built",
         sourcemap: true,
-        format: process.env.BUILD === "production" ? 'iife' : 'esm',
-         plugins: [process.env.BUILD === "production" && terser()]
+        format: 'iife',
+         plugins: [terser()]
     },
     plugins: [
         commonjs(), 
@@ -40,7 +40,7 @@ export default defineConfig({
             plugins: [
                 atImport(),
                 postcssPresetEnv({}),
-                process.env.BUILD === "production" && cssnano()
+                cssnano()
             ], 
             extract: true
         }),
