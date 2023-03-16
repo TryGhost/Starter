@@ -84,8 +84,5 @@
             }
         }
     },
-    "type": "module",
-    "dependencies": {
-        "tocbot": "^4.20.1"
-    }
+    "type": "module"
 }

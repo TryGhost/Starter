@@ -5,14 +5,16 @@
         <div class="gh-postfeed">
         {{#foreach posts}}
 
-            {{> "card"}} {{!-- partials/card.hbs --}}
+            {{> "card" page=../pagination.page }} {{!-- partials/card.hbs --}}
 
         {{/foreach}}
         </div>
 
-        {{!-- Outputs pagination links, if available --}}
-        <div class="gh-pagination">
-            {{pagination}}
-        </div>
+        {{!-- If JS isn't enabled, fallback to standard pagiantion --}}
+        <noscript>
+            <div class="gh-pagination">
+                {{pagination}}
+            </div>
+        </noscript>
     </div>
 </div>
