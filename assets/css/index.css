@@ -1,7 +1,7 @@
 /*
 
-This is a development CSS file which is compiled to a minified
-production stylesheet in assets/built/screen.css using: gulp dev
+This is a development CSS file that is compiled to a minified
+production stylesheet in assets/built/screen.css using: npm run dev
 
 */
 
@@ -193,6 +193,10 @@ html,
     grid-column: wide-start / wide-end;
     width: 100%;
     margin: 8vmin 0 0;
+}
+
+.gh-feature-image img {
+    margin-inline: auto;
 }
 
 .gh-post-footer {

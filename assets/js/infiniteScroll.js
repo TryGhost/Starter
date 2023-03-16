@@ -1,3 +1,12 @@
+/*
+This script continously loads post as the user scrolls the page. It uses the IntersectionObserver API to detect when the last post is in view. When the last post is in view, it fetches the next page and appends the posts to the page. It then checks if there is a next page and if there is, it continues to observe the last post. If there is no next page, it disconnects the observer. 
+
+Importantly, for this script to work, it requires that each card have the `post` class and that the card container have the `gh-postfeed` class
+*/
+
+let link = document.querySelector('link[rel="next"]')?.getAttribute('href');
+
+// Fetch and parse next page
 async function getNextPage(url) {
     try {
         const res = await fetch(url);
@@ -19,11 +28,13 @@ async function getNextPage(url) {
     }
 }
 
-let link = document.querySelector('link[rel="next"]')?.getAttribute('href');
-
 export default function infiniteScroll() {
+    
+    if (!link) { return; }
+
     const options = {
-       rootMargin: '100px',
+        // When the last card is within a 150px of the viewport, fetch the next page. This provides a smoother transition between pages 
+       rootMargin: '150px',
     }
 
     const callback = (entries, observer) => {
