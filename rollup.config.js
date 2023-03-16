@@ -15,8 +15,6 @@ import postcss from 'rollup-plugin-postcss';
 import atImport from 'postcss-import';
 // Use the latest CSS features in your Rollup bundle
 import postcssPresetEnv from 'postcss-preset-env';
-// Minifies the CSS
-import cssnano from 'cssnano';
 
 // Development: Enables a livereload server that watches for changes to CSS, JS, and Handlbars files
 import { resolve } from "path";
@@ -29,20 +27,20 @@ export default defineConfig({
         dir: "assets/built",
         sourcemap: true,
         format: 'iife',
-         plugins: [terser()]
+        plugins: [terser()]
     },
     plugins: [
         commonjs(), 
         nodeResolve(), 
         babel({ babelHelpers: 'bundled' }),
         postcss({
+            extract: true,
             sourceMap: true,
             plugins: [
                 atImport(),
-                postcssPresetEnv({}),
-                cssnano()
+                postcssPresetEnv({})
             ], 
-            extract: true
+            minimize: true,
         }),
         process.env.BUILD !== "production" && livereload({
             watch: resolve('.'),

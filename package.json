@@ -49,7 +49,6 @@
         "@rollup/plugin-node-resolve": "^15.0.1",
         "@rollup/plugin-terser": "^0.4.0",
         "bestzip": "^2.2.1",
-        "cssnano": "^5.1.15",
         "gscan": "^4.36.1",
         "postcss-import": "^15.1.0",
         "postcss-preset-env": "^8.0.1",
