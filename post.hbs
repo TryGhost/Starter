@@ -41,11 +41,11 @@
             Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
         </div>
 
-        {{!--
+        {{#if comments}}
         <section class="gh-post-comments">
-            If you want to embed comments, this is a good place to do it!
+            {{comments}}
         </section>
-        --}}
+        {{/if}}
 
     </footer>
 

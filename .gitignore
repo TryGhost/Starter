@@ -6,6 +6,7 @@ b-cov
 *.out
 *.pid
 *.gz
+*.zip
 
 pids
 logs
@@ -13,7 +14,6 @@ results
 
 npm-debug.log
 node_modules
-package-lock.json
 
 .idea/*
 *.iml
@@ -22,4 +22,3 @@ projectFilesBackup
 .DS_Store
 
 dist/
-built/

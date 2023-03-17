@@ -18,7 +18,8 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: color-mod(var(--color-base) l(+20%));
+    color: #464646;
+    color: color-mix(in srgb, var(--color-base) 80%, white);
     font-family: var(--font-sans-serif);
     font-size: 1.5rem;
     line-height: 1.6em;
@@ -29,6 +30,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 
 p,
 ul,
