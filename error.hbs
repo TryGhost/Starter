@@ -3,9 +3,9 @@
 <head>
 
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+    <script src="{{asset "built/index.js"}}" defer></script>
 
     <title>{{meta_title}}</title>
 
@@ -90,7 +90,7 @@
 <footer class="gh-foot">
     <div class="gh-container">
         <div class="gh-foot-menu">
-            {{navigation}}
+            {{navigation type="secondary"}}
         </div>
         <div class="gh-foot-meta">
             Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
@@ -100,17 +100,7 @@
 
 </div>
 
-<script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
-
-<script>
-$(document).ready(function () {
-    // Mobile Menu Trigger
-    $('.gh-burger').click(function () {
-        $('body').toggleClass('gh-head-open');
-    });
-});
-</script>
-
+{{!-- <foot> --}}
 {{ghost_foot}}
 {{!-- Outputs important scripts - should always be included before closing body tag --}}
 
