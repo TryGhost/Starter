@@ -40,7 +40,11 @@
             <div class="gh-head-actions-list">
                 {{search}}
                 {{#if @site.members_enabled}}
+                    {{#if @member}}
                     <a class="gh-button" href="{{@site.signup_url}}">Sign up</a>
+                    {{else}}
+                    <a class="gh-button" href="https://starter.ghost.io/#/portal/account">Account</a>
+                    {{/if}}
                 {{/if}}
             </div>
         </div>
