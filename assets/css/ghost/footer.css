@@ -47,7 +47,7 @@
     margin: 2rem 0;
     font-size: 1.5rem;
     text-align: center;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 @media (max-width: 700px) {

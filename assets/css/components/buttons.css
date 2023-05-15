@@ -45,9 +45,9 @@
 }
 
 .gh-button {
-    color: var(--color-primary) !important;
+    color: inherit;
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px var(--color-primary);
+    box-shadow: inset 0 0 0 2px currentColor
 }
 
 .gh-button:hover {
