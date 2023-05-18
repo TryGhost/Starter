@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*
 
 This is a development CSS file that is compiled to a minified
@@ -9,23 +12,1405 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* ---------------------------------------------------------- */
 
 /* Base components */
-@import "vars.css";
-@import "components/global.css";
-@import "components/forms.css";
-@import "components/buttons.css";
+
+/* @import "vars.css"; */
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+    /* Colours */
+    --color-primary: var(--ghost-accent-color, #3eb0ef);
+    --color-base: #131313;
+    --color-border: #ddd;
+    --color-bg: #f5f5f5;
+    --color-success: #80b912;
+    --color-error: #f05230;
+
+    /* Fonts */
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    --font-serif: Georgia, Times, serif;
+    --font-mono: Menlo, Courier, monospace;
+    --font-light: 100;
+    --font-normal: 400;
+    --font-bold: 700;
+    --font-heavy: 800;
+
+    /* Breakpoints */
+    --xlarge: 1680px;
+    --large: 1280px;
+    --medium: 980px;
+    --small: 740px;
+    --xsmall: 480px;
+
+    /* Sizes */
+    --height: 4rem;
+    --margin: 2rem;
+    --radius: 0.5rem;
+}
+
+/* @import "components/global.css"; */
+/* Reset
+/* ---------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #464646;
+    font-family: var(--font-sans-serif);
+    font-size: 1.5rem;
+    line-height: 1.6em;
+    font-weight: 400;
+    font-style: normal;
+    background: #fff;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+ul,
+ol,
+li,
+dl,
+dd,
+hr,
+pre,
+form,
+table,
+video,
+figure,
+figcaption,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+select,
+textarea {
+    font: inherit;
+    -webkit-appearance: none;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+hr {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid currentcolor;
+    opacity: 0.2;
+}
+
+::selection {
+    text-shadow: none;
+    background: #cbeafb;
+}
+
+mark {
+    background-color: #fdffb6;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+ul:not([class]) li + li {
+    margin-top: 0.6em;
+}
+
+a:not([class]) {
+    color: var(--color-primary);
+    text-decoration-skip-ink: auto;
+}
+
+a[class] {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+a[class]:hover {
+    transition: 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    line-height: 1.15em;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4.6rem;
+    letter-spacing: -0.5px;
+}
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+@media (max-width: 500px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+@media (max-width: 500px) {
+    h3 {
+        font-size: 1.8rem;
+    }
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+h5 {
+    font-size: 2.4rem;
+}
+
+h6 {
+    font-size: 2.2rem;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* @import "components/forms.css"; */
+/* Forms
+/* ---------------------------------------------------------- */
+
+.gh-input,
+.gh-textarea {
+    background: var(--color-bg);
+    border-radius: var(--radius);
+    border: none;
+    border: solid 1px var(--color-border);
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 0.6em;
+    text-decoration: none;
+    width: 100%;
+}
+
+.gh-input:focus {
+    border-color: var(--color-primary);
+}
+
+.gh-select {
+    height: var(--height);
+    padding-right: var(--height);
+    text-overflow: ellipsis;
+}
+
+.gh-select option {
+    color: var(--color-primary);
+    background: var(--color-bg);
+}
+
+.gh-select:focus::-ms-value {
+    background-color: transparent;
+}
+
+.gh-select::-ms-expand {
+    display: none;
+}
+
+.gh-input,
+.gh-select {
+    height: var(--height);
+}
+
+.gh-textarea {
+    padding: 0.3em 0.6em;
+    resize: vertical;
+}
+
+.gh-check {
+    display: block;
+    margin-right: -2em;
+    opacity: 0;
+    width: 1em;
+    z-index: -1;
+}
+
+.gh-check + label,
+.gh-check + label {
+    display: flex;
+    align-items: center;
+    color: var(--color-base);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: var(--font-normal);
+    padding-left: calc((var(--height) * 0.6) + 0.75em);
+    padding-right: 2rem;
+    position: relative;
+    user-select: none;
+}
+
+.gh-check + label:before,
+.gh-check + label:before {
+    background: var(--color-bg);
+    border-radius: var(--radius);
+    border: solid 1px var(--color-border);
+    content: "";
+    display: inline-block;
+    height: calc(var(--height) * 0.6);
+    line-height: calc(var(--height) * 0.56);
+    text-align: center;
+    width: calc(var(--height) * 0.6);
+    margin-right: 1rem;
+}
+
+.gh-check:checked + label:before,
+.gh-check:checked + label:before {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-bg);
+    content: "✓";
+}
+
+.gh-check:focus + label:before,
+.gh-check:focus + label:before {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.gh-check + label:before {
+    border-radius: var(--radius);
+}
+
+.gh-check + label:before {
+    border-radius: 100%;
+}
+
+/* @import "components/buttons.css"; */
+/* Buttons
+/* ---------------------------------------------------------- */
+
+.gh-button {
+    display: inline-block;
+    min-width: 75px;
+    height: var(--height);
+    padding: 0 2rem;
+    border: 0;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-family: var(--font-sans-serif);
+    font-size: 1.4rem;
+    font-weight: var(--font-normal);
+    line-height: var(--height);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    appearance: none;
+    transition: 0.4s ease;
+}
+
+.gh-button.gh-button-fit {
+    width: 100%;
+}
+
+.gh-button.gh-button-small {
+    height: calc(var(--height) * 0.9);
+    line-height: calc(var(--height) * 0.9);
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+.gh-button.gh-button-large {
+    height: calc(var(--height) * 1.2);
+    line-height: calc(var(--height) * 1.2);
+    padding: 0 2.5rem;
+    font-size: 1.7rem;
+}
+
+.gh-button.gh-button-disabled,
+.gh-button:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.gh-button {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px currentColor;
+}
+
+.gh-button:hover {
+    text-decoration: none;
+    color: var(--color-primary) !important;
+    box-shadow: inset 0 0 0 2px var(--color-primary);
+    transition: 0.2s ease;
+}
+
+.gh-button.gh-button-primary {
+    color: #fff !important;
+    background-color: var(--color-primary);
+    box-shadow: none;
+}
+
+.gh-button.gh-button-primary:hover {
+    background-color: var(--color-primary);
+}
 
 /* Ghost components */
-@import "ghost/header.css";
-@import "ghost/content.css";
-@import "ghost/readmore.css";
-@import "ghost/members.css";
-@import "ghost/errors.css";
-@import "ghost/footer.css";
-@import "ghost/badge.css";
-@import "ghost/pagination.css";
-@import "ghost/comments.css";
+/* @import "ghost/header.css"; */
+/* Global Header
+/* ---------------------------------------------------------- */
 
+.gh-head {
+    padding: 3vmin 4vmin;
+    font-size: 1.6rem;
+    line-height: 1.3em;
+    background: inherit;
+}
 
+.gh-head a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.gh-head-inner {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr auto 1fr;
+    grid-auto-flow: row dense;
+}
+
+/* Brand
+/* ---------------------------------------------------------- */
+
+.gh-head-brand {
+    grid-column-start: 2;
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.gh-head-logo {
+    display: block;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 1.2em;
+}
+
+.gh-head-logo img {
+    max-height: 40px;
+}
+
+/* Primary Navigation
+/* ---------------------------------------------------------- */
+
+.gh-head-menu {
+    display: flex;
+    align-items: center;
+}
+
+.gh-head-menu .nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+}
+
+.gh-head-menu .nav li {
+    margin: 0 1.5vmin 0 0;
+    padding: 0;
+}
+
+.gh-head-menu .nav a {
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.gh-head-menu .nav-current a {
+    box-shadow: 0 -1px 0 0 currentcolor inset;
+}
+
+/* Secondary Navigation
+/* ---------------------------------------------------------- */
+
+.gh-head-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    text-align: right;
+}
+
+.gh-head-actions-list {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.gh-head-actions-list a:not([class]) {
+    display: inline-block;
+    margin: 0 0 0 1.5vmin;
+    padding: 5px 0;
+}
+
+/* Mobile Menu Trigger
+/* ---------------------------------------------------------- */
+
+.gh-burger {
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.gh-burger-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+}
+
+.gh-burger-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.gh-burger-box::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: currentcolor;
+    transition: transform 300ms cubic-bezier(0.2, 0.6, 0.3, 1),
+        width 300ms cubic-bezier(0.2, 0.6, 0.3, 1);
+    will-change: transform, width;
+}
+
+.gh-burger-inner::before,
+.gh-burger-inner::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: currentcolor;
+    transition: transform 250ms cubic-bezier(0.2, 0.7, 0.3, 1),
+        width 250ms cubic-bezier(0.2, 0.7, 0.3, 1);
+    will-change: transform, width;
+}
+
+.gh-burger-inner::before {
+    transform: translatey(-6px);
+}
+.gh-burger-inner::after {
+    transform: translatey(6px);
+}
+
+body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::before {
+    transform: translatey(-8px);
+}
+body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
+    transform: translatey(8px);
+}
+
+.gh-head-open .gh-burger-box::before {
+    width: 0;
+    transform: translatex(19px);
+    transition: transform 200ms cubic-bezier(0.2, 0.7, 0.3, 1),
+        width 200ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.gh-head-open .gh-burger-inner::before {
+    width: 26px;
+    transform: translatex(6px) rotate(135deg);
+}
+
+.gh-head-open .gh-burger-inner::after {
+    width: 26px;
+    transform: translatex(6px) rotate(-135deg);
+}
+
+/* Layout Variants
+/* ---------------------------------------------------------- */
+
+.gh-head-brandnavactions .gh-head-brand {
+    grid-column-start: 1;
+}
+
+.gh-head-brandnav .gh-container {
+    grid-gap: 0;
+    grid-template-columns: auto max-content max-content;
+}
+.gh-head-brandnav .gh-head-brand {
+    grid-column-start: 1;
+}
+.gh-head-brandnav .gh-head-menu {
+    margin-left: 40px;
+}
+.gh-head-brandnav .gh-head-menu .nav li {
+    margin: 0 0 0 1.5vmin;
+    padding: 0;
+}
+
+/* Center Stacked */
+.gh-head-stacked .gh-container {
+    grid-template-columns: 1fr;
+    grid-gap: 2vmin;
+}
+.gh-head-stacked .gh-head-brand {
+    grid-column-start: 1;
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.gh-head-stacked .gh-head-menu,
+.gh-head-stacked .gh-head-actions,
+.gh-head-stacked .gh-head-actions-list {
+    justify-content: center;
+}
+.gh-head-stacked .gh-head-actions a:first-child svg {
+    margin-left: 0;
+}
+
+/* Mobile Menu
+/* ---------------------------------------------------------- */
+/* IDs needed to ensure sufficient specificity */
+
+@media (max-width: 900px) {
+    .gh-burger {
+        display: inline-block;
+    }
+    #gh-head {
+        transition: all 0.4s ease-out;
+        overflow: hidden;
+    }
+    #gh-head .gh-head-inner {
+        height: 100%;
+        grid-template-columns: 1fr;
+    }
+    #gh-head .gh-head-brand {
+        position: relative;
+        z-index: 10;
+        grid-column-start: auto;
+        max-width: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+    }
+    #gh-head .gh-head-logo {
+        font-size: 2.2rem;
+    }
+    #gh-head .gh-head-logo img {
+        max-height: 40px;
+    }
+    #gh-head .gh-head-menu {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 0 10vh 0;
+        font-weight: 300;
+        font-size: 3.6rem;
+        line-height: 1.1em;
+    }
+    #gh-head .gh-head-menu .nav li {
+        margin: 5px 0;
+    }
+    #gh-head .gh-head-menu .nav a {
+        padding: 8px 0;
+    }
+    #gh-head .gh-head-menu .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #gh-head .gh-head-actions {
+        padding: 20px 0;
+        justify-content: center;
+        text-align: left;
+    }
+    #gh-head .gh-head-actions a {
+        margin: 0 10px;
+    }
+    /* Hide collapsed content */
+    #gh-head .gh-head-actions,
+    #gh-head .gh-head-menu {
+        display: none;
+    }
+    /* Open the menu */
+    .gh-head-open {
+        overflow: hidden;
+        height: 100vh;
+    }
+    .gh-head-open #gh-head {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 900;
+        overflow-y: scroll;
+    }
+    .gh-head-open #gh-head .gh-head-inner {
+        grid-template-rows: auto 1fr auto;
+    }
+    .gh-head-open #gh-head .gh-head-actions,
+    .gh-head-open #gh-head .gh-head-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    #gh-head .gh-head-menu {
+        font-size: 6vmin;
+    }
+}
+
+/* @import "ghost/content.css"; */
+
+/* Content grid
+/* ---------------------------------------------------------- */
+
+.gh-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(4vw, auto)
+        [wide-start]
+        minmax(auto, 240px)
+        [main-start]
+        min(720px, calc(100% - 8vw))
+        [main-end]
+        minmax(auto, 240px)
+        [wide-end]
+        minmax(4vw, auto)
+        [full-end];
+}
+
+.gh-canvas > * {
+    grid-column: main-start / main-end;
+}
+
+.kg-width-wide {
+    grid-column: wide-start / wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start / full-end;
+}
+
+.kg-width-full img {
+    width: 100%;
+}
+
+/* Content & Typography
+/* ---------------------------------------------------------- */
+
+.gh-content > * + * {
+    margin-top: 4vmin;
+}
+
+.gh-content [id]:not(:first-child) {
+    margin: 1.5em 0 0;
+}
+
+.gh-content > [id] + * {
+    margin-top: 1.5rem;
+}
+
+.gh-content [id] + .kg-card,
+.gh-content blockquote + .kg-card {
+    margin-top: 6vmin;
+}
+
+.gh-canvas > blockquote,
+.gh-canvas > ol,
+.gh-canvas > ul,
+.gh-canvas > dl,
+.gh-canvas > p {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.6em;
+}
+
+.gh-content > ul,
+.gh-content > ol,
+.gh-content > dl {
+    padding-left: 1.9em;
+}
+
+.gh-content hr {
+    margin-top: 6vmin;
+}
+
+.gh-content hr + * {
+    margin-top: 6vmin !important;
+}
+
+.gh-content blockquote {
+    position: relative;
+    font-style: italic;
+}
+
+.gh-content blockquote::before {
+    content: "";
+    position: absolute;
+    left: -1.5em;
+    top: 0;
+    bottom: 0;
+    width: 0.3rem;
+    background: var(--color-primary);
+}
+
+@media (max-width: 650px) {
+    .gh-canvas blockquote,
+    .gh-canvas ol,
+    .gh-canvas ul,
+    .gh-canvas dl,
+    .gh-canvas p {
+        font-size: 1.8rem;
+    }
+
+    .gh-content blockquote::before {
+        left: -4vmin;
+    }
+}
+
+/* Cards
+/* ---------------------------------------------------------- */
+
+.gh-content :not(.kg-card):not([id]) + .kg-card {
+    margin-top: 6vmin;
+}
+
+.gh-content .kg-card + :not(.kg-card) {
+    margin-top: 6vmin;
+}
+
+figcaption {
+    padding: 1.5rem 1.5rem 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+}
+
+figcaption strong {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.gh-canvas :not(pre) code {
+    vertical-align: middle;
+    padding: 0.15em 0.4em 0.15em;
+    border: #e1eaef 1px solid;
+    font-weight: 400 !important;
+    font-size: 0.9em;
+    line-height: 1em;
+    color: #dc0050;
+    background: #f0f6f9;
+    border-radius: 0.25em;
+}
+
+.gh-canvas > pre {
+    overflow: scroll;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Default to 16 / 9 aspect ratio for YouTube & Vimeo embeds  */
+.kg-embed-card > :where(iframe[src*="youtube.com"], iframe[src*="vimeo.com"]) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.kg-image-card img {
+    margin: auto;
+}
+
+/* Galleries
+/* ---------------------------------------------------------- */
+
+.kg-gallery-card + .kg-gallery-card {
+    margin-top: 0.75em;
+}
+
+.kg-gallery-container {
+    position: relative;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em;
+}
+
+/* Bookmark Cards
+/* ---------------------------------------------------------- */
+
+.kg-bookmark-card,
+.kg-bookmark-publisher {
+    position: relative;
+}
+
+.kg-bookmark-container,
+.kg-bookmark-container:hover {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    color: currentColor;
+    background: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-sans-serif);
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.kg-bookmark-content {
+    flex-basis: 0;
+    flex-grow: 999;
+    padding: 20px;
+    order: 1;
+}
+
+.kg-bookmark-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.3em;
+}
+
+.kg-bookmark-description {
+    display: -webkit-box;
+    max-height: 45px;
+    margin: 0.5em 0 0 0;
+    font-size: 1.4rem;
+    line-height: 1.55em;
+    overflow: hidden;
+    opacity: 0.8;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.kg-bookmark-metadata {
+    margin-top: 20px;
+}
+
+.kg-bookmark-metadata {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kg-bookmark-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.kg-bookmark-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.kg-bookmark-thumbnail {
+    display: flex;
+    flex-basis: 24rem;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.kg-bookmark-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+.kg-bookmark-author {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.kg-bookmark-publisher::before {
+    content: "•";
+    margin: 0 0.5em;
+}
+
+/* Card captions
+/* ---------------------------------------------------------- */
+
+.kg-width-full.kg-card-hascaption {
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.kg-width-wide.kg-card-hascaption img {
+    grid-column: wide-start / wide-end;
+}
+.kg-width-full.kg-card-hascaption img {
+    grid-column: 1 / -1;
+}
+
+.kg-width-full.kg-card-hascaption figcaption {
+    grid-column: main-start / main-end;
+}
+
+/* Tables
+/* ---------------------------------------------------------- */
+
+.gh-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.gh-content th {
+    padding: 0.5em 0.8em;
+    text-align: left;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.gh-content td {
+    padding: 0.4em 0.7em;
+}
+
+.gh-content tbody tr:nth-child(2n + 1) {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1px;
+}
+
+.gh-content tbody tr:nth-child(2n + 2) td:last-child {
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1), inset -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.gh-content tbody tr:nth-child(2n + 2) td {
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.gh-content tbody tr:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* @import "ghost/readmore.css"; */
+/* Read More
+/* ---------------------------------------------------------- */
+
+.gh-readmore {
+    padding: 8vmin 4vmin;
+    font-size: 2.6rem;
+}
+
+.gh-readmore-inner {
+    display: grid;
+    grid-gap: 8vmin;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gh-readmore-prev {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.gh-readmore a {
+    display: flex;
+    color: currentColor;
+    text-decoration: none;
+}
+
+.gh-readmore h4 {
+    width: 100%;
+    font-size: inherit;
+}
+
+.gh-readmore svg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1em;
+    margin: 0.15em 0 0;
+}
+
+.gh-readmore svg + h4,
+.gh-readmore h4 + svg {
+    margin-left: 2vmin;
+}
+
+@media (max-width: 700px) {
+    .gh-readmore {
+        font-size: 1.6rem;
+    }
+    .gh-readmore svg {
+        margin: 0.1em 0 0;
+    }
+}
+
+/* @import "ghost/members.css"; */
+/* Members Auth Template
+/* ---------------------------------------------------------- */
+
+.gh-auth-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 10vmin;
+    text-align: center;
+}
+
+.gh-auth-title {
+    margin: 0 0 0.1em;
+    font-size: 4.2rem;
+}
+
+.gh-auth-form p {
+    margin: 10px 0 4vmin 0;
+    font-size: 1.7rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.gh-auth-form p small {
+    display: inline-block;
+    margin: 15px 0 0 0;
+    font-size: 1.4rem;
+}
+
+.gh-auth-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.gh-auth-box .gh-button {
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    .gh-auth-box {
+        flex-direction: column;
+        max-width: 400px;
+    }
+    .gh-auth-box .gh-button {
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+}
+
+/* Members Forms
+/* ---------------------------------------------------------- */
+
+form[data-members-form] .gh-button-loader,
+form[data-members-form] .message-success,
+form[data-members-form] .message-error {
+    display: none;
+}
+
+.gh-button-content {
+    min-width: 100px;
+}
+
+.message-success svg,
+.message-error svg {
+    position: relative;
+    top: -1px;
+    margin-right: 5px;
+    height: 15px;
+    width: 15px;
+}
+.message-success svg {
+    fill: #fff;
+}
+.message-error svg {
+    fill: var(--color-error);
+}
+
+form[data-members-form].success .message-success,
+form[data-members-form].error .message-error {
+    position: fixed;
+    top: 20px;
+    left: 4vmin;
+    right: 4vmin;
+    z-index: 9999;
+    max-width: calc(1400px - 8vmin);
+    margin: 0 auto;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    background: var(--color-base);
+    border-radius: var(--radius);
+}
+form[data-members-form].success .message-success {
+    background: var(--color-success);
+}
+form[data-members-form].error .message-error {
+    color: var(--color-error);
+    background: #fff;
+    box-shadow: var(--color-error) 0 0 0 1px;
+}
+
+form[data-members-form] .gh-button {
+    position: relative;
+    min-width: 120px;
+}
+
+/*-- Loading --*/
+
+/* Hide button text */
+form[data-members-form].loading .gh-button-content {
+    visibility: hidden;
+}
+
+/* Show loading spinner */
+form[data-members-form].loading .gh-button-loader {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: -30%;
+    margin: 0 0 0 -19px;
+    transform: scale(0.6);
+}
+
+.gh-button-loader svg path,
+.gh-button-loader svg rect {
+    fill: #fff;
+}
+
+/*-- Show success message on success --*/
+form[data-members-form].success .message-success {
+    display: block;
+}
+
+/*-- Show error message on error --*/
+form[data-members-form].error .message-error {
+    display: block;
+}
+
+/* @import "ghost/errors.css"; */
+
+/* @import "ghost/footer.css"; */
+/* Global Footer
+/* ---------------------------------------------------------- */
+
+.gh-foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8vmin 4vmin 4vmin;
+}
+
+.gh-foot .gh-container {
+    width: auto;
+}
+
+.gh-foot a {
+    color: inherit;
+}
+
+.gh-foot-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gh-foot-menu .nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.gh-foot-menu .nav li {
+    margin: 0 1.5vmin;
+    padding: 0;
+}
+
+.gh-foot-menu .nav a {
+    display: inline-block;
+    padding: 3px 0;
+    text-decoration: none;
+    box-shadow: 0 -1px 0 0 currentcolor inset;
+}
+
+.gh-foot-meta {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+    .gh-foot-menu .nav {
+        font-size: 1.6rem;
+    }
+}
+
+/* @import "ghost/badge.css"; */
+a.gh-powered,
+a.gh-powered:hover {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 9px 6px 6px;
+    border: none;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.3px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #383838;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+a.gh-powered svg {
+    height: 16px;
+    width: 16px;
+    margin: 0 6px 0 0;
+}
+
+/* @import "ghost/pagination.css"; */
+
+.gh-pagination .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 4vmin;
+}
+/* @import "ghost/comments.css"; */
+.gh-post-comments {
+    margin-block: 8vmin 4vmin;
+}
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
@@ -113,7 +1498,6 @@ html,
     aspect-ratio: 16 / 9;
 }
 
-
 .gh-card-meta {
     display: block;
     margin: 0 0 1rem;
@@ -144,7 +1528,6 @@ html,
     opacity: 0.75;
 }
 
-
 /* Page
 /* ---------------------------------------------------------- */
 
@@ -172,7 +1555,6 @@ html,
         font-size: 1.6rem;
     }
 }
-
 
 /* Post
 /* ---------------------------------------------------------- */
@@ -208,7 +1590,6 @@ html,
 .gh-post-footer {
     margin: 2rem 0;
 }
-
 
 /* Author Archive
 /* ---------------------------------------------------------- */
@@ -246,7 +1627,7 @@ html,
     margin: 0 1.25vmin 0 0;
     height: 1em;
     width: 1px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     transform: rotate(20deg);
 }
 
