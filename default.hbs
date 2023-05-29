@@ -14,17 +14,9 @@
     </head>
 
     <body class="{{body_class}}">
-        <script>
-            // Check if the current URL matches the desired page
-            if (window.location.pathname === '/') {
-                // Add the custom class to the html element
-                document.documentElement.classList.add('no-scrollbar');
-            }
-        </script>
-
         <div class="gh-viewport">
 
-            <header id="gh-head" class="gh-head absolute w-full">
+            <header id="gh-head" class="gh-head w-full">
                 <nav class="gh-head-inner gh-container">
                     <div class="gh-head-brand">
                         <a class="gh-head-logo" href="{{@site.url}}">
@@ -57,6 +49,15 @@
                     </div>
                 </nav>
             </header>
+
+            <script>
+                // Check if the current URL matches the desired page
+                if (window.location.pathname === '/') {
+                    // Add the custom class to the html element
+                    document.documentElement.classList.add('no-scrollbar');
+                    document.querySelector("header").classList.add('absolute');
+                }
+            </script>
 
             <main class="gh-main">
 
