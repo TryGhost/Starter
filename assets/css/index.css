@@ -1,6 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    }
+}
+
+  @keyframes fly-up {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-100%);
+    }
+  }
+  
+  @keyframes appear-from-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .changing-heading {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .fly-up-animation {
+    animation-name: fly-up;
+  }
+  
+  .appear-from-bottom-animation {
+    animation-name: appear-from-bottom;
+  }
+
+.scroll-container {
+    overflow-y: scroll;  /* Enable vertical scrolling */
+    max-height: 200px;   /* Set a maximum height for the container */
+    scrollbar-width: thin;  /* Adjust the scrollbar width as needed */
+  }
+  
 /*
 
 This is a development CSS file that is compiled to a minified
@@ -433,9 +495,7 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .gh-head {
-    padding: 3vmin 4vmin;
-    font-size: 1.6rem;
-    line-height: 1.3em;
+    @apply p-10 text-2xl;
     background: inherit;
 }
 
@@ -491,7 +551,7 @@ h6 {
 }
 
 .gh-head-menu .nav li {
-    margin: 0 1.5vmin 0 0;
+    margin: 0 1.5rem 0 0;
     padding: 0;
 }
 
@@ -525,7 +585,7 @@ h6 {
 
 .gh-head-actions-list a:not([class]) {
     display: inline-block;
-    margin: 0 0 0 1.5vmin;
+    margin: 0 0 0 1.5rem;
     padding: 5px 0;
 }
 
@@ -634,14 +694,14 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin-left: 40px;
 }
 .gh-head-brandnav .gh-head-menu .nav li {
-    margin: 0 0 0 1.5vmin;
+    margin: 0 0 0 1.5rem;
     padding: 0;
 }
 
 /* Center Stacked */
 .gh-head-stacked .gh-container {
     grid-template-columns: 1fr;
-    grid-gap: 2vmin;
+    grid-gap: 2rem;
 }
 .gh-head-stacked .gh-head-brand {
     grid-column-start: 1;
@@ -752,7 +812,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 @media (max-width: 600px) {
     #gh-head .gh-head-menu {
-        font-size: 6vmin;
+        font-size: 6rem;
     }
 }
 
@@ -797,7 +857,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 /* ---------------------------------------------------------- */
 
 .gh-content > * + * {
-    margin-top: 4vmin;
+    margin-top: 4rem;
 }
 
 .gh-content [id]:not(:first-child) {
@@ -810,7 +870,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .gh-content [id] + .kg-card,
 .gh-content blockquote + .kg-card {
-    margin-top: 6vmin;
+    margin-top: 6rem;
 }
 
 .gh-canvas > blockquote,
@@ -831,11 +891,11 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .gh-content hr {
-    margin-top: 6vmin;
+    margin-top: 6rem;
 }
 
 .gh-content hr + * {
-    margin-top: 6vmin !important;
+    margin-top: 6rem !important;
 }
 
 .gh-content blockquote {
@@ -863,7 +923,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     }
 
     .gh-content blockquote::before {
-        left: -4vmin;
+        left: -4rem;
     }
 }
 
@@ -871,11 +931,11 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 /* ---------------------------------------------------------- */
 
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-    margin-top: 6vmin;
+    margin-top: 6rem;
 }
 
 .gh-content .kg-card + :not(.kg-card) {
-    margin-top: 6vmin;
+    margin-top: 6rem;
 }
 
 figcaption {
@@ -1121,13 +1181,13 @@ figcaption strong {
 /* ---------------------------------------------------------- */
 
 .gh-readmore {
-    padding: 8vmin 4vmin;
+    padding: 8rem 4rem;
     font-size: 2.6rem;
 }
 
 .gh-readmore-inner {
     display: grid;
-    grid-gap: 8vmin;
+    grid-gap: 8rem;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -1156,7 +1216,7 @@ figcaption strong {
 
 .gh-readmore svg + h4,
 .gh-readmore h4 + svg {
-    margin-left: 2vmin;
+    margin-left: 2rem;
 }
 
 @media (max-width: 700px) {
@@ -1175,7 +1235,7 @@ figcaption strong {
 .gh-auth-form {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto 10vmin;
+    margin: 0 auto 10rem;
     text-align: center;
 }
 
@@ -1185,7 +1245,7 @@ figcaption strong {
 }
 
 .gh-auth-form p {
-    margin: 10px 0 4vmin 0;
+    margin: 10px 0 4rem 0;
     font-size: 1.7rem;
     color: rgba(0, 0, 0, 0.6);
 }
@@ -1251,10 +1311,10 @@ form[data-members-form].success .message-success,
 form[data-members-form].error .message-error {
     position: fixed;
     top: 20px;
-    left: 4vmin;
-    right: 4vmin;
+    left: 4rem;
+    right: 4rem;
     z-index: 9999;
-    max-width: calc(1400px - 8vmin);
+    max-width: calc(1400px - 8rem);
     margin: 0 auto;
     padding: 10px 0;
     color: #fff;
@@ -1321,7 +1381,7 @@ form[data-members-form].error .message-error {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8vmin 4vmin 4vmin;
+    padding: 8rem 4rem 4rem;
 }
 
 .gh-foot .gh-container {
@@ -1348,7 +1408,7 @@ form[data-members-form].error .message-error {
 }
 
 .gh-foot-menu .nav li {
-    margin: 0 1.5vmin;
+    margin: 0 1.5rem;
     padding: 0;
 }
 
@@ -1405,11 +1465,11 @@ a.gh-powered svg {
 .gh-pagination .pagination {
     display: flex;
     justify-content: space-between;
-    margin-block: 4vmin;
+    margin-block: 4rem;
 }
 /* @import "ghost/comments.css"; */
 .gh-post-comments {
-    margin-block: 8vmin 4vmin;
+    margin-block: 8rem 4rem;
 }
 
 /* Main - Your styles here! Edit below
@@ -1430,18 +1490,18 @@ html,
 }
 
 .gh-page {
-    padding: 0 4vmin;
+    /* padding: 0 4rem; */
 }
 
 .gh-article {
-    padding: 8vmin 0;
+    padding: 8rem 0;
 }
 
 .gh-postfeed {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-    gap: 4.8vmin 4vmin;
-    padding: 8vmin 0;
+    gap: 4.8rem 4rem;
+    padding: 8rem 0;
 }
 
 .gh-postfeed > *:first-child {
@@ -1478,7 +1538,7 @@ html,
 /* ---------------------------------------------------------- */
 
 /* .gh-card:not(:first-child) {
-    margin: 8vmin auto 0;
+    margin: 8rem auto 0;
 } */
 
 .gh-card-link {
@@ -1490,7 +1550,7 @@ html,
     width: 100%;
     /* max-height: 700px; */
     object-fit: cover;
-    margin-bottom: 4vmin;
+    margin-bottom: 4rem;
     aspect-ratio: 1 / 1;
 }
 
@@ -1517,7 +1577,7 @@ html,
 
 .gh-card-content p {
     margin: 1.2rem 0;
-    padding: 0 3vmin;
+    padding: 0 3rem;
 }
 
 .gh-card-content > strong {
@@ -1533,18 +1593,18 @@ html,
 
 .gh-page-head {
     margin: 0 auto;
-    padding: 8vmin 0 4vmin;
+    padding: 8rem 0 4rem;
     text-align: center;
 }
 
 .gh-page-image {
-    margin: 4vmin 0 0 0;
+    margin: 4rem 0 0 0;
 }
 
 .gh-page-head > p {
     max-width: 720px;
     margin: 0.3em auto 0;
-    padding: 0 6vmin;
+    padding: 0 6rem;
     font-size: 1.3em;
     line-height: 1.4em;
     opacity: 0.5;
@@ -1560,7 +1620,7 @@ html,
 /* ---------------------------------------------------------- */
 
 .gh-header {
-    padding: 0 0 8vmin 0;
+    padding: 0 0 8rem 0;
     text-align: center;
 }
 
@@ -1580,7 +1640,7 @@ html,
 .gh-feature-image {
     grid-column: wide-start / wide-end;
     width: 100%;
-    margin: 8vmin 0 0;
+    margin: 8rem 0 0;
 }
 
 .gh-feature-image img {
@@ -1595,8 +1655,8 @@ html,
 /* ---------------------------------------------------------- */
 
 .gh-author-image {
-    height: 12vmin;
-    width: 12vmin;
+    height: 12rem;
+    width: 12rem;
     margin: 0 auto 1.5em;
     border-radius: 100%;
     overflow: hidden;
@@ -1604,7 +1664,7 @@ html,
 }
 
 .gh-author-meta {
-    margin: 2vmin 0 0 0;
+    margin: 2rem 0 0 0;
     font-size: 1.2em;
 }
 
@@ -1618,13 +1678,13 @@ html,
     position: relative;
     display: inline-flex;
     align-items: center;
-    margin: 0 0.75vmin;
+    margin: 0 0.75rem;
 }
 
 .gh-author-links a + a:before {
     display: block;
     content: "";
-    margin: 0 1.25vmin 0 0;
+    margin: 0 1.25rem 0 0;
     height: 1em;
     width: 1px;
     background: rgba(0, 0, 0, 0.3);
@@ -1635,4 +1695,10 @@ html,
     .gh-author-meta {
         font-size: 1.6rem;
     }
+}
+
+/* My CSS */
+
+.screen-height-minus-header {
+    @apply h-[calc(100vh-96px)];
 }
