@@ -3,28 +3,28 @@
 /* Content grid
 /* ---------------------------------------------------------- */
 
-.gh-canvas {
+.gh-canvas,
+.kg-width-full.kg-content-wide {
+    --gap: 4vw;
+    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --full: minmax(var(--gap), 1fr);
+
     display: grid;
     grid-template-columns:
-        [full-start]
-        minmax(4vw, auto)
-            [wide-start]
-            minmax(auto, 240px)
-                [main-start]
-                    min(720px, calc(100% - 8vw))
-                [main-end]
-            minmax(auto, 240px)
-            [wide-end]
-        minmax(4vw, auto)
-        [full-end]
-    ;
+        [full-start] var(--full)
+        [wide-start] var(--wide)
+        [main-start] var(--main) [main-end]
+        var(--wide) [wide-end]
+        var(--full) [full-end];
 }
 
 .gh-canvas > * {
     grid-column: main-start / main-end;
 }
 
-.kg-width-wide {
+.kg-width-wide,
+.kg-content-wide > div {
     grid-column: wide-start / wide-end;
 }
 
