@@ -40,10 +40,10 @@
             <div class="gh-head-actions-list">
                 {{search}}
                 {{#if @site.members_enabled}}
-                    {{^if @member}}
-                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
-                    {{else}}
+                    {{#if @member}}
                     <a class="gh-button" href="#/portal/account">Account</a>
+                    {{else}}
+                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
                     {{/if}}
                 {{/if}}
             </div>
