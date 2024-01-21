@@ -14,9 +14,9 @@ Re-usable card for linking to posts
                 {{img_url feature_image size='m' format='avif'}} 600w,
                 {{img_url feature_image size='l' format='avif'}} 1200w,
                 {{img_url feature_image size='xl' format='avif'}} 2000w"
-                {{#unless @first}}sizes="(min-width: 1200px) 1200px, 100vw"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/unless}}
+                sizes="{{#if @first}}(min-width: 800px) 100vw, 700px{{else}}(min-width: 1200px) 1200px, 100vw{{/if}}"
                 type="image/avif"
-                {{#unless @first}}loading="lazy"{{/unless}}
+                loading="{{#if @first}}eager{{else}}lazy{{/if}}"
               >
               <source 
                 srcset="
@@ -26,9 +26,9 @@ Re-usable card for linking to posts
                 {{img_url feature_image size='m' format='webp'}} 600w,
                 {{img_url feature_image size='l' format='webp'}} 1200w,
                 {{img_url feature_image size='xl' format='webp'}} 2000w"
-                {{#unless @first}}sizes="(min-width: 1200px) 1200px, 100vw"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/unless}}
+                sizes="{{#if @first}}(min-width: 800px) 100vw, 700px{{else}}(min-width: 1200px) 1200px, 100vw{{/if}}"
                 type="image/webp"
-                {{#unless @first}}loading="lazy"{{/unless}}
+                loading="{{#if @first}}eager{{else}}lazy{{/if}}"
 
               >
               <img
@@ -39,11 +39,11 @@ Re-usable card for linking to posts
                 {{img_url feature_image size='m'}} 600w,
                 {{img_url feature_image size='l'}} 1200w,
                 {{img_url feature_image size='xl'}} 2000w"
-                {{#unless @first}}sizes="(min-width: 1200px) 1200px, 100vw"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/unless}}
+                sizes="{{#if @first}}(min-width: 800px) 100vw, 700px{{else}}(min-width: 1200px) 1200px, 100vw{{/if}}"
                 src="{{img_url feature_image size='m'}}"
                 alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                 class="gh-card-image"
-                {{#unless @first}}loading="lazy"{{/unless}}
+                loading="{{#if @first}}eager{{else}}lazy{{/if}}"
               >
             </picture>
         {{/if}}
