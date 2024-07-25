@@ -1,93 +1,61 @@
 {{!< default}}
 
-{{#post}}
+<main class="site-main">
 
-<article class="gh-article {{post_class}}">
+    {{#post}}
 
-    <header class="gh-header gh-canvas">
-        <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        <h1 class="gh-title">{{title}}</h1>
+    <article class="gh-article {{post_class}}">
 
-        {{#if custom_excerpt}}
-        <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
+        <header class="gh-article-header gh-canvas">
+            <span class="backButton" onclick="window.open('{{@site.url}}','_self')">
+                <i class="arrowLeft fa-solid fa-arrow-left"></i>
+            </span>
 
-        {{#if feature_image}}
-        <figure class="gh-feature-image">
-            <picture>
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="avif"}} 30w,
-                {{img_url feature_image size="xs" format="avif"}} 100w,
-                {{img_url feature_image size="s" format="avif"}} 300w,
-                {{img_url feature_image size="m" format="avif"}} 600w,
-                {{img_url feature_image size="l" format="avif"}} 1200w,
-                {{img_url feature_image size="xl" format="avif"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                type="image/avif"
-              >
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="webp"}} 30w,
-                {{img_url feature_image size="xs" format="webp"}} 100w,
-                {{img_url feature_image size="s" format="webp"}} 300w,
-                {{img_url feature_image size="m" format="webp"}} 600w,
-                {{img_url feature_image size="l" format="webp"}} 1200w,
-                {{img_url feature_image size="xl" format="webp"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                type="image/webp"
-              >
-              <img
-                srcset="
-                {{img_url feature_image size="xxs"}} 30w,
-                {{img_url feature_image size="xs"}} 100w,
-                {{img_url feature_image size="s"}} 300w,
-                {{img_url feature_image size="m"}} 600w,
-                {{img_url feature_image size="l"}} 1200w,
-                {{img_url feature_image size="xl"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                src="{{img_url feature_image size="l"}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-              >
-            </picture>
-            {{#if feature_image_caption}}
-                <figcaption>{{feature_image_caption}}</figcaption>
+            {{#if custom_excerpt}}
+                <p class="gh-article-excerpt">{{custom_excerpt}}</p>
             {{/if}}
-        </figure>
-        {{/if}}
-    </header>
 
-    <div class="gh-content gh-canvas">
-        {{content}}
-    </div>
+            {{!-- Image --}}
+            {{> "post-image"}}
 
-    <footer class="gh-footer gh-canvas">
+            {{!-- Tag --}}
+            {{#if primary_tag}}
+                <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+            {{/if}}
 
-        <div class="gh-post-authors">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
+            {{!-- Title --}}
+            <h1 class="gh-article-title">{{title}}</h1>
+            
+            {{!-- Date --}}
+            <div class="articlePublished">
+                <time class="publishedDate" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                <i class="dotIcon fa-solid fa-circle"></i>
+                <span class="readTime">	{{reading_time}}</span>
+            </div>
+
+        </header>
+
+        <div class="gh-content gh-canvas">
+            {{content}}
         </div>
+    </article>
 
-        {{#if comments}}
-        <section class="gh-post-comments">
+    {{!-- Share Post Banner --}}
+    {{> "share-banner"}}
+
+    {{!-- Prev Post ---- Next Post --}}
+    {{!-- {{> "post-navigation"}} --}}
+
+    {{#if comments}}
+        <div class="gh-comments gh-canvas">
             {{comments}}
-        </section>
-        {{/if}}
-
-    </footer>
-
-</article>
-
-<aside class="gh-readmore">
-    <div class="gh-readmore-inner gh-container">
-        <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
         </div>
-        <div class="gh-readmore-prev">
-            {{#prev_post}}<a href="{{url}}">
-                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
-            </a>{{/prev_post}}
-        </div>
-    </div>
-</aside>
+    {{/if}}
 
-{{/post}}
+    {{/post}}
+
+    {{#if @custom.show_related_posts}}
+        {{> "related-posts"}}
+    {{/if}}
+
+</main>

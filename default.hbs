@@ -1,79 +1,194 @@
 <!DOCTYPE html>
 <html lang="{{@site.locale}}">
+
 <head>
-
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
-    <script src="{{asset "built/index.js"}}" defer></script>
-
     <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
-    {{!-- Outputs important meta data and settings, should always be in <head> --}}
-
 </head>
-<body class="{{body_class}}">
-<div class="gh-viewport">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
+<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<div class="gh-site">
 
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button" aria-label="menu">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://dapplooker.com">
+                        {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="{{@site.title}}">
+                        {{else}}
+                            Blogs
+                        {{/if}}
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{search}}
-                {{#if @site.members_enabled}}
-                    {{^if @member}}
-                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
-                    {{else}}
-                    <a class="gh-button" href="#/portal/account">Account</a>
-                    {{/if}}
-                {{/if}}
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                
+                {{!-- Hambuger Icon --}}
+                {{!-- <button class="gh-burger"></button> --}}
+            </div>
+
+            {{!-- Nav Menu Tabs --}}
+            {{!-- <nav class="gh-head-menu">
+                {{navigation}}
+                {{#unless @site.members_enabled}}
+                    {{#match @custom.navigation_layout "Stacked"}}
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                    {{/match}}
+                {{/unless}}
+            </nav> --}}
+
+            <div class="gh-head-actions">
+                {{#unless @site.members_enabled}}
+                    {{^match @custom.navigation_layout "Stacked"}}
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}} Search</button>
+                    {{/match}}
+                {{else}}
+                    <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                    <div class="gh-head-members">
+                        {{#unless @member}}
+                            {{#unless @site.members_invite_only}}
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                            {{else}}
+                                <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signin" data-portal="signin">Sign in</a>
+                            {{/unless}}
+                        {{else}}
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/account" data-portal="account">Account</a>
+                        {{/unless}}
+                    </div>
+                {{/unless}}
             </div>
         </div>
-    </nav>
-</header>
+    </header>
 
-<main class="gh-main">
-
-    {{{body}}}
-    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-
-</main>
-
-<footer class="gh-foot">
-    <div class="gh-container">
-        <div class="gh-foot-menu">
-            {{navigation type="secondary"}}
-        </div>
-        <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-        </div>
+    <div class="site-content">
+        {{{body}}}
     </div>
-</footer>
+
+    <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer">
+        {{!-- <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                {{@site.title}} © {{date format="YYYY"}}
+            </div>
+            
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div> --}}
+
+<div class="footerContainer">
+        <div class="footerContent">
+          <div class="left">
+            <div class="poweredBy" >
+              <a
+                target="_blank"
+                href="https://dapplooker.com/"
+              >
+                <img
+                  width="194px"
+                  height="44px"
+                  class="dapplookerIcon"
+                  alt="Dapplooker Icon"
+                  src="{{@site.logo}}"
+                />
+              </a>
+            </div>
+            <p class="footerDesc">We aim to empower everyone to easily understand smart contract data, 
+              do analytics and easily build beautiful charts and dashboards.
+            </p>
+          </div>
+          <div class="right">
+              <h2 class="heading">Join Us</h2>
+              <ul class="socialLinks">
+                {{!-- Twitter --}}
+                <li class="socialItem">
+                  <a
+                    href="https://twitter.com/dapplooker"
+                    target="_blank"
+                    class="socialLink"
+                  >
+                  <i class="socialIcon fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
+                {{!-- Linkedin --}}
+                <li class="socialItem">
+                  <a
+                    href="https://www.linkedin.com/company/dapplooker?originalSubdomain=in"
+                    target="_blank"
+                    class="socialLink"
+                  >
+                  <i class="socialIcon fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+                {{!-- Telegram  --}}
+                <li class="socialItem">
+                    <a
+                      href="https://t.me/dapplooker"
+                      target="_blank"
+                      class="socialLink"
+                    >
+                    <i class="socialIcon fa-brands fa-telegram"></i>
+                    </a>
+                </li>
+                {{!-- Github  --}}
+                <li class="socialItem">
+                    <a
+                      href="https://github.com/dapplooker"
+                      target="_blank"
+                      class="socialLink"
+                    >
+                    <i class="socialIcon fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                 {{!-- Discord --}}
+                <li class="socialItem">
+                    <a
+                      href="https://discord.com/invite/s2BYwUMTQ4"
+                      target="_blank"
+                      class="socialLink"
+                    >
+                    <i class="socialIcon fa-brands fa-discord"></i>
+                    </a>
+                  </li>
+                  {{!-- Medium --}}
+               <li class="socialItem">
+                    <a
+                      href="https://blog.dapplooker.com/"
+                      target="_blank"
+                      class="socialLink"
+                    >
+                    <i class="socialIcon fa-brands fa-medium"></i>
+                    </a>
+                  </li>
+                  {{!-- Youtube --}}
+                <li class="socialItem">
+                    <a
+                      href="https://www.youtube.com/channel/UC1KJmtb3UhnWSN_sDv71_fg"
+                      target="_blank"
+                      class="socialLink"
+                    >
+                    <i class="socialIcon fa-brands fa-youtube"></i>
+                    </a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+    </footer>
 
 </div>
 
-{{!-- <foot> --}}
+{{#is "post, page"}}
+    {{> "pswp"}}
+{{/is}}
+
+<script src="{{asset "built/main.min.js"}}"></script>
 {{ghost_foot}}
-{{!-- Outputs important scripts - should always be included before closing body tag --}}
 
 </body>
 </html>

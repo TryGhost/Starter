@@ -1,0 +1,7 @@
+.author-image-placeholder {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: 50%;
+}

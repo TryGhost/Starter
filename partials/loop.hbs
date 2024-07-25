@@ -1,0 +1,65 @@
+<article class="{{post_class}} u-shadow"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
+<div class="post-link" 
+{{!-- href="{{url}}" --}}
+>
+    {{#if feature_image}}
+        {{#if featured}}
+            <img
+                class="post-image u-object-fit"
+                src="{{img_url feature_image}}"
+                alt="{{title}}"
+                loading="lazy"
+            >
+        {{else}}
+        <figure class="post-media" onclick="window.open(`{{@site.url}}{{url}}`,'_self')">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="{{img_url feature_image size="s"}} 400w,
+                            {{img_url feature_image size="m"}} 750w,
+                            {{img_url feature_image size="l"}} 960w,
+                            {{img_url feature_image size="xl"}} 1140w,
+                            {{img_url feature_image size="xxl"}} 1920w"
+                    sizes="600px"
+                    src="{{img_url feature_image size="l"}}"
+                    alt="{{title}}"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+        {{/if}}
+    {{/if}}
+
+    <div class="post-wrapper">
+        <header class="post-header">
+            {{#primary_tag}}
+                <span class="post-tag" onclick="window.open(`{{@site.url}}{{url}}`,'_self')">{{name}}</span>
+            {{/primary_tag}}
+            <h2 class="post-title" onclick="window.open(`{{@site.url}}{{url}}`,'_self')">
+                {{title}}
+            </h2>
+            <time class="publishedDate" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+        </header>
+
+        {{!-- {{#if excerpt}}
+            <div class="post-excerpt">
+                {{excerpt words="12"}}
+            </div>
+        {{/if}} --}}
+    </div>
+
+    {{!-- <footer class="post-footer" style="background-color: #333;">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+            {{#foreach authors}}
+                {{#if profile_image}}
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                    </span>
+                {{/if}}
+            {{/foreach}}
+        </div>
+    </footer> --}}
+</div>
+</article>

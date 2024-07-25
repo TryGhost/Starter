@@ -22,7 +22,7 @@ import livereload from 'rollup-plugin-livereload';
 
 // Rollup configuration
 export default defineConfig({
-    input: 'assets/js/index.js',
+    input: 'assets/js/main.js',
     output: {
         dir: "assets/built",
         sourcemap: true,
@@ -30,8 +30,8 @@ export default defineConfig({
         plugins: [terser()]
     },
     plugins: [
-        commonjs(), 
-        nodeResolve(), 
+        commonjs(),
+        nodeResolve(),
         babel({ babelHelpers: 'bundled' }),
         postcss({
             extract: true,
@@ -39,7 +39,7 @@ export default defineConfig({
             plugins: [
                 atImport(),
                 postcssPresetEnv({})
-            ], 
+            ],
             minimize: true,
         }),
         process.env.BUILD !== "production" && livereload({

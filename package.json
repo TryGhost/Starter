@@ -60,7 +60,7 @@
     ],
     "config": {
         "card_assets": true,
-        "posts_per_page": 15,
+        "posts_per_page": 9,
         "image_sizes": {
             "xxs": {
                 "width": 30
@@ -79,6 +79,39 @@
             },
             "xl": {
                 "width": 2000
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "navigation_layout": {
+                "type": "select",
+                "options": [
+                    "Logo on the left",
+                    "Logo in the middle",
+                    "Stacked"
+                ],
+                "default": "Logo in the middle"
+            },
+            "title_font": {
+                "type": "select",
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif"
+                ],
+                "default": "Modern sans-serif"
+            },
+            "body_font": {
+                "type": "select",
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif"
+                ],
+                "default": "Modern sans-serif"
+            },
+            "show_related_posts": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
             }
         }
     },

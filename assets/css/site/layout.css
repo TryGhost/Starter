@@ -1,0 +1,29 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex-grow: 1;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.page-template .site-content {
+  padding-block: 0;
+}
+
+@media (min-width: 992px) {
+  .related-column {
+    order: 1;
+  }
+
+  .content-column {
+    order: 2;
+  }
+
+  .sidebar-column {
+    order: 3;
+  }
+}

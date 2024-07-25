@@ -1,0 +1,129 @@
+:root {
+  --primary-color: var(--ghost-accent-color, #2ec4b6);
+  --primary-text-color: #333;
+  --secondary-text-color: #aaa;
+  --white-color: #fff;
+  --light-gray-color: #f4f4f4;
+  --mid-gray-color: #e9e9e9;
+  --dark-gray-color: #1a1a1a;
+  --black-color: #000;
+  /* --font-sans: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; */
+  --font-sans: "Heebo", sans-serif;
+  /* --font-serif: Lora, Times, serif; */
+  --font-serif: "Heebo", sans-serif;
+  --animation-base: ease-in-out;
+  --shadow-base: 0 0 10px rgba(0, 0, 0, 0.02);
+  --content-font-size: 1.7rem;
+  --color-darker-gray: white;
+}
+
+body:not(.post-template):not(.page-template) {
+  /* background-image: linear-gradient(0deg, #efefef 65%, #fff); */
+  background-color: #03000c !important;
+}
+body {
+  /* background-image: linear-gradient(0deg, #efefef 65%, #fff); */
+  background-color: #03000c !important;
+}
+
+.gh-foot {
+  padding-bottom: 5rem !important;
+}
+
+.footerContainer {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #514f4d;
+  border-bottom: 1px solid #514f4d;
+}
+
+.heading {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footerContent {
+  width: 100%;
+  padding: 32px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerDesc {
+  width: 311px;
+  color: #bfc7cb;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  text-wrap: pretty;
+  margin-top: 20px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.socialLinks {
+  display: flex;
+  column-gap: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.socialItem {
+  width: 50px;
+  height: 50px;
+  background-color: #070301;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  list-style: none;
+}
+.socialItem:hover {
+  background-color: #16110f;
+}
+
+.socialIcon {
+  font-size: 22.5px;
+}
+
+@media screen and (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .right {
+    margin-top: 50px;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .heading {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .dapplookerIcon {
+    width: 170px;
+  }
+
+  .socialLinks {
+    column-gap: 5px;
+  }
+
+  .socialItem {
+    width: 35px;
+    height: 35px;
+  }
+
+  .socialIcon {
+    font-size: 18px;
+  }
+}

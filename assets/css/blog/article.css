@@ -1,0 +1,153 @@
+.gh-article {
+  margin-top: 50px;
+}
+
+.page-template .gh-article {
+  margin-top: 0;
+}
+
+.gh-article-meta {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+}
+
+.gh-article-tag {
+  color: var(--tag-color, var(--ghost-accent-color));
+}
+
+.gh-article-title {
+  font-size: 3rem;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+.gh-article-excerpt {
+  font-size: 2rem;
+}
+
+.gh-article-image {
+  grid-column: main-start / main-end;
+}
+
+/* DappLooker Custom CSS */
+.gh-article-header,
+.gh-article-meta,
+.gh-article-title,
+.gh-content,
+.gh-comments {
+  color: white !important;
+}
+.gh-article {
+  margin-top: 0px !important;
+}
+.gh-article-header {
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  left: -60px;
+  top: 40px;
+  width: max-content;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.09);
+  padding: 3px 12px;
+  cursor: pointer;
+}
+.backButton:hover {
+  background-color: #34363a;
+}
+
+@media screen and (max-width: 860px) {
+  .backButton {
+    left: 0px;
+    top: -30px;
+  }
+}
+
+.arrowLeft {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gh-article-tag {
+  width: max-content;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  background-color: rgba(0, 120, 255, 0.2);
+  color: var(--tag-color, var(--ghost-accent-color));
+  letter-spacing: 0.005em;
+  padding: 3px 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.gh-article-title {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.articleImage {
+  border-radius: 8px;
+}
+
+.articlePublished {
+  margin-top: 12px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.publishedDate,
+.readTime {
+  color: rgba(238, 238, 238, 0.9);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.dotIcon {
+  font-size: 7px !important;
+  color: rgba(238, 238, 238, 0.9);
+}
+
+.gh-content {
+  line-height: 27px;
+}
+.gh-content h1 {
+  margin-top: 46px !important;
+  font-size: 28px !important;
+}
+
+/* Share Banner CSS */
+.sharePostBanner {
+  margin-top: 36px;
+}
+.wrapper {
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  height: 80px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bannerTitle {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+.socialLogos {
+  display: flex;
+  gap: 20px;
+}
+.shareIcon {
+  font-size: 30px;
+}

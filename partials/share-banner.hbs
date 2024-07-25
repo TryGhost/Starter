@@ -1,0 +1,36 @@
+ {{!-- Share Post Banner --}}
+    <div class="sharePostBanner gh-canvas" >
+      <div class="wrapper">
+        <h4 class="bannerTitle">Share with your community</h4>
+        <div class="socialLogos">
+            <a
+              href="https://x.com/intent/post?text={{title}}+by@dapplooker+{{@site.url}}{{url}}"
+              target="_blank"
+              class="socialLink"
+            >
+            <i class="shareIcon fa-brands fa-square-x-twitter"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/feed/?linkOrigin=LI_BADGE&shareActive=true&shareUrl={{@site.url}}{{url}}"
+              target="_blank"
+              class="socialLink"
+            >
+            <i class="shareIcon socialIcon fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://www.reddit.com/submit?url={{@site.url}}{{url}}&title={{title}}"
+              target="_blank"
+              class="socialLink"
+            >
+            <i class="shareIcon fa-brands fa-reddit"></i>
+            </a>
+            <span
+            onclick="navigator.clipboard.writeText({{@site.url}}{{url}})"
+            class="socialLink copyContainer"
+            style="cursor: pointer;"
+            >
+            {{> "icons/copy-attachment"}}
+            </span>
+        </div>
+        </div>
+    </div>
