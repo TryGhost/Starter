@@ -1,0 +1,48 @@
+.gh-head {
+  background-color: transparent;
+}
+
+.gh-head-menu,
+.gh-head-actions {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+}
+
+.gh-head-btn {
+  --multiplier: 1.3;
+}
+
+/* DappLooker Customised CSS */
+.gh-head {
+  color: white !important;
+}
+.gh-head-brand {
+  grid-column-start: 1 !important;
+  color: white !important;
+}
+.gh-head-actions {
+  grid-column-end: 4;
+}
+
+.gh-icon-btn {
+  width: auto !important;
+  color: #b1b3b9 !important;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 500;
+  height: auto !important;
+  padding: 8px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 36px;
+}
+.gh-icon-btn:hover {
+  background-color: #34363a;
+}
+.gh-icon-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  margin-right: 10px !important;
+}
