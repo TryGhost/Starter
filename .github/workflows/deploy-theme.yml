@@ -14,5 +14,5 @@ jobs:
             - name: Deploy Ghost Theme
               uses: TryGhost/action-deploy-theme@v1
               with:
-                  api-url: http://localhost:2369
-                  api-key: 66913bc53dfe76460aaf7d06:c26ff01a6b93f0da3e4b12d4ef8cab9aa2743f7cc79d006445cb00a53f06c157
+                  api-url: https://gh.graphlooker.com
+                  api-key: 66aa0688619ac756639d9419:af22408f45798a4ef9bdb60f31298368e80e2915148ce13a20a4337f2f0b18ba
