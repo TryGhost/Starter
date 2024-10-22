@@ -1,3 +1,5 @@
+import "../css/main.css";
+
 // (function () {
 //     pagination(true);
 // })();

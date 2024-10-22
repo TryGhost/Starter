@@ -1,6 +1,6 @@
 .post-feed {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
@@ -135,7 +135,7 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .post-feed {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

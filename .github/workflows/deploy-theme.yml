@@ -3,9 +3,7 @@ name: Deploy Theme
 on:
     push:
         branches:
-            - master
             - main
-            - dl-theme
 jobs:
     deploy:
         runs-on: ubuntu-22.04

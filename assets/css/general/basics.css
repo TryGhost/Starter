@@ -19,7 +19,7 @@
 
 body:not(.post-template):not(.page-template) {
   /* background-image: linear-gradient(0deg, #efefef 65%, #fff); */
-  background-color: #03000c !important;
+  /* background-color: #03000c !important; */
 }
 body {
   /* background-image: linear-gradient(0deg, #efefef 65%, #fff); */
