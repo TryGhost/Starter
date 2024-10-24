@@ -7,14 +7,8 @@
       <title>{{meta_title}}</title>
       <link rel="stylesheet" href="{{asset "built/main.css"}}">
       <script src="{{asset "built/main.js"}}" defer></script>
+      <meta name="robots" content="index, follow"> 
       
-      {{#if (match @site.url "gh.graphlooker.com")}} 
-          <meta name="robots" content="noindex, nofollow"> 
-      {{else}} 
-          <meta name="robots" content="index, follow"> 
-      {{/if}}
-
-
       {{ghost_head}}
   </head>
 
@@ -195,7 +189,7 @@
         {{> "pswp"}}
     {{/is}}
 
-    <script src="{{asset "built/main.min.js"}}"></script>
+    <script src="{{asset "built/main.js"}}"></script>
 
     {{ghost_foot}}
   </body>
