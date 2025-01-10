@@ -1,7 +1,6 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A starter theme for Ghost theme development",
-    "demo": "https://starter.ghost.io",
+    "name": "xoruby-theme",
+    "description": "Based on the starter theme",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=5.0.0"
@@ -47,13 +46,15 @@
         "@rollup/plugin-commonjs": "^25.0.0",
         "@rollup/plugin-node-resolve": "^15.0.1",
         "@rollup/plugin-terser": "^0.4.0",
+        "autoprefixer": "^10.4.20",
         "bestzip": "^2.2.1",
-        "postcss": "^8.4.24",
+        "postcss": "^8.4.49",
         "postcss-import": "^15.1.0",
         "postcss-preset-env": "^8.0.1",
         "rollup": "^3.18.0",
         "rollup-plugin-livereload": "^2.0.5",
-        "rollup-plugin-postcss": "^4.0.2"
+        "rollup-plugin-postcss": "^4.0.2",
+        "tailwindcss": "^3.4.17"
     },
     "browserslist": [
         "defaults"
