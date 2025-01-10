@@ -22,10 +22,22 @@ body {
     line-height: 1.6em;
     font-weight: 400;
     font-style: normal;
-    background: #fff;
+    background: #000;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.logo-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 300px;  /* adjust size as needed */
+    height: auto;
 }
 
 
