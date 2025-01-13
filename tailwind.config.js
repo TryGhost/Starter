@@ -48,6 +48,7 @@ export default {
       colors: {
         orange: {...COLOR_TOKENS.ORANGE},
         purple: {...COLOR_TOKENS.PURPLE},
+        white: '#F5F5F5',
         current: 'currentColor',
       },
     },

@@ -13,16 +13,15 @@ html {
 }
 
 body {
+    @apply bg-purple-900 text-white;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: #464646;
     font-family: var(--font-sans-serif);
     font-size: 1.5rem;
     line-height: 1.6em;
     font-weight: 400;
     font-style: normal;
-    background: #000;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
