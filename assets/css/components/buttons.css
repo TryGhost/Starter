@@ -7,7 +7,7 @@
     height: var(--height);
     padding: 0 2rem;
     border: 0;
-    border-radius: var(--radius);
+    /* border-radius: var(--radius); */
     cursor: pointer;
     font-family: var(--font-sans-serif);
     font-size: 1.4rem;

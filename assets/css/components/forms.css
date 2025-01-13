@@ -4,7 +4,7 @@
 .gh-input,
 .gh-textarea {
     background: var(--color-bg);
-    border-radius: var(--radius);
+    /* border-radius: var(--radius); */
     border: none;
     border: solid 1px var(--color-border);
     color: inherit;
@@ -73,7 +73,7 @@
 .gh-check + label:before,
 .gh-check + label:before {
     background: var(--color-bg);
-    border-radius: var(--radius);
+    /* border-radius: var(--radius); */
     border: solid 1px var(--color-border);
     content: '';
     display: inline-block;
@@ -100,7 +100,7 @@
 
 
 .gh-check + label:before {
-    border-radius: var(--radius);
+    /* border-radius: var(--radius); */
 }
 
 .gh-check + label:before {

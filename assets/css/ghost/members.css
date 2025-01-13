@@ -92,7 +92,7 @@ form[data-members-form].error .message-error {
     font-weight: 500;
     text-align: center;
     background: var(--color-base);
-    border-radius: var(--radius);
+    /* border-radius: var(--radius); */
 }
 form[data-members-form].success .message-success {
     background: var(--color-success);
