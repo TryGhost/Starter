@@ -1,3 +1,7 @@
+import tailwindcss from 'tailwindcss';
+
+import tailwindConfig from "./tailwind.config.js";
+
 import { defineConfig } from 'rollup';
 // A Rollup plugin which locates modules using the Node resolution algorithm
 import { nodeResolve } from '@rollup/plugin-node-resolve';
@@ -38,7 +42,8 @@ export default defineConfig({
             sourceMap: true,
             plugins: [
                 atImport(),
-                postcssPresetEnv({})
+                postcssPresetEnv({}),
+                tailwindcss(tailwindConfig)
             ], 
             minimize: true,
         }),

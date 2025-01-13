@@ -25,7 +25,6 @@
 /* ---------------------------------------------------------- */
 
 .gh-head-brand {
-    grid-column-start: 2;
     display: flex;
     align-items: center;
     max-width: 200px;
