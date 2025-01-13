@@ -71,6 +71,10 @@ html,
     margin: 0 auto;
 }
 
+.gh-head {
+    color: #f5f5f5
+}
+
 .gh-head-actions a:not(.gh-button) {
     display: inline-flex;
     align-items: center;

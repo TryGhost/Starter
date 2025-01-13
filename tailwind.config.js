@@ -2,7 +2,12 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'display': ['"Advent Pro"', 'sans-serif'],
+        'body': ['"Red Hat Display"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
