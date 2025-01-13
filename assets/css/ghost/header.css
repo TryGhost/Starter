@@ -54,6 +54,7 @@
 }
 
 .gh-head-menu .nav {
+    @apply font-bold uppercase;
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
