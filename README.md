@@ -41,7 +41,7 @@ We've documented this starter theme pretty heavily so that it should be possible
 
 The main files are:
 
-- [`default.hbs`](default.hbs) - The main template file
+- [`default.hbs`](default_original.hbs - The main template file
 - [`index.hbs`](index.hbs) - Used for the home page
 - [`post.hbs`](post.hbs) - Used for individual posts
 - [`page.hbs`](page.hbs) - Used for individual pages
