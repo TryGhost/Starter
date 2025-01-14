@@ -1,0 +1,4 @@
+routes:
+  /: home
+  /blog/:
+    template: blog
