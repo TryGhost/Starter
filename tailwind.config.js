@@ -10,6 +10,7 @@ const COLOR_TOKENS = {
     700: "rgb(120, 32, 2)",
     800: "rgb(85, 23, 2)",
     900: "rgb(35, 9, 1)",
+    "primary": "#FF460B",
   },
   PURPLE: {
     50:  "rgb(247, 246, 249)",
@@ -23,6 +24,7 @@ const COLOR_TOKENS = {
     700: "rgb(95, 83, 127)",
     800: "rgb(64, 55, 88)",
     900: "rgb(7, 6, 9)",
+    "primary": "#1B1725",
   }
 };
 /** @type {import('tailwindcss').Config} */
@@ -30,6 +32,12 @@ export default {
   content: [],
   theme: {
     extend: {
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px',
+      },
       fontFamily: {
         'display': ['"Advent Pro"', 'sans-serif'],
         'body': ['"Red Hat Display"', 'sans-serif'],

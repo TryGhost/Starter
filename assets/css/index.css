@@ -32,6 +32,17 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+h1 {
+    @apply text-5xl text-orange-primary font-display font-extrabold;
+}
 html,
 .gh-viewport {
     display: flex;
