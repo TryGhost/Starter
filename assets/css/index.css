@@ -44,7 +44,7 @@ h1 {
     @apply text-5xl text-orange-primary font-display font-extrabold;
 }
 h2 {
-    @apply font-bold italic uppercase text-2xl;
+    @apply font-display font-bold uppercase text-2xl;
 }
 html,
 .gh-viewport {
@@ -113,9 +113,20 @@ html,
 /* Index
 /* ---------------------------------------------------------- */
 
-/* .gh-card:not(:first-child) {
-    margin: 8vmin auto 0;
-} */
+.gh-card {
+    @apply bg-purple-100 text-purple-900 p-[40px];
+
+    h2 {
+        @apply text-4xl;
+    }
+}
+
+.gh-card:not(:first-child) {
+    /* margin: 8vmin auto 0; */
+    h2 {
+        @apply text-3xl;
+    }
+}
 
 .gh-card-link {
     display: flex;
@@ -136,7 +147,7 @@ html,
 
 
 .gh-card-meta {
-    display: block;
+    display: none;
     margin: 0 0 1rem;
     font-size: 1.4rem;
     line-height: 1.2em;
@@ -147,14 +158,15 @@ html,
 
 .gh-card-content {
     max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
+    /* margin: 0 auto; */
+    text-align: left;
     font-size: 1.6rem;
 }
 
 .gh-card-content p {
+    @apply leading-9;
     margin: 1.2rem 0;
-    padding: 0 3vmin;
+    /* padding: 0 3vmin; */
 }
 
 .gh-card-content > strong {
