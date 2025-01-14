@@ -43,6 +43,9 @@ h6 {
 h1 {
     @apply text-5xl text-orange-primary font-display font-extrabold;
 }
+h2 {
+    @apply font-bold italic uppercase text-2xl;
+}
 html,
 .gh-viewport {
     display: flex;
