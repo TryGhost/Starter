@@ -19,6 +19,7 @@ node_modules
 *.iml
 projectFilesBackup
 
+/assets/built/
 /assets/dist/
 /dist/
 /import-posts/ghost-posts.json
