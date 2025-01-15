@@ -10,11 +10,13 @@
         "desktop": "assets/screenshot-desktop.jpg"
     },
     "scripts": {
-        "dev": "rollup -c --environment BUILD:development -w",
-        "build": "rollup -c --environment BUILD:production",
-        "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
-        "test": "npx gscan .",
-        "pretest": "npm run build"
+        "reload": "node utils/reload",
+        "dev": "npm run reload & npm run watch",
+        "watch": "NODE_ENV=development rollup -c -w",
+        "build": "NODE_ENV=production rollup -c",
+        "zip": "npm run build && node utils/zip",
+        "check": "gscan .",
+        "css": "npx stylelint 'src/css/**/*.css' --fix"
     },
     "author": {
         "name": "Ghost Foundation",

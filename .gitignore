@@ -19,6 +19,10 @@ node_modules
 *.iml
 projectFilesBackup
 
-.DS_Store
-
-dist/
+/assets/dist/
+/dist/
+/import-posts/ghost-posts.json
+/import-posts/posts.json
+node_modules/
+*.DS_Store
+*.~undo-tree~
