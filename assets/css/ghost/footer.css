@@ -5,11 +5,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8vmin 4vmin 4vmin;
+    padding: 48px 80px;
 }
 
 .gh-foot .gh-container {
-    width: auto;
 }
 
 .gh-foot a {
@@ -17,9 +16,12 @@
 }
 
 .gh-foot-menu {
+    @apply font-bold uppercase;
+    font-family: Advent Pro, sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 30px;
 }
 
 .gh-foot-menu .nav {
@@ -40,7 +42,6 @@
     display: inline-block;
     padding: 3px 0;
     text-decoration: none;
-    box-shadow: 0 -1px 0 0 currentcolor inset;
 }
 
 .gh-foot-meta {
@@ -48,6 +49,23 @@
     font-size: 1.5rem;
     text-align: center;
     opacity: 0.75;
+}
+
+.footer-border {
+    @apply flex flex-col divide-y divide-orange-primary divide-y-4;
+}
+
+.top-footer {
+    @apply  flex flex-row items-center justify-between pb-6;
+}
+
+.social-media {
+    @apply flex flex-row items-center gap-4;
+}
+
+.copyright {
+    @apply text-xs capitalize;
+    font-family: Red Hat Display, sans-serif !important;
 }
 
 @media (max-width: 700px) {

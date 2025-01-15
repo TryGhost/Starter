@@ -60,9 +60,53 @@
 </main>
 
 <footer class="gh-foot">
-    <div class="gh-container">
+    <div class="gh-container footer-border">
+        <div class="top-footer">
+            <div>
+                <img 
+                    src="/assets/images/logo.svg"
+                    alt="XO Ruby Logo"
+                    width="300"
+                    height="300"
+                    class="logo"
+                />
+            </div>
+            <div>
+                <ul class="social-media">
+                    <li role="menuitem">
+                        <a href="https://bsky.app/profile/xoruby.com" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/bluesky.svg" alt="Blue Sky" />
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="https://www.linkedin.com/company/beflagrant" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/linkedin.svg" alt="Linkedin" />
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="https://ruby.social/@xoruby" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/mastodon.svg" alt="Mastodon" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="gh-foot-menu">
-            {{navigation type="secondary"}}
+            <div class="copyright">
+                XORuby @ 2024. All rights reserved.
+            </div>
+            <div>
+                {{navigation}}
+            </div>
+            <div>
+                {{#if @site.members_enabled}}
+                    {{^if @member}}
+                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
+                    {{else}}
+                    <a class="gh-button" href="#/portal/account">Account</a>
+                    {{/if}}
+                {{/if}}
+            </div>
         </div>
     </div>
 </footer>
