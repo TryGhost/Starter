@@ -15,7 +15,7 @@
     </div>
     {{/tag}}
 
-    <div class="post-feed gh-feed">
+    <div class="post-feed gh-feed {{#if posts.[1]}}{{else}}two-posts{{/if}}">
         {{#foreach posts}}
             {{> "loop"}}
         {{/foreach}}

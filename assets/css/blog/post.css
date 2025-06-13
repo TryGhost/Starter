@@ -4,6 +4,10 @@
   gap: 30px;
 }
 
+.post-feed.two-posts {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .post-link {
   display: flex;
   flex-direction: column;
@@ -31,7 +35,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: normal;
-  background-color: rgba(0, 120, 255, 0.2);
+  background-color: #f16823;
   color: var(--tag-color, var(--ghost-accent-color));
   letter-spacing: 0.005em;
   padding: 3px 12px;
@@ -178,4 +182,9 @@
   line-height: 24px;
   padding: 12px 20px;
   grid-column-start: 2;
+}
+
+.tag .post-feed.two-posts .post-title {
+  font-size: 28px;
+  line-height: 120%;
 }
