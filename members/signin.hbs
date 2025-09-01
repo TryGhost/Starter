@@ -12,18 +12,18 @@
 
         {{!-- Not logged in: Signin form --}}
         <form class="gh-auth-form" data-members-form="signin">
-            <h1 class="gh-auth-title">Welcome back!</h1>
-            <p>Sign into your account again for full access</p>
+            <h1 class="gh-auth-title">{{t "Welcome back!"}}</h1>
+            <p>{{t "Sign into your account again for full access"}}</p>
             <div class="gh-auth-box">
-                <input aria-label="Email Address" class="gh-input" data-members-email type="email" placeholder="Your email address" required="true" autocomplete="false" autofocus />
+                <input aria-label="{{t "Email Address"}}" class="gh-input" data-members-email type="email" placeholder="{{t "Your email address"}}" required="true" autocomplete="false" autofocus />
                 <button class="gh-button gh-button-primary" type="submit">
-                    <span class="gh-button-content">Sign in</span>
+                    <span class="gh-button-content">{{t "Sign in"}}</span>
                     <span class="gh-button-loader">{{> "icons/loader"}}</span>
                 </button>
             </div>
-            <p><small>Don't have an account yet? <a href="/signup/">Sign up</a></small></p>
-            <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to complete signin</div>
-            <div class="message-error">Please enter a valid email address!</div>
+            <p><small>{{t "Don't have an account yet?"}} <a href="/signup/">{{t "Sign up"}}</a></small></p>
+            <div class="message-success"><strong>{{t "Great!"}}</strong> {{t "Check your inbox and click the link to complete signin"}}</div>
+            <div class="message-error">{{t "Please enter a valid email address!"}}</div>
         </form>
 
     {{/if}}

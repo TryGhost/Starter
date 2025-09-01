@@ -48,10 +48,10 @@ Re-usable card for linking to posts
             </picture>
         {{/if}}
         <div class="gh-card-content">
-            <span class="gh-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+            <span class="gh-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
             <h2 class="gh-card-title">{{title}}</h2>
             <p>{{excerpt}}</p>
-            <strong>Read more</strong>
+            <strong>{{t "Read More"}}</strong>
         </div>
     </a>
 </article>

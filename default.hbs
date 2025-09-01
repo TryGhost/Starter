@@ -27,7 +27,7 @@
                     {{@site.title}}
                 {{/if}}
             </a>
-            <a class="gh-burger" role="button" aria-label="menu">
+            <a class="gh-burger" role="button" aria-label="{{t "Menu"}}">
                 <div class="gh-burger-box">
                     <div class="gh-burger-inner"></div>
                 </div>
@@ -41,9 +41,9 @@
                 {{search}}
                 {{#if @site.members_enabled}}
                     {{^if @member}}
-                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
+                    <a class="gh-button" href="{{@site.signup_url}}">{{t "Subscribe"}}</a>
                     {{else}}
-                    <a class="gh-button" href="#/portal/account">Account</a>
+                    <a class="gh-button" href="#/portal/account">{{t "Account"}}</a>
                     {{/if}}
                 {{/if}}
             </div>
@@ -64,7 +64,7 @@
             {{navigation type="secondary"}}
         </div>
         <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+            {{t "Published with"}} <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
     </div>
 </footer>

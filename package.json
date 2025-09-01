@@ -2,7 +2,7 @@
     "name": "ghost-starter-theme",
     "description": "A starter theme for Ghost theme development",
     "demo": "https://starter.ghost.io",
-    "version": "1.0.0",
+    "version": "1.3.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -13,14 +13,14 @@
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
         "build": "rollup -c --environment BUILD:production",
-        "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
+        "zip": "npm run build && bestzip Theme-Romain.zip assets/* partials/* members/* locales/* *.hbs package.json",
         "test": "npx gscan .",
         "pretest": "npm run build"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Romain ROCHAS",
+        "email": "romainrochas69@gmail.com",
+        "url": "https://ghost.romain-rochas.fr"
     },
     "gpm": {
         "type": "theme",

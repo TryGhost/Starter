@@ -40,10 +40,10 @@
         <div class="gh-head-actions">
             <div class="gh-head-actions-list">
                 {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                <a href="{{facebook_url @site.facebook}}" title="{{t "Facebook"}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                 {{/if}}
                 {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                <a href="{{twitter_url @site.twitter}}" title="{{t "Twitter"}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                 {{/if}}
                 <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
             </div>
@@ -60,19 +60,19 @@
 
                 <h1 class="gh-error-code">{{statusCode}}</h1>
                 <p class="gh-error-description">{{message}}</p>
-                <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
+                <p class="gh-error-link"><a href="{{@site.url}}">{{t "Go back home"}} →</a></p>
 
                 {{#if errorDetails}}
                 <section class="gh-error-stack">
-                    <h4>Theme errors:</h4>
+                    <h4>{{t "Theme errors:"}}​</h4>
                     <ul class="gh-error-stack-list">
                         {{#foreach errorDetails}}
                         <li>
                             <h5 class="gh-error-stack-function">{{{rule}}}</h5>
 
                             {{#foreach failures}}
-                            <span class="gh-error-stack-file"><strong>Ref:</strong> {{ref}}</span><br>
-                            <span class="gh-error-stack-file"><strong>Message:</strong> {{message}}</span>
+                            <span class="gh-error-stack-file"><strong>{{t "Ref:"}}​</strong> {{ref}}</span><br>
+                            <span class="gh-error-stack-file"><strong>{{t "Message:"}}​</strong> {{message}}</span>
                             {{/foreach}}
                         </li>
                         {{/foreach}}
@@ -93,7 +93,7 @@
             {{navigation type="secondary"}}
         </div>
         <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+            {{t "Published with"}} <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
     </div>
 </footer>
