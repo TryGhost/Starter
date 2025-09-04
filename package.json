@@ -41,9 +41,9 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/yipfram/AI-blog.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
+    "bugs": "https://github.com/yipfram/AI-blog/issues",
     "contributors": [
         "https://github.com/TryGhost/Starter/graphs/contributors",
         "https://github.com/romain-ai"
@@ -55,15 +55,15 @@
         "@rollup/plugin-commonjs": "^25.0.0",
         "@rollup/plugin-node-resolve": "^15.0.1",
         "@rollup/plugin-terser": "^0.4.0",
+        "autoprefixer": "^10.4.21",
         "bestzip": "^2.2.1",
         "postcss": "^8.4.24",
         "postcss-import": "^15.1.0",
         "postcss-preset-env": "^8.0.1",
-        "tailwindcss": "^3.3.0",
-        "autoprefixer": "^10.4.0",
         "rollup": "^3.18.0",
         "rollup-plugin-livereload": "^2.0.5",
-        "rollup-plugin-postcss": "^4.0.2"
+        "rollup-plugin-postcss": "^4.0.2",
+        "tailwindcss": "^3.4.17"
     },
     "browserslist": [
         "defaults"

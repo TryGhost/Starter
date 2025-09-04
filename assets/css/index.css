@@ -1,9 +1,7 @@
-/*
 
-This is a development CSS file that is compiled to a minified
-production stylesheet in assets/built/screen.css using: npm run dev
-
-*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
@@ -92,9 +90,7 @@ html,
 /* Index
 /* ---------------------------------------------------------- */
 
-/* .gh-card:not(:first-child) {
-    margin: 8vmin auto 0;
-} */
+
 
 .gh-card-link {
     display: flex;
@@ -103,7 +99,7 @@ html,
 
 .gh-card-image {
     width: 100%;
-    /* max-height: 700px; */
+
     object-fit: cover;
     margin-bottom: 4vmin;
     aspect-ratio: 1 / 1;
