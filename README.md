@@ -1,8 +1,9 @@
-# Ghost Starter Theme
 
-A starter framework for Ghost themes! Click **Use this template** to create a copy of this repo for everything you need to get started developing a custom Ghost theme.
+# AI-blog Theme
 
-&nbsp;
+AI-blog is a modern Ghost theme powered by Tailwind CSS, created by Romain AI and based on the original Ghost Starter Theme by Ghost Foundation.
+
+This theme is designed for AI-powered blogs and content creators. Forked and customized from the Starter theme.
 
 ## First time using a Ghost theme?
 
@@ -17,7 +18,7 @@ We've documented this starter theme pretty heavily so that it should be possible
 
 &nbsp;
 
-## Starter theme features
+## AI-blog theme features
 
 🔁&nbsp;Livereload by default. See changes instantly in the browser whenever you save a file.
 
@@ -120,6 +121,11 @@ npm run test
 
 
 
-## Copyright & License
 
-Copyright (c) 2013-2025 Ghost Foundation - Released under the [MIT license](LICENSE).
+---
+
+Copyright (c) 2025 Romain AI
+
+Based on work by Ghost Foundation (c) 2013-2025
+
+Released under the [MIT license](LICENSE).
