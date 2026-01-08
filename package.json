@@ -49,8 +49,8 @@
         "@rollup/plugin-terser": "^0.4.0",
         "bestzip": "^2.2.1",
         "postcss": "^8.4.24",
-        "postcss-import": "^15.1.0",
-        "postcss-preset-env": "^8.0.1",
+        "postcss-import": "^16.0.0",
+        "postcss-preset-env": "^10.0.0",
         "rollup": "^3.18.0",
         "rollup-plugin-livereload": "^2.0.5",
         "rollup-plugin-postcss": "^4.0.2"
