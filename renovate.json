@@ -1,13 +1,6 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "@tryghost:theme"
-  ],
-  "schedule": ["after 12am and before 4am"],
-  "timezone": "UTC",
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["patch", "minor"],
-      "automerge": true
-    }
+    "local>TryGhost/renovate-config:theme.json5"
   ]
 }
