@@ -41,19 +41,19 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
-        "@babel/core": "^7.21.0",
-        "@babel/preset-env": "^7.20.2",
-        "@rollup/plugin-babel": "^6.0.3",
-        "@rollup/plugin-commonjs": "^29.0.0",
-        "@rollup/plugin-node-resolve": "^16.0.0",
-        "@rollup/plugin-terser": "^0.4.0",
-        "bestzip": "^2.2.1",
+        "@babel/core": "7.22.5",
+        "@babel/preset-env": "7.22.5",
+        "@rollup/plugin-babel": "6.0.3",
+        "@rollup/plugin-commonjs": "29.0.0",
+        "@rollup/plugin-node-resolve": "16.0.3",
+        "@rollup/plugin-terser": "0.4.3",
+        "bestzip": "2.2.1",
         "postcss": "^8.4.24",
         "postcss-import": "^16.0.0",
         "postcss-preset-env": "^10.0.0",
-        "rollup": "^4.0.0",
-        "rollup-plugin-livereload": "^2.0.5",
-        "rollup-plugin-postcss": "^4.0.2"
+        "rollup": "4.61.0",
+        "rollup-plugin-livereload": "2.0.5",
+        "rollup-plugin-postcss": "4.0.2"
     },
     "browserslist": [
         "defaults"
