@@ -44,8 +44,8 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
-        "@babel/core": "7.22.5",
-        "@babel/preset-env": "7.22.5",
+        "@babel/core": "7.29.7",
+        "@babel/preset-env": "7.29.7",
         "@rollup/plugin-babel": "6.0.3",
         "@rollup/plugin-commonjs": "29.0.3",
         "@rollup/plugin-node-resolve": "16.0.3",
