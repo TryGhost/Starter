@@ -47,7 +47,7 @@
         "@babel/core": "7.22.5",
         "@babel/preset-env": "7.22.5",
         "@rollup/plugin-babel": "6.0.3",
-        "@rollup/plugin-commonjs": "29.0.0",
+        "@rollup/plugin-commonjs": "29.0.3",
         "@rollup/plugin-node-resolve": "16.0.3",
         "@rollup/plugin-terser": "0.4.3",
         "bestzip": "2.2.1",
