@@ -33,13 +33,13 @@ importers:
         specifier: 6.2.1
         version: 6.2.1
       postcss:
-        specifier: ^8.4.24
+        specifier: 8.5.15
         version: 8.5.15
       postcss-import:
-        specifier: ^16.0.0
+        specifier: 16.1.1
         version: 16.1.1(postcss@8.5.15)
       postcss-preset-env:
-        specifier: ^10.0.0
+        specifier: 10.6.1
         version: 10.6.1(postcss@8.5.15)
       rollup:
         specifier: 4.61.1
