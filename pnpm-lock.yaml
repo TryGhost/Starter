@@ -24,8 +24,8 @@ importers:
         specifier: 16.0.3
         version: 16.0.3(rollup@4.61.1)
       '@rollup/plugin-terser':
-        specifier: 0.4.3
-        version: 0.4.3(rollup@4.61.1)
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.61.1)
       bestzip:
         specifier: 2.2.5
         version: 2.2.5
@@ -1113,11 +1113,11 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/plugin-terser@0.4.3':
-    resolution: {integrity: sha512-EF0oejTMtkyhrkwCdg0HJ0IpkcaVg1MMSf2olHb2Jp+1mnLM04OhjpJWGma4HobiDTF0WCyViWuvadyE9ch2XA==}
+  '@rollup/plugin-terser@0.4.4':
+    resolution: {integrity: sha512-XHeJC5Bgvs8LfukDwWZp7yeqin6ns8RTl2B9avbejt6tZqsqvVoWI7ZTQrcNsfKEDWBTnTxM8nMDkO2IFFbd0A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^2.x || ^3.x
+      rollup: ^2.0.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
@@ -4722,7 +4722,7 @@ snapshots:
     optionalDependencies:
       rollup: 4.61.1
 
-  '@rollup/plugin-terser@0.4.3(rollup@4.61.1)':
+  '@rollup/plugin-terser@0.4.4(rollup@4.61.1)':
     dependencies:
       serialize-javascript: 6.0.2
       smob: 1.6.2
