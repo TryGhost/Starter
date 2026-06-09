@@ -13,10 +13,13 @@
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
         "build": "rollup -c --environment BUILD:production",
-        "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
+        "zip": "pnpm build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
         "test": "npx gscan .",
-        "pretest": "npm run build"
+        "pretest": "pnpm zip",
+        "test:ci": "npx gscan --fatal --verbose .",
+        "pretest:ci": "pnpm zip"
     },
+    "packageManager": "pnpm@11.5.1",
     "author": {
         "name": "Ghost Foundation",
         "email": "hello@ghost.org",
