@@ -52,9 +52,9 @@
         "@rollup/plugin-terser": "0.4.3",
         "bestzip": "2.2.1",
         "gscan": "6.2.1",
-        "postcss": "^8.4.24",
-        "postcss-import": "^16.0.0",
-        "postcss-preset-env": "^10.0.0",
+        "postcss": "8.5.15",
+        "postcss-import": "16.1.1",
+        "postcss-preset-env": "10.6.1",
         "rollup": "4.61.1",
         "rollup-plugin-livereload": "2.0.5",
         "rollup-plugin-postcss": "4.0.2"
