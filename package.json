@@ -45,7 +45,7 @@
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
         "@babel/core": "8.0.1",
-        "@babel/preset-env": "8.0.1",
+        "@babel/preset-env": "8.0.2",
         "@rollup/plugin-babel": "7.1.0",
         "@rollup/plugin-commonjs": "29.0.3",
         "@rollup/plugin-node-resolve": "16.0.3",
