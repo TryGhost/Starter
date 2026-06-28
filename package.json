@@ -51,7 +51,7 @@
         "@rollup/plugin-node-resolve": "16.0.3",
         "@rollup/plugin-terser": "1.0.0",
         "bestzip": "3.0.1",
-        "gscan": "6.4.0",
+        "gscan": "6.4.1",
         "postcss": "8.5.15",
         "postcss-import": "16.1.1",
         "postcss-preset-env": "11.3.0",
