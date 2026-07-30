@@ -39,8 +39,8 @@ importers:
         specifier: 16.1.1
         version: 16.1.1(postcss@8.5.15)
       postcss-preset-env:
-        specifier: 11.3.0
-        version: 11.3.0(postcss@8.5.15)
+        specifier: 11.3.2
+        version: 11.3.2(postcss@8.5.15)
       rollup:
         specifier: 4.62.3
         version: 4.62.3
@@ -2669,8 +2669,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  postcss-preset-env@11.3.0:
-    resolution: {integrity: sha512-PpijTuY+NT35vvk7us0pw9lJVrsZZWukjONZsza2Kq1Gag8nrUXRkgdKdxyyhZPJ6R43L3/nLpspUK99TmU9xg==}
+  postcss-preset-env@11.3.2:
+    resolution: {integrity: sha512-O7aA42UBH/89RkGy1YXgJqb+LxZ2+zvR8bHn9qyYcYc+lOo4g9TuIpb75nZT1tN77Bd6pX3DMZ+eYohS4MfKQg==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       postcss: ^8.4
@@ -5923,7 +5923,7 @@ snapshots:
       postcss: 8.5.15
       postcss-value-parser: 4.2.0
 
-  postcss-preset-env@11.3.0(postcss@8.5.15):
+  postcss-preset-env@11.3.2(postcss@8.5.15):
     dependencies:
       '@csstools/postcss-alpha-function': 2.0.8(postcss@8.5.15)
       '@csstools/postcss-cascade-layers': 6.0.0(postcss@8.5.15)
