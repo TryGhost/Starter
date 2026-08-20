@@ -53,7 +53,7 @@
         "bestzip": "3.0.2",
         "gscan": "6.4.2",
         "postcss": "8.5.26",
-        "postcss-import": "16.2.0",
+        "postcss-import": "17.0.0",
         "postcss-preset-env": "11.4.0",
         "rollup": "4.62.4",
         "rollup-plugin-livereload": "2.0.5",
