@@ -128,8 +128,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0(rollup@4.63.1)
       bestzip:
-        specifier: 3.0.3
-        version: 3.0.3
+        specifier: 3.1.0
+        version: 3.1.0
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -1529,8 +1529,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  bestzip@3.0.3:
-    resolution: {integrity: sha512-3UpGCm+bn1uGuPD0ro2d+jFL7wG+632Lo710L6VmJVubxsw3ED0QrDqH+jxktPg8b+0e92cYO6J2zC5FJ2gyvw==}
+  bestzip@3.1.0:
+    resolution: {integrity: sha512-ujFDdpMDJnE6BgnpqPa45uHUkuPqLaOEsKuBQdQOEb0p7n2u9aSDmyZb93xC+c1Jj21a8F0XMZ6jaEMuACATsQ==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -4745,7 +4745,7 @@ snapshots:
 
   baseline-browser-mapping@2.11.21: {}
 
-  bestzip@3.0.3:
+  bestzip@3.1.0:
     dependencies:
       archiver: 8.0.0
       glob: 13.0.6
