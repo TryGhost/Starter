@@ -185,8 +185,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0(rollup@4.63.5)
       bestzip:
-        specifier: 4.0.2
-        version: 4.0.2
+        specifier: 4.0.3
+        version: 4.0.3
       gscan:
         specifier: 6.6.1
         version: 6.6.1(supports-color@7.2.0)
@@ -1420,8 +1420,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  bestzip@4.0.2:
-    resolution: {integrity: sha512-7Yi7FrL/tcyhE+mYxPaZKTRcx7liRYS64qVuRY3parEcKwq/avjMhBbgovhaEByvVlhgEZT7nonHnKeu6pfj8A==}
+  bestzip@4.0.3:
+    resolution: {integrity: sha512-whi8CW8smVjOgFlvE8CMIICq45Eb8n+chgiOD93d71eHZdqFcdDUc9L5OGAv9oycOWSFWz/BeUR8y8zVhiXVmg==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -3887,7 +3887,7 @@ snapshots:
 
   baseline-browser-mapping@2.11.25: {}
 
-  bestzip@4.0.2:
+  bestzip@4.0.3:
     dependencies:
       archiver: 8.0.0
       glob: 13.0.6
