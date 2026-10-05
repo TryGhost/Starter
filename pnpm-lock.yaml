@@ -197,8 +197,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0(postcss@8.5.28)
       postcss-preset-env:
-        specifier: 11.5.5
-        version: 11.5.5(postcss@8.5.28)
+        specifier: 11.6.0
+        version: 11.6.0(postcss@8.5.28)
       rollup:
         specifier: 4.64.0
         version: 4.64.0
@@ -763,6 +763,13 @@ packages:
     resolution: {integrity: sha512-OoKoR0f76dCY666JlcbhmVTs2drYj1GUXZTYTcbUgJjh9Nv41aFfZ21bPQTERm5+L5cBDo466NltB2lplS5GBw==}
     engines: {node: '>=20.19.0'}
 
+  '@csstools/custom-function-parser@1.0.0':
+    resolution: {integrity: sha512-7RS4uOSyY1kf1BHNjgCf8rWF1t+rQaIKEr8183Z6hHXPew2ikm2FC8mWqqrj+/UFJFLJtHaoETc04NJveC9qrw==}
+    engines: {node: '>=20.19.0'}
+    peerDependencies:
+      '@csstools/css-parser-algorithms': ^4.0.2
+      '@csstools/css-tokenizer': ^4.0.2
+
   '@csstools/media-query-list-parser@5.0.2':
     resolution: {integrity: sha512-qx19O8AbbLLbDSAcI6YOby/Vq8rV51psgIvlF5OZT/L8fQJDCyQifL6k+kYU4a8ySpzJ4RBzZkIs530bAn8y4Q==}
     engines: {node: '>=20.19.0'}
@@ -820,6 +827,12 @@ packages:
 
   '@csstools/postcss-contrast-color-function@3.0.15':
     resolution: {integrity: sha512-YJt9zzmbV3RvyBo8kkWkf1hzQEryMQhQCcSsiV4jtiVfrlFRaTaevQyRDliAea7AIdCkVep1qSp1cnilPIVjKQ==}
+    engines: {node: '>=20.19.0'}
+    peerDependencies:
+      postcss: ^8.4
+
+  '@csstools/postcss-custom-functions@1.0.1':
+    resolution: {integrity: sha512-fpsZ0M5R5sTpyELyw69Uj56jfbYxwzQ3jJAP/WfXsT9EH8Rl8fv/jv4UeiFXiiNExzzg9PyTMxcBpkz3GxiYcA==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       postcss: ^8.4
@@ -2285,8 +2298,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  postcss-preset-env@11.5.5:
-    resolution: {integrity: sha512-TVOyy/zfx7vfO2ZMgh5hsCpbuZ0UPKmF/0PxZerNSLRTL+3aOpPXQHcs4X4JNTjNJWXoC0zXD1FIOXEOYxf2dQ==}
+  postcss-preset-env@11.6.0:
+    resolution: {integrity: sha512-tHsk5w0TtDvQ69UNJfKiBTtJ2zstjKgqC3lJSb+7Qj7ybbc4aR4SC3fAfxMq3meH1sTgBXrRH9CCsyMEVX980Q==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       postcss: ^8.4
@@ -3264,6 +3277,11 @@ snapshots:
 
   '@csstools/css-tokenizer@4.0.2': {}
 
+  '@csstools/custom-function-parser@1.0.0(@csstools/css-parser-algorithms@4.0.2(@csstools/css-tokenizer@4.0.2))(@csstools/css-tokenizer@4.0.2)':
+    dependencies:
+      '@csstools/css-parser-algorithms': 4.0.2(@csstools/css-tokenizer@4.0.2)
+      '@csstools/css-tokenizer': 4.0.2
+
   '@csstools/media-query-list-parser@5.0.2(@csstools/css-parser-algorithms@4.0.2(@csstools/css-tokenizer@4.0.2))(@csstools/css-tokenizer@4.0.2)':
     dependencies:
       '@csstools/css-parser-algorithms': 4.0.2(@csstools/css-tokenizer@4.0.2)
@@ -3341,6 +3359,14 @@ snapshots:
       '@csstools/css-tokenizer': 4.0.2
       '@csstools/postcss-progressive-custom-properties': 5.1.4(postcss@8.5.28)
       '@csstools/utilities': 3.0.0(postcss@8.5.28)
+      postcss: 8.5.28
+
+  '@csstools/postcss-custom-functions@1.0.1(postcss@8.5.28)':
+    dependencies:
+      '@csstools/cascade-layer-name-parser': 3.0.2(@csstools/css-parser-algorithms@4.0.2(@csstools/css-tokenizer@4.0.2))(@csstools/css-tokenizer@4.0.2)
+      '@csstools/css-parser-algorithms': 4.0.2(@csstools/css-tokenizer@4.0.2)
+      '@csstools/css-tokenizer': 4.0.2
+      '@csstools/custom-function-parser': 1.0.0(@csstools/css-parser-algorithms@4.0.2(@csstools/css-tokenizer@4.0.2))(@csstools/css-tokenizer@4.0.2)
       postcss: 8.5.28
 
   '@csstools/postcss-exponential-functions@3.0.9(postcss@8.5.28)':
@@ -4717,7 +4743,7 @@ snapshots:
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
 
-  postcss-preset-env@11.5.5(postcss@8.5.28):
+  postcss-preset-env@11.6.0(postcss@8.5.28):
     dependencies:
       '@csstools/postcss-alpha-function': 2.0.16(postcss@8.5.28)
       '@csstools/postcss-cascade-layers': 6.0.1(postcss@8.5.28)
@@ -4728,6 +4754,7 @@ snapshots:
       '@csstools/postcss-container-rule-prelude-list': 1.0.4(postcss@8.5.28)
       '@csstools/postcss-content-alt-text': 3.0.7(postcss@8.5.28)
       '@csstools/postcss-contrast-color-function': 3.0.15(postcss@8.5.28)
+      '@csstools/postcss-custom-functions': 1.0.1(postcss@8.5.28)
       '@csstools/postcss-exponential-functions': 3.0.9(postcss@8.5.28)
       '@csstools/postcss-fit-tolerance-property': 1.0.1(postcss@8.5.28)
       '@csstools/postcss-font-format-keywords': 5.0.0(postcss@8.5.28)
