@@ -194,8 +194,8 @@ importers:
         specifier: 8.5.30
         version: 8.5.30
       postcss-import:
-        specifier: 17.0.0
-        version: 17.0.0(postcss@8.5.30)
+        specifier: 17.0.1
+        version: 17.0.1(postcss@8.5.30)
       postcss-preset-env:
         specifier: 11.6.1
         version: 11.6.1(postcss@8.5.30)
@@ -2114,8 +2114,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  postcss-import@17.0.0:
-    resolution: {integrity: sha512-qzVMJhcq39KweT7Fp0HcjE5YxL5yI854Q3CtufxDuZKO9HLQUp2rptB9+U0MIj3pT1ZEVXoqnpeC1mSkfYuz4Q==}
+  postcss-import@17.0.1:
+    resolution: {integrity: sha512-lthLZRa+sMc/xo+lG7TMUvOviwP9ngR0VULnvfXTyOE3JIc0mFrbjcubI6Jx52X+B3IKt9yfp6wwVWE768JezA==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       postcss: ^8.0.0
@@ -4567,7 +4567,7 @@ snapshots:
       postcss: 8.5.30
       postcss-value-parser: 4.2.0
 
-  postcss-import@17.0.0(postcss@8.5.30):
+  postcss-import@17.0.1(postcss@8.5.30):
     dependencies:
       postcss: 8.5.30
       postcss-value-parser: 4.2.0
