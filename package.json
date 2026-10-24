@@ -49,7 +49,7 @@
         "@rollup/plugin-babel": "7.1.0",
         "@rollup/plugin-commonjs": "29.0.3",
         "@rollup/plugin-node-resolve": "16.0.3",
-        "@rollup/plugin-terser": "1.0.0",
+        "@rollup/plugin-terser": "1.0.1",
         "bestzip": "4.0.3",
         "gscan": "6.6.1",
         "postcss": "8.5.31",
