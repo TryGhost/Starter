@@ -55,7 +55,7 @@
         "postcss": "8.5.31",
         "postcss-import": "17.0.1",
         "postcss-preset-env": "11.6.1",
-        "rollup": "4.65.0",
+        "rollup": "4.65.1",
         "rollup-plugin-livereload": "2.0.5",
         "rollup-plugin-postcss": "4.0.2"
     },
