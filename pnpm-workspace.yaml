@@ -1,10 +1,9 @@
-# pnpm 11 requires each dependency build script to be explicitly approved.
 allowBuilds:
   # Optional dtrace bindings for bunyan (a gscan dependency); not needed to build or test the theme.
   dtrace-provider: false
 
 # archiver still requests minimatch 10 through readdir-glob 3.
 overrides:
-  "minimatch@>=7 <11.0.1": 11.0.4
+  "minimatch@>=7 <11.0.1": 11.0.5
   # bestzip still requests glob 13, which cannot safely cancel traversal.
   "bestzip>glob": 14.0.4
