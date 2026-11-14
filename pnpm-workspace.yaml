@@ -4,6 +4,6 @@ allowBuilds:
 
 # archiver still requests minimatch 10 through readdir-glob 3.
 overrides:
-  "minimatch@>=7 <11.0.1": 11.0.5
+  "minimatch@>=7 <11.0.1": 11.0.8
   # bestzip still requests glob 13, which cannot safely cancel traversal.
   "bestzip>glob": 14.0.4
