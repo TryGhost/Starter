@@ -6,4 +6,4 @@ allowBuilds:
 overrides:
   "minimatch@>=7 <11.0.1": 11.0.5
   # bestzip still requests glob 13, which cannot safely cancel traversal.
-  "bestzip>glob": 14.0.4
+  "bestzip>glob": 14.0.5
