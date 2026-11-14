@@ -164,7 +164,7 @@ settings:
 
 overrides:
   minimatch@>=7 <11.0.1: 11.0.5
-  bestzip>glob: 14.0.4
+  bestzip>glob: 14.0.5
 
 importers:
 
@@ -1732,8 +1732,8 @@ packages:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
 
-  glob@14.0.4:
-    resolution: {integrity: sha512-mMiwNKoJZ4HAIRVJxotO6LsNRReA30gQwP9E2/p94tfLv+jygCNpKDjhhSL6OLY6LE371EZm5EAf7RpYuUqlsw==}
+  glob@14.0.5:
+    resolution: {integrity: sha512-nbKW5Sl53DEM5PkmZ5Jwfeyss1ohuqcgOBjOarSjz1fp8W4ss4EOOvKADQRbApD6JmVBX+HkpZYfBez4wXbeQQ==}
     engines: {node: 18 || 20 || >=22}
 
   gscan@6.7.0:
@@ -3900,7 +3900,7 @@ snapshots:
   bestzip@4.0.3(bare-buffer@3.7.1):
     dependencies:
       archiver: 8.0.0(bare-buffer@3.7.1)
-      glob: 14.0.4
+      glob: 14.0.5
       yargs: 16.2.2
     transitivePeerDependencies:
       - bare-abort-controller
@@ -4189,7 +4189,7 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
-  glob@14.0.4:
+  glob@14.0.5:
     dependencies:
       minimatch: 11.0.5
       minipass: 7.1.3
