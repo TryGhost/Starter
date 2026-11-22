@@ -198,8 +198,8 @@ importers:
         specifier: 1.0.2
         version: 1.0.2(rollup@4.68.7)
       bestzip:
-        specifier: 4.0.3
-        version: 4.0.3(bare-buffer@3.7.1)
+        specifier: 4.0.4
+        version: 4.0.4(bare-buffer@3.7.1)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -1518,8 +1518,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  bestzip@4.0.3:
-    resolution: {integrity: sha512-whi8CW8smVjOgFlvE8CMIICq45Eb8n+chgiOD93d71eHZdqFcdDUc9L5OGAv9oycOWSFWz/BeUR8y8zVhiXVmg==}
+  bestzip@4.0.4:
+    resolution: {integrity: sha512-s7Qrq+y7JgPud9b3vayVvpV8j49lutXQVLfAenfTlqnSnQNWL43Jg2MxImMnppIvg4hN+eqkjjJjqesDaHFizw==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -4047,7 +4047,7 @@ snapshots:
 
   baseline-browser-mapping@2.11.35: {}
 
-  bestzip@4.0.3(bare-buffer@3.7.1):
+  bestzip@4.0.4(bare-buffer@3.7.1):
     dependencies:
       archiver: 8.0.0(bare-buffer@3.7.1)
       glob: 14.0.4

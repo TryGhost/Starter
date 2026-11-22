@@ -50,7 +50,7 @@
         "@rollup/plugin-commonjs": "29.0.3",
         "@rollup/plugin-node-resolve": "16.0.3",
         "@rollup/plugin-terser": "1.0.2",
-        "bestzip": "4.0.3",
+        "bestzip": "4.0.4",
         "gscan": "6.7.0",
         "postcss": "8.5.33",
         "postcss-import": "17.0.1",
